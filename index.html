@@ -6,12 +6,12 @@
     <meta name="theme-color" content="#1e3c72">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="description" content="المسبحة الذكية - تطبيق للتسبيح والأذكار يعمل بدون إنترنت مع استجابة صوتية فورية">
+    <meta name="description" content="المسبحة الذكية - تطبيق للتسبيح والأذكار يعمل بدون إنترنت مع دعم التحكم الصوتي">
     
     <title>المسبحة الذكية - التسبح والأذكار</title>
     
     <!-- PWA Manifest -->
-    <link rel="manifest" href="data:application/json;base64,ewogICJuYW1lIjogIkFsa1NlaWhhIEFsLVNhanloYWgiLAogICJzaG9ydF9uYW1lIjogIkFsa1NlaWhhIiwKICAiaWNvbnMiOiBbewogICAgInNyYyI6ICJkYXRhOmltYWdlL3N2Zyt4bWwsJTNDc3ZnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zycgdmlld0JveD0nMCAwIDUxMiA1MTInJTNFNyUzQ2NpcmNsZSBjeD0nMjU2JyBjeT0nMjU2JyByPScyMDAnIGZpbGw9JyUyMzFlM2M3MicvJTNFNyUzQ3RleHQgeD0nNTAlMjUnIHk9JzUwJTI1JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBkeT0nLjNlbScgZmlsbD0nd2hpdGUnIGZvbnQtc2l6ZT0nMjAwJyUzRSVGMCU5RiU5RiVFQyVGMCU5RiU5RiVGMyUzQy90ZXh0JTNFNyUzQy9zdmclM0UiLAogICAgInNpemVzIjogIjUxMng1MTIiLAogICAgInR5cGUiOiAiaW1hZ2Uvc3ZnK3htbCIKICB9XSwKICAic3RhcnRfdXJsIjogIi8iLAogICJkaXNwbGF5IjogInN0YW5kYWxvbmUiLAogICJiYWNrZ3JvdW5kX2NvbG9yIjogIiMxZTNjNzIiLAogICJ0aGVtZV9jb2xvciI6ICIjMWUzYzcyIiwKICAib3JpZW50YXRpb24iOiAicG9ydHJhaXQiLAogICJsYW5nIjogImFyIiwKICAiY2F0ZWdvcmllcyI6IFsicHJvZHVjdGl2aXR5IiwicmVsaWdpb24iXSwKICAiZGVzY3JpcHRpb24iOiAiQXBwIGZvciBEaGlrciBhbmQgVGFzYmhpaCB3aXRoIHZvaWNlIGNvbnRyb2wiCn0=">
+    <link rel="manifest" href="data:application/json;base64,ewogICJuYW1lIjogItis2LLZitixINmF2YbYp9mG2K/ZiCIsCiAgInNob3J0X25hbWUiOiAi2YXYp9mG2K/ZiCIsCiAgImRlc2NyaXB0aW9uIjogItin2YrYp9i62Kkg2KfZhNmF2YbYp9mG2K/ZiiDYp9mE2KfZhNiz2KrYr9in2Kog2KjYp9mG2KjYp9mGINij2YjYrNmI2KfZhiDYp9mE2YLYqNmE2YLYr9iMINmF2YbYp9mG2K/ZiiIsCiAgInN0YXJ0X3VybCI6ICIvIiwKICAiZGlzcGxheSI6ICJzdGFuZGFsb25lIiwKICAiYmFja2dyb3VuZF9jb2xvciI6ICIjMWUzYzcyIiwKICAidGhlbWVfY29sb3IiOiAiIzFlM2M3MiIsCiAgIm9yaWVudGF0aW9uIjogInBvcnRyYWl0IiwKICAibGFuZyI6ICJhciIsCiAgImNhdGVnb3JpZXMiOiBbInJlbGlnaW9uIiwicHJvZHVjdGl2aXR5Il0sCiAgImljb25zIjogWwogICAgewogICAgICAic3JjIjogImRhdGE6aW1hZ2Uvc3ZnK3htbDtiYXNlNjQsUEhOMlp5QmxibUZpWVhSMGRHbHZiajBpTVRBd0lpQm9aV2xuYUhRaU9pSXhNREF3SWlCM2FXUjBhRDBpTlRBd01EQWlJR1pwYkd3OUlqRXdNREFpSUdObGJHRnphRDBpTVRBd01DQStQR2x0WVdkbElIZHBaSFJvUFNJME1EQXdJaUI0Yld4dWN6MGlkR1Z6ZENJZ2VHMXdkejBpTVRBd01DQWlQR2x0WVdkbElIZHBaSFJvUFNJME1EQXdJaUI0Yld4dWN6MGlkR1Z6ZENJZ2VHMXdkejBpTVRBd01DQWlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNGlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNGlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNGlQSEJ2YkhsamFXNGlQSEJ2YkhsamFXNGlQSEJ2YkhsamFXNGlQSEJ2YkhsamFXNGlQSEJ2YkhsamFXNGlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNGlQSEJ2YkhsamFXNGlQSEJ2YkhsamFXNGlQSEJ2YkhsamFXNGlQSEJ2YkhsamFXNGlQSEJ2YkhsamFXNGlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNGlQSEJ2YkhsamFXNGlQSEJ2YkhsamFXNGlQSEJ2YkhsamFXNGlQSEJ2YkhsamFXNGlQSEJ2YkhsamFXNGlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNGlQSEJ2YkhsamFXNGlQSEJ2YkhsamFXNGlQSEJ2YkhsamFXNGlQSEJ2YkhsamFXNGlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNGlQSEJ2YkhsamFXNGlQSEJ2YkhsamFXNGlQSEJ2YkhsamFXNGlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNGlQSEJ2YkhsamFXNGlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNGlQSEJ2YkhsamFXNGlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNGlQSEJ2YkhsamFXNGlKM0J2YkhsamFXNk1EQXdNREFnIiwKICAgICAgInNpemVzIjogIjUxMng1MTIiLAogICAgICAidHlwZSI6ICJpbWFnZS9zdmcreG1sIiwKICAgICAgInB1cnBvc2UiOiAiYW55IG1hc2thYmxlIgogICAgfQogIF0KfQ==">
     
     <style>
         :root {
@@ -897,6 +897,35 @@
             border-color: var(--accent-color);
         }
 
+        .permission-status {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px;
+            border-radius: 10px;
+            margin-top: 10px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+
+        .permission-status.granted {
+            background: rgba(76, 175, 80, 0.15);
+            color: var(--accent-color);
+            border: 1px solid rgba(76, 175, 80, 0.3);
+        }
+
+        .permission-status.denied {
+            background: rgba(244, 67, 54, 0.15);
+            color: var(--danger-color);
+            border: 1px solid rgba(244, 67, 54, 0.3);
+        }
+
+        .permission-status.prompt {
+            background: rgba(255, 152, 0, 0.15);
+            color: #FF9800;
+            border: 1px solid rgba(255, 152, 0, 0.3);
+        }
+
         .color-menu {
             position: fixed;
             top: 50%;
@@ -1198,7 +1227,6 @@
             text-align: center;
         }
 
-        /* إشعارات Toast */
         .toast {
             position: fixed;
             bottom: 100px;
@@ -1241,6 +1269,120 @@
             border-color: #FF9800;
             color: #FF9800;
         }
+
+        /* ====== تنسيق قسم تثبيت التطبيق ====== */
+        .install-info {
+            background: rgba(30, 60, 114, 0.1);
+            border-radius: 12px;
+            padding: 16px;
+            margin-top: 15px;
+            font-size: 0.85em;
+            line-height: 1.6;
+        }
+
+        body.dark-mode .install-info {
+            background: rgba(76, 175, 80, 0.1);
+        }
+
+        .install-info p {
+            margin-bottom: 8px;
+        }
+
+        .install-info p:last-child {
+            margin-bottom: 0;
+        }
+
+        .install-info strong {
+            color: var(--primary-color);
+        }
+
+        body.dark-mode .install-info strong {
+            color: var(--accent-color);
+        }
+
+        /* ====== تنسيق البانر التلقائي للتثبيت ====== */
+        .install-banner {
+            position: fixed;
+            bottom: 90px;
+            left: 0;
+            right: 0;
+            background: var(--card-light);
+            box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.2);
+            padding: 15px 20px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+            z-index: 999;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        body.dark-mode .install-banner {
+            background: var(--card-dark);
+            border-top-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .install-banner.show {
+            transform: translateY(0);
+        }
+
+        .install-banner-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .install-banner-text {
+            flex: 1;
+        }
+
+        .install-banner-title {
+            font-weight: 700;
+            font-size: 1.1em;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        body.dark-mode .install-banner-title {
+            color: var(--accent-color);
+        }
+
+        .install-banner-desc {
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+
+        .install-banner-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .install-banner-btn {
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.85em;
+            font-weight: 600;
+            transition: var(--transition-fast);
+        }
+
+        .install-banner-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .install-banner-btn.deny {
+            background: rgba(0, 0, 0, 0.1);
+            color: var(--text-muted);
+        }
+
+        body.dark-mode .install-banner-btn.deny {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-light);
+        }
     </style>
 </head>
 <body>
@@ -1255,11 +1397,25 @@
         </div>
     </header>
 
+    <!-- بانر التثبيت التلقائي -->
+    <div class="install-banner" id="installBanner">
+        <div class="install-banner-content">
+            <div class="install-banner-text">
+                <div class="install-banner-title" data-ar="📱 تثبيت التطبيق؟" data-en="📱 Install App?">📱 تثبيت التطبيق؟</div>
+                <div class="install-banner-desc" data-ar="أضفه للشاشة الرئيسية للوصول السريع" data-en="Add it to your home screen for quick access">أضفه للشاشة الرئيسية للوصول السريع</div>
+            </div>
+            <div class="install-banner-buttons">
+                <button class="install-banner-btn" onclick="PWAController.install()" data-ar="تثبيت" data-en="Install">تثبيت</button>
+                <button class="install-banner-btn deny" onclick="PWAController.dismissInstallBanner()" data-ar="لا شكراً" data-en="No thanks">لا شكراً</button>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
         <!-- رأس الصفحة -->
         <section class="header">
             <h1 data-ar="📿 المسبحة الذكية" data-en="📿 Smart Tasbih">📿 المسبحة الذكية</h1>
-            <p data-ar="التسبيح باللمس أو الصوت - استجابة فورية" data-en="Tap or Voice Tasbih - Instant Response">التسبيح باللمس أو الصوت - استجابة فورية</p>
+            <p data-ar="التسبيح باللمس أو الصوت - استجابة فورية (يتطلب إذن الميكروفون)" data-en="Tap or Voice Tasbih - Instant Response (Requires microphone permission)">التسبيح باللمس أو الصوت - استجابة فورية (يتطلب إذن الميكروفون)</p>
         </section>
 
         <!-- قسم المسبحة -->
@@ -1310,7 +1466,7 @@
                 </div>
 
                 <div class="last-detected" id="lastDetected">
-                    <span data-ar="🎤 جاهز للاستماع الفوري" data-en="🎤 Ready for instant listening">🎤 جاهز للاستماع الفوري</span>
+                    <span data-ar="🎤 جاهز للاستماع الفوري (يتطلب إذن الميكروفون)" data-en="🎤 Ready for instant listening (Requires microphone permission)">🎤 جاهز للاستماع الفوري (يتطلب إذن الميكروفون)</span>
                 </div>
             </div>
         </main>
@@ -1386,8 +1542,22 @@
                 </div>
 
                 <div class="settings-group">
-                    <h3 data-ar="📿 إعدادات التسبيح" data-en="📿 Tasbih Settings">📿 إعدادات التسبيح</h3>
+                    <h3 data-ar="🎤 إعدادات الصوت" data-en="🎤 Audio Settings">🎤 إعدادات الصوت</h3>
                     
+                    <div class="setting-item">
+                        <label data-ar="إذن الميكروفون:" data-en="Microphone Permission:">إذن الميكروفون:</label>
+                        <div style="flex: 1;">
+                            <button class="control-btn" onclick="PermissionController.requestMicrophone()" style="min-width: 150px;">
+                                <span aria-hidden="true">🔊</span>
+                                <span data-ar="طلب الإذن" data-en="Request Permission">طلب الإذن</span>
+                            </button>
+                            <div class="permission-status prompt" id="micPermissionStatus">
+                                <span aria-hidden="true">⏳</span>
+                                <span data-ar="لم يتم طلب الإذن بعد" data-en="Permission not requested yet">لم يتم طلب الإذن بعد</span>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="setting-item">
                         <label data-ar="تصفير العداد:" data-en="Reset Counter:">تصفير العداد:</label>
                         <button class="control-btn danger" onclick="TasbihController.reset()">
@@ -1397,12 +1567,35 @@
                     </div>
                 </div>
 
+                <!-- ====== قسم تثبيت التطبيق الجديد ====== -->
+                <div class="settings-group">
+                    <h3 data-ar="📱 تثبيت التطبيق" data-en="📱 Install App">📱 تثبيت التطبيق</h3>
+                    
+                    <div class="setting-item">
+                        <label data-ar="إضافة للشاشة الرئيسية:" data-en="Add to Home Screen:">إضافة للشاشة الرئيسية:</label>
+                        <button class="control-btn" onclick="PWAController.install()" style="min-width: 180px; background: #4CAF50;">
+                            <span aria-hidden="true">📲</span>
+                            <span data-ar="تثبيت التطبيق" data-en="Install App">تثبيت التطبيق</span>
+                        </button>
+                    </div>
+                    
+                    <div class="install-info">
+                        <p data-ar="📲 <strong>على أندرويد:</strong> اضغط 'تثبيت التطبيق' أو أيقونة ⬇️ أعلى الصفحة" data-en="📲 <strong>On Android:</strong> Click 'Install App' or the ⬇️ icon at the top">
+                            📲 <strong>على أندرويد:</strong> اضغط 'تثبيت التطبيق' أو أيقونة ⬇️ أعلى الصفحة
+                        </p>
+                        <p data-ar="🍎 <strong>على iOS:</strong> اضغط 'Share' ثم 'Add to Home Screen'" data-en="🍎 <strong>On iOS:</strong> Tap 'Share' then 'Add to Home Screen'">
+                            🍎 <strong>على iOS:</strong> اضغط 'Share' ثم 'Add to Home Screen'
+                        </p>
+                        <p data-ar="✅ التطبيق يعمل بشكل كامل بدون إنترنت بعد التثبيت" data-en="✅ App works fully offline after installation">
+                            ✅ التطبيق يعمل بشكل كامل بدون إنترنت بعد التثبيت
+                        </p>
+                    </div>
+                </div>
+
                 <div class="settings-group">
                     <h3 data-ar="ℹ️ معلومات التطبيق" data-en="ℹ️ About App">ℹ️ معلومات التطبيق</h3>
                     <div class="text-center" style="font-size: 0.9em; line-height: 1.7; opacity: 0.85; padding: 15px;">
-                        <p data-ar="📱 لإضافة التطبيق للشاشة الرئيسية: اضغط على زر ⬇️ أعلى الصفحة" data-en="📱 To add to home screen: click ⬇️ button at top">📱 لإضافة التطبيق للشاشة الرئيسية: اضغط على زر ⬇️ أعلى الصفحة</p>
-                        <br>
-                        <p data-ar="✅ يعمل بدون إنترنت | ✅ التسبيح الصوتي الفوري | ✅ أذكارك محفوظة محلياً" data-en="✅ Works offline | ✅ Instant Voice Tasbih | ✅ Your azkar saved locally">✅ يعمل بدون إنترنت | ✅ التسبيح الصوتي الفوري | ✅ أذكارك محفوظة محلياً</p>
+                        <p data-ar="🎤 لاستخدام التسبيح الصوتي: اضغط على زر 'تفعيل الصوت' واسمح بالوصول للميكروفون" data-en="🎤 For voice tasbih: Click 'Enable Voice' and allow microphone access">🎤 لاستخدام التسبيح الصوتي: اضغط على زر 'تفعيل الصوت' واسمح بالوصول للميكروفون</p>
                         <br>
                         <p data-ar="💾 جميع البيانات محفوظة على جهازك" data-en="💾 All data is saved on your device">💾 جميع البيانات محفوظة على جهازك</p>
                     </div>
@@ -1453,6 +1646,8 @@
         let deferredPrompt = null;
         let buttonColor = '#1e3c72';
         let lastCalculatedDate = null;
+        let microphonePermission = 'prompt';
+        let installBannerDismissed = false;
         
         const availableColors = [
             '#1e3c72', '#2a5298', '#4CAF50', '#f44336', '#FF9800', '#9C27B0', '#00BCD4', '#E91E63', '#795548', '#607D8B', '#3F51B5', '#009688'
@@ -1642,12 +1837,12 @@
             }
         }
 
-        // ====== PWA Controller ======
+        // ====== PWA Controller (محسّن) ======
         class PWAController {
             static init() {
                 if ('serviceWorker' in navigator) {
                     navigator.serviceWorker.register('data:text/javascript;base64,' + btoa(`
-                        const CACHE_NAME = 'tasbih-app-v7';
+                        const CACHE_NAME = 'tasbih-app-v9';
                         
                         self.addEventListener('install', event => {
                             event.waitUntil(
@@ -1685,12 +1880,45 @@
                     }).catch(error => console.error('❌ SW registration failed:', error));
                 }
 
+                // استعادة حالة البانر المخفي
+                installBannerDismissed = Storage.load('installBannerDismissed', false);
+
                 window.addEventListener('beforeinstallprompt', (e) => {
                     e.preventDefault();
                     deferredPrompt = e;
-                    document.getElementById('installIcon').classList.remove('hidden');
+                    
+                    // أظهر أيقونة التثبيت في الشريط العلوي
+                    const installIcon = document.getElementById('installIcon');
+                    if (installIcon) {
+                        installIcon.classList.remove('hidden');
+                    }
+
+                    // أظهر البانر التلقائي إذا لم يتم تجاهله من قبل
+                    if (!installBannerDismissed) {
+                        const banner = document.getElementById('installBanner');
+                        if (banner) {
+                            banner.classList.add('show');
+                        }
+                    }
+                    
                     console.log('📲 PWA install prompt ready');
                 });
+
+                // تحقق من إذا كان التطبيق مثبت بالفعل (للأندرويد)
+                if ('getInstalledRelatedApps' in navigator) {
+                    navigator.getInstalledRelatedApps().then(apps => {
+                        if (apps && apps.length > 0) {
+                            console.log('📱 App is already installed');
+                            this.hideInstallElements();
+                        }
+                    });
+                }
+
+                // بالنسبة لـ iOS: تحقق من وضع standalone
+                if (window.matchMedia('(display-mode: standalone)').matches) {
+                    console.log('📱 App is running in standalone mode');
+                    this.hideInstallElements();
+                }
             }
 
             static install() {
@@ -1699,11 +1927,49 @@
                     deferredPrompt.userChoice.then((choiceResult) => {
                         if (choiceResult.outcome === 'accepted') {
                             console.log('✅ PWA installed');
-                            Toast.show(Localization.get('✅ تم تثبيت التطبيق', '✅ App installed'), 'success');
+                            Toast.show(Localization.get('✅ تم تثبيت التطبيق بنجاح!', '✅ App installed successfully!'), 'success');
+                            this.hideInstallElements();
+                        } else {
+                            console.log('❌ PWA installation declined');
                         }
                         deferredPrompt = null;
                     });
+                } else {
+                    // إذا كان المتصفح لا يدعم التثبيت التلقائي (مثل iOS)
+                    Toast.show(Localization.get('🍎 على iOS: استخدم خيار Share > Add to Home Screen', '🍎 On iOS: Use Share > Add to Home Screen'), 'info');
                 }
+            }
+
+            static dismissInstallBanner() {
+                const banner = document.getElementById('installBanner');
+                if (banner) {
+                    banner.classList.remove('show');
+                }
+                installBannerDismissed = true;
+                Storage.save('installBannerDismissed', true);
+                console.log('📲 Install banner dismissed');
+            }
+
+            static hideInstallElements() {
+                // أخفي أيقونة التثبيت
+                const installIcon = document.getElementById('installIcon');
+                if (installIcon) {
+                    installIcon.classList.add('hidden');
+                }
+
+                // أخفي البانر التلقائي
+                const banner = document.getElementById('installBanner');
+                if (banner) {
+                    banner.classList.remove('show');
+                }
+
+                // أخفي زر التثبيت في الإعدادات
+                const installBtn = document.getElementById('installAppBtn');
+                if (installBtn) {
+                    installBtn.style.display = 'none';
+                }
+
+                console.log('📲 Install elements hidden');
             }
         }
 
@@ -1754,19 +2020,108 @@
                 VoiceController.lastDetectedPhrase = '';
                 const lastDetected = document.getElementById('lastDetected');
                 if (lastDetected) {
-                    lastDetected.textContent = Localization.get('🎤 جاهز للاستماع الفوري', '🎤 Ready for instant listening');
+                    lastDetected.textContent = Localization.get('🎤 جاهز للاستماع الفوري (يتطلب إذن الميكروفون)', '🎤 Ready for instant listening (Requires microphone permission)');
                     lastDetected.classList.remove('instant');
                 }
                 console.log('📝 Current tasbih changed:', currentTasbih);
             }
         }
 
+        // ====== Permission Controller ======
+        class PermissionController {
+            static init() {
+                if ('permissions' in navigator) {
+                    navigator.permissions.query({ name: 'microphone' }).then(permissionStatus => {
+                        microphonePermission = permissionStatus.state;
+                        this.updatePermissionStatus();
+                        console.log('🎤 Microphone permission status:', microphonePermission);
+                        
+                        permissionStatus.onchange = () => {
+                            microphonePermission = permissionStatus.state;
+                            this.updatePermissionStatus();
+                            console.log('🎤 Microphone permission changed:', microphonePermission);
+                        };
+                    });
+                } else {
+                    console.warn('⚠️ Permissions API not supported');
+                }
+            }
+
+            static async requestMicrophone() {
+                try {
+                    if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+                        Toast.show(Localization.get('❌ المتصفح لا يدعم الميكروفون', '❌ Browser does not support microphone'), 'error');
+                        return;
+                    }
+
+                    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                    microphonePermission = 'granted';
+                    this.updatePermissionStatus();
+                    
+                    stream.getTracks().forEach(track => track.stop());
+                    
+                    Toast.show(Localization.get('✅ تم منح إذن الميكروفون', '✅ Microphone permission granted'), 'success');
+                    console.log('✅ Microphone permission granted');
+                    
+                } catch (error) {
+                    if (error.name === 'NotAllowedError' || error.name === 'PermissionDeniedError') {
+                        microphonePermission = 'denied';
+                        Toast.show(Localization.get('❌ تم رفض إذن الميكروفون - يرجى تغييره من إعدادات المتصفح', '❌ Microphone permission denied - Please change it in browser settings'), 'error');
+                    } else if (error.name === 'NotFoundError' || error.name === 'NoDeviceFound') {
+                        Toast.show(Localization.get('❌ لم يتم العثور على ميكروفون', '❌ No microphone found'), 'error');
+                    } else {
+                        Toast.show(Localization.get('❌ حدث خطأ في طلب الإذن', '❌ Error requesting permission'), 'error');
+                    }
+                    
+                    this.updatePermissionStatus();
+                    console.error('❌ Error requesting microphone permission:', error);
+                }
+            }
+
+            static updatePermissionStatus() {
+                const statusEl = document.getElementById('micPermissionStatus');
+                if (!statusEl) return;
+
+                statusEl.classList.remove('granted', 'denied', 'prompt');
+                
+                switch(microphonePermission) {
+                    case 'granted':
+                        statusEl.classList.add('granted');
+                        statusEl.innerHTML = `
+                            <span aria-hidden="true">✅</span>
+                            <span data-ar="✅ تم منح الإذن" data-en="✅ Permission granted">✅ تم منح الإذن</span>
+                        `;
+                        break;
+                    case 'denied':
+                        statusEl.classList.add('denied');
+                        statusEl.innerHTML = `
+                            <span aria-hidden="true">❌</span>
+                            <span data-ar="❌ تم رفض الإذن - اذهب لإعدادات المتصفح" data-en="❌ Permission denied - Go to browser settings">❌ تم رفض الإذن - اذهب لإعدادات المتصفح</span>
+                        `;
+                        break;
+                    default:
+                        statusEl.classList.add('prompt');
+                        statusEl.innerHTML = `
+                            <span aria-hidden="true">⏳</span>
+                            <span data-ar="⏳ لم يتم طلب الإذن بعد" data-en="⏳ Permission not requested yet">⏳ لم يتم طلب الإذن بعد</span>
+                        `;
+                }
+            }
+
+            static checkPermissionBeforeVoice() {
+                if (microphonePermission === 'denied') {
+                    Toast.show(Localization.get('❌ إذن الميكروفون مرفوض - يرجى تغييره من إعدادات المتصفح', '❌ Microphone permission denied - Please change it in browser settings'), 'error');
+                    return false;
+                }
+                return true;
+            }
+        }
+
         // ====== Voice Controller (الإصدار الفائق السرعة) ======
         class VoiceController {
-            // نظام استجابة فورية
             static lastProcessedTime = 0;
             static lastDetectedPhrase = '';
-            static processingThreshold = 150; // 150ms فقط
+            static processingThreshold = 150;
             static minConfidence = 0.55;
             static debounceTimer = null;
             
@@ -1782,7 +2137,7 @@
                 recognition = new SpeechRecognition();
                 recognition.continuous = true;
                 recognition.lang = currentLang === 'ar' ? 'ar-SA' : 'en-US';
-                recognition.interimResults = true; // ✅ تفعيل النتائج الوسطية
+                recognition.interimResults = true;
                 recognition.maxAlternatives = 1;
                 
                 recognition.onstart = () => {
@@ -1807,6 +2162,12 @@
 
             static toggle() {
                 if (!recognition) return;
+
+                if (!voiceEnabled && microphonePermission === 'denied') {
+                    if (!PermissionController.checkPermissionBeforeVoice()) {
+                        return;
+                    }
+                }
 
                 voiceEnabled = !voiceEnabled;
                 const voiceBtn = document.getElementById('voiceBtn');
@@ -1842,7 +2203,6 @@
                 }
             }
 
-            // معالجة النتائج بأقصى سرعة
             static handleFastResult(event) {
                 const currentTime = Date.now();
                 
@@ -1882,7 +2242,6 @@
                 }
             }
 
-            // تفعيل فوري للتسبيح
             static triggerInstantTasbih(transcript, confidence) {
                 TasbihController.increment();
                 this.triggerVibration();
@@ -1891,7 +2250,6 @@
                 console.log(`⚡ INSTANT MATCH: ${transcript}`);
             }
 
-            // خوارزمية مطابقة فائقة السرعة
             static isTasbihMatch(transcript) {
                 const transcriptClean = this.cleanText(transcript);
                 const selectedKeywords = this.getCurrentKeywords();
@@ -2045,7 +2403,9 @@
                 } else if (event.error === 'audio-capture') {
                     errorMsg = Localization.get('لا يمكن الوصول إلى الميكروفون', 'Cannot access microphone');
                 } else if (event.error === 'not-allowed') {
-                    errorMsg = Localization.get('تم رفض الوصول إلى الميكروفون', 'Microphone access denied');
+                    microphonePermission = 'denied';
+                    PermissionController.updatePermissionStatus();
+                    errorMsg = Localization.get('❌ تم رفض إذن الميكروفون - يرجى تغييره من إعدادات المتصفح', '❌ Microphone permission denied - Please change it in browser settings');
                 } else if (event.error === 'network') {
                     errorMsg = Localization.get('خطأ في الشبكة', 'Network error');
                 }
@@ -2426,7 +2786,7 @@
 
         // ====== Initialization ======
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('🚀 App initializing with ultra-fast voice response...');
+            console.log('🚀 App initializing with ultra-fast voice response and PWA install...');
             
             // Load saved settings
             const savedLang = Storage.load('appLang');
@@ -2486,10 +2846,11 @@
             PWAController.init();
             VoiceController.init();
             DateController.init();
+            PermissionController.init();
             Localization.updateButtonLabels();
             
             Toast.show(Localization.get('✅ التطبيق جاهز', '✅ App ready'), 'success');
-            console.log('✅ App initialized successfully with instant voice response');
+            console.log('✅ App initialized successfully with instant voice response and PWA install');
         });
     </script>
 </body>
