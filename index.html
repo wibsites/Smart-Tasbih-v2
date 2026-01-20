@@ -6,8 +6,12 @@
     <meta name="theme-color" content="#1e3c72">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>المسبحة الذكية</title>
-    <link rel="manifest" href="data:application/json,%7B%22name%22%3A%22المسبحة%20الذكية%22%2C%22short_name%22%3A%22المسبحة%22%2C%22icons%22%3A%5B%7B%22src%22%3A%22data%3Aimage%2Fsvg%2Bxml%2C%253Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%20512%20512'%253E%253Ccircle%20cx%3D'256'%20cy%3D'256'%20r%3D'200'%20fill%3D'%25231e3c72'%2F%253E%253Ctext%20x%3D'50%2525'%20y%3D'50%2525'%20text-anchor%3D'middle'%20dy%3D'.3em'%20fill%3D'white'%20font-size%3D'200'%253E📿%253C%2Ftext%253E%253C%2Fsvg%253E%22%2C%22sizes%22%3A%22512x512%22%2C%22type%22%3A%22image%2Fsvg%2Bxml%22%7D%5D%2C%22start_url%22%3A%22%2F%22%2C%22display%22%3A%22standalone%22%2C%22background_color%22%3A%22%231e3c72%22%2C%22theme_color%22%3A%22%231e3c72%22%2C%22orientation%22%3A%22portrait%22%2C%22lang%22%3A%22ar%22%7D">
+    <meta name="description" content="المسبحة الذكية - تطبيق للتسبيح والأذكار يعمل بدون إنترنت مع استجابة صوتية فورية">
+    
+    <title>المسبحة الذكية - التسبح والأذكار</title>
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="data:application/json;base64,ewogICJuYW1lIjogIkFsa1NlaWhhIEFsLVNhanloYWgiLAogICJzaG9ydF9uYW1lIjogIkFsa1NlaWhhIiwKICAiaWNvbnMiOiBbewogICAgInNyYyI6ICJkYXRhOmltYWdlL3N2Zyt4bWwsJTNDc3ZnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zycgdmlld0JveD0nMCAwIDUxMiA1MTInJTNFNyUzQ2NpcmNsZSBjeD0nMjU2JyBjeT0nMjU2JyByPScyMDAnIGZpbGw9JyUyMzFlM2M3MicvJTNFNyUzQ3RleHQgeD0nNTAlMjUnIHk9JzUwJTI1JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBkeT0nLjNlbScgZmlsbD0nd2hpdGUnIGZvbnQtc2l6ZT0nMjAwJyUzRSVGMCU5RiU5RiVFQyVGMCU5RiU5RiVGMyUzQy90ZXh0JTNFNyUzQy9zdmclM0UiLAogICAgInNpemVzIjogIjUxMng1MTIiLAogICAgInR5cGUiOiAiaW1hZ2Uvc3ZnK3htbCIKICB9XSwKICAic3RhcnRfdXJsIjogIi8iLAogICJkaXNwbGF5IjogInN0YW5kYWxvbmUiLAogICJiYWNrZ3JvdW5kX2NvbG9yIjogIiMxZTNjNzIiLAogICJ0aGVtZV9jb2xvciI6ICIjMWUzYzcyIiwKICAib3JpZW50YXRpb24iOiAicG9ydHJhaXQiLAogICJsYW5nIjogImFyIiwKICAiY2F0ZWdvcmllcyI6IFsicHJvZHVjdGl2aXR5IiwicmVsaWdpb24iXSwKICAiZGVzY3JpcHRpb24iOiAiQXBwIGZvciBEaGlrciBhbmQgVGFzYmhpaCB3aXRoIHZvaWNlIGNvbnRyb2wiCn0=">
     
     <style>
         :root {
@@ -105,6 +109,9 @@
             border-radius: 8px;
             position: relative;
             padding-right: 35px !important;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
         .date-display.loading::after {
@@ -135,7 +142,6 @@
 
         .update-indicator {
             font-size: 0.7em;
-            margin-left: 8px;
             color: var(--accent-color);
             font-weight: bold;
         }
@@ -344,6 +350,17 @@
             z-index: 2;
         }
 
+        .tasbih-number.instant-match {
+            animation: pulse-fast 0.3s ease;
+            color: #4CAF50 !important;
+        }
+
+        @keyframes pulse-fast {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
         .color-change-wrapper {
             margin: 20px 0;
             display: flex;
@@ -496,6 +513,19 @@
         body.dark-mode .last-detected {
             background: rgba(255, 255, 255, 0.03);
             color: var(--text-light);
+        }
+
+        .last-detected.instant {
+            background: rgba(76, 175, 80, 0.15);
+            border-color: #4CAF50;
+            color: #4CAF50;
+            font-weight: 600;
+            animation: flash-green 0.5s ease;
+        }
+
+        @keyframes flash-green {
+            0% { background: rgba(76, 175, 80, 0.3); }
+            100% { background: rgba(76, 175, 80, 0.15); }
         }
 
         .my-azkar-container {
@@ -1168,18 +1198,48 @@
             text-align: center;
         }
 
-        .bg-preview {
-            width: 100%;
-            height: 80px;
-            border-radius: 10px;
-            margin-top: 10px;
-            display: none;
-            background-size: cover;
-            background-position: center;
+        /* إشعارات Toast */
+        .toast {
+            position: fixed;
+            bottom: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--card-light);
+            color: var(--text-dark);
+            padding: 12px 24px;
+            border-radius: 30px;
+            box-shadow: var(--shadow-md);
+            z-index: 2001;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+            font-weight: 500;
+            border: 1px solid rgba(0, 0, 0, 0.1);
         }
 
-        .bg-preview.show {
-            display: block;
+        body.dark-mode .toast {
+            background: var(--card-dark);
+            color: var(--text-light);
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .toast.show {
+            opacity: 1;
+        }
+
+        .toast.success {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        .toast.error {
+            border-color: var(--danger-color);
+            color: var(--danger-color);
+        }
+
+        .toast.warning {
+            border-color: #FF9800;
+            color: #FF9800;
         }
     </style>
 </head>
@@ -1199,7 +1259,7 @@
         <!-- رأس الصفحة -->
         <section class="header">
             <h1 data-ar="📿 المسبحة الذكية" data-en="📿 Smart Tasbih">📿 المسبحة الذكية</h1>
-            <p data-ar="التسبيح باللمس أو الصوت - تطبيق كامل" data-en="Tap or Voice Tasbih - Full App">التسبيح باللمس أو الصوت - تطبيق كامل</p>
+            <p data-ar="التسبيح باللمس أو الصوت - استجابة فورية" data-en="Tap or Voice Tasbih - Instant Response">التسبيح باللمس أو الصوت - استجابة فورية</p>
         </section>
 
         <!-- قسم المسبحة -->
@@ -1250,7 +1310,7 @@
                 </div>
 
                 <div class="last-detected" id="lastDetected">
-                    <span data-ar="آخر ذكر مستمع إليه: (لم يتم الكشف بعد)" data-en="Last detected: (Not yet detected)">آخر ذكر مستمع إليه: (لم يتم الكشف بعد)</span>
+                    <span data-ar="🎤 جاهز للاستماع الفوري" data-en="🎤 Ready for instant listening">🎤 جاهز للاستماع الفوري</span>
                 </div>
             </div>
         </main>
@@ -1342,7 +1402,7 @@
                     <div class="text-center" style="font-size: 0.9em; line-height: 1.7; opacity: 0.85; padding: 15px;">
                         <p data-ar="📱 لإضافة التطبيق للشاشة الرئيسية: اضغط على زر ⬇️ أعلى الصفحة" data-en="📱 To add to home screen: click ⬇️ button at top">📱 لإضافة التطبيق للشاشة الرئيسية: اضغط على زر ⬇️ أعلى الصفحة</p>
                         <br>
-                        <p data-ar="✅ يعمل بدون إنترنت | ✅ التسبيح الصوتي واليدوي | ✅ أذكارك محفوظة محلياً" data-en="✅ Works offline | ✅ Voice & Tap Tasbih | ✅ Your azkar saved locally">✅ يعمل بدون إنترنت | ✅ التسبيح الصوتي واليدوي | ✅ أذكارك محفوظة محلياً</p>
+                        <p data-ar="✅ يعمل بدون إنترنت | ✅ التسبيح الصوتي الفوري | ✅ أذكارك محفوظة محلياً" data-en="✅ Works offline | ✅ Instant Voice Tasbih | ✅ Your azkar saved locally">✅ يعمل بدون إنترنت | ✅ التسبيح الصوتي الفوري | ✅ أذكارك محفوظة محلياً</p>
                         <br>
                         <p data-ar="💾 جميع البيانات محفوظة على جهازك" data-en="💾 All data is saved on your device">💾 جميع البيانات محفوظة على جهازك</p>
                     </div>
@@ -1357,6 +1417,9 @@
         <h3 id="colorMenuTitle" data-ar="🎨 اختر لون الزر" data-en="🎨 Choose Button Color">🎨 اختر لون الزر</h3>
         <div class="color-options" id="colorOptions" role="listbox"></div>
     </div>
+
+    <!-- إشعارات Toast -->
+    <div class="toast" id="toast"></div>
 
     <nav class="bottom-nav" role="navigation" aria-label="Main navigation">
         <button class="nav-item active" onclick="NavigationController.show('tasbih')" 
@@ -1380,6 +1443,7 @@
     </nav>
 
     <script>
+        // ====== النظام الأساسي ======
         let counter = 0;
         let voiceEnabled = false;
         let recognition = null;
@@ -1394,6 +1458,102 @@
             '#1e3c72', '#2a5298', '#4CAF50', '#f44336', '#FF9800', '#9C27B0', '#00BCD4', '#E91E63', '#795548', '#607D8B', '#3F51B5', '#009688'
         ];
 
+        // ====== خدمة حفظ البيانات ======
+        class Storage {
+            static save(key, value) {
+                try {
+                    localStorage.setItem(key, JSON.stringify(value));
+                    return true;
+                } catch (e) {
+                    console.error('❌ Storage save error:', e);
+                    return false;
+                }
+            }
+
+            static load(key, defaultValue = null) {
+                try {
+                    const item = localStorage.getItem(key);
+                    return item ? JSON.parse(item) : defaultValue;
+                } catch (e) {
+                    console.error('❌ Storage load error:', e);
+                    return defaultValue;
+                }
+            }
+
+            static remove(key) {
+                try {
+                    localStorage.removeItem(key);
+                    return true;
+                } catch (e) {
+                    console.error('❌ Storage remove error:', e);
+                    return false;
+                }
+            }
+        }
+
+        // ====== نظام الترجمة ======
+        class Localization {
+            static get(arText, enText) {
+                return currentLang === 'ar' ? arText : enText;
+            }
+
+            static update() {
+                document.querySelectorAll('[data-ar][data-en]').forEach(element => {
+                    if (element.id === 'dateDisplay' || element.parentElement.id === 'dateDisplay') {
+                        return;
+                    }
+                    element.textContent = this.get(element.dataset.ar, element.dataset.en);
+                });
+                
+                document.querySelectorAll('input, textarea').forEach(element => {
+                    if (element.dataset.arPlaceholder && element.dataset.enPlaceholder) {
+                        element.placeholder = this.get(element.dataset.arPlaceholder, element.dataset.enPlaceholder);
+                    }
+                });
+
+                if (currentLang === 'ar') {
+                    document.body.setAttribute('dir', 'rtl');
+                    document.body.classList.remove('english');
+                } else {
+                    document.body.setAttribute('dir', 'ltr');
+                    document.body.classList.add('english');
+                }
+
+                if (recognition) {
+                    recognition.lang = currentLang === 'ar' ? 'ar-SA' : 'en-US';
+                }
+            }
+
+            static updateButtonLabels() {
+                const themeBtn = document.querySelector('#themeToggle span:last-child');
+                if (themeBtn) {
+                    themeBtn.textContent = isDarkMode ? this.get('إيقاف', 'Disable') : this.get('تفعيل', 'Enable');
+                }
+
+                const langBtn = document.querySelector('#langToggle span');
+                if (langBtn) {
+                    langBtn.textContent = currentLang === 'ar' ? 'EN' : 'عربي';
+                }
+            }
+        }
+
+        // ====== نظام الإشعارات ======
+        class Toast {
+            static show(message, type = 'info') {
+                const toast = document.getElementById('toast');
+                if (!toast) return;
+                
+                toast.textContent = message;
+                toast.className = `toast ${type}`;
+                toast.classList.add('show');
+                
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 3000);
+            }
+        }
+
+        // ====== حساب التاريخ الهجري (محسّن) ======
         function getHijriDate() {
             try {
                 const today = new Date();
@@ -1482,22 +1642,17 @@
             }
         }
 
+        // ====== PWA Controller ======
         class PWAController {
             static init() {
                 if ('serviceWorker' in navigator) {
-                    navigator.serviceWorker.register('data:text/javascript,' + encodeURIComponent(`
-                        const CACHE_NAME = 'tasbih-app-v6';
-                        const urlsToCache = [
-                            '/',
-                            '/index.html',
-                            '/css/styles.css',
-                            '/js/app.js'
-                        ];
+                    navigator.serviceWorker.register('data:text/javascript;base64,' + btoa(`
+                        const CACHE_NAME = 'tasbih-app-v7';
                         
                         self.addEventListener('install', event => {
                             event.waitUntil(
                                 caches.open(CACHE_NAME).then(cache => {
-                                    return cache.addAll(urlsToCache);
+                                    return cache.addAll(['/']);
                                 })
                             );
                             console.log('Service Worker installing');
@@ -1520,9 +1675,7 @@
                         self.addEventListener('fetch', event => {
                             event.respondWith(
                                 caches.match(event.request).then(response => {
-                                    return response || fetch(event.request).catch(() => {
-                                        console.log('Offline mode: serving from cache');
-                                    });
+                                    return response || fetch(event.request);
                                 })
                             );
                         });
@@ -1546,6 +1699,7 @@
                     deferredPrompt.userChoice.then((choiceResult) => {
                         if (choiceResult.outcome === 'accepted') {
                             console.log('✅ PWA installed');
+                            Toast.show(Localization.get('✅ تم تثبيت التطبيق', '✅ App installed'), 'success');
                         }
                         deferredPrompt = null;
                     });
@@ -1553,6 +1707,7 @@
             }
         }
 
+        // ====== Tasbih Controller ======
         class TasbihController {
             static increment() {
                 counter++;
@@ -1587,6 +1742,7 @@
                         counterEl.textContent = counter;
                     }
                     Storage.save('tasbihCounter', counter);
+                    Toast.show(Localization.get('✅ تم تصفير العداد', '✅ Counter reset'), 'success');
                     console.log('🔄 Counter reset');
                 }
             }
@@ -1595,91 +1751,586 @@
                 const select = document.getElementById('tasbihSelect');
                 if (!select) return;
                 currentTasbih = select.value;
+                VoiceController.lastDetectedPhrase = '';
                 const lastDetected = document.getElementById('lastDetected');
                 if (lastDetected) {
-                    lastDetected.textContent = Localization.get('آخر ذكر مستمع إليه: (لم يتم الكشف بعد)', 'Last detected: (Not yet detected)');
+                    lastDetected.textContent = Localization.get('🎤 جاهز للاستماع الفوري', '🎤 Ready for instant listening');
+                    lastDetected.classList.remove('instant');
                 }
                 console.log('📝 Current tasbih changed:', currentTasbih);
             }
         }
 
-        class Localization {
-            static get(arText, enText) {
-                return currentLang === 'ar' ? arText : enText;
+        // ====== Voice Controller (الإصدار الفائق السرعة) ======
+        class VoiceController {
+            // نظام استجابة فورية
+            static lastProcessedTime = 0;
+            static lastDetectedPhrase = '';
+            static processingThreshold = 150; // 150ms فقط
+            static minConfidence = 0.55;
+            static debounceTimer = null;
+            
+            static init() {
+                const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+                
+                if (!SpeechRecognition) {
+                    console.warn("Speech recognition not supported");
+                    this.hideVoiceFeatures();
+                    return;
+                }
+
+                recognition = new SpeechRecognition();
+                recognition.continuous = true;
+                recognition.lang = currentLang === 'ar' ? 'ar-SA' : 'en-US';
+                recognition.interimResults = true; // ✅ تفعيل النتائج الوسطية
+                recognition.maxAlternatives = 1;
+                
+                recognition.onstart = () => {
+                    console.log('🎙️ Voice recognition started (ultra-fast mode)');
+                    this.updateStatus('الاستماع الفوري...', 'Listening instantly...');
+                };
+                
+                recognition.onresult = this.handleFastResult.bind(this);
+                recognition.onerror = this.handleError.bind(this);
+                recognition.onend = this.handleEnd.bind(this);
+                
+                console.log('✅ Voice recognition initialized (fast mode)');
             }
 
-            static update() {
-                document.querySelectorAll('[data-ar][data-en]').forEach(element => {
-                    if (element.id === 'dateDisplay' || element.parentElement.id === 'dateDisplay') {
-                        return;
+            static hideVoiceFeatures() {
+                const voiceBtn = document.getElementById('voiceBtn');
+                const voiceIndicator = document.getElementById('voiceIndicator');
+                if (voiceBtn) voiceBtn.style.display = 'none';
+                if (voiceIndicator) voiceIndicator.style.display = 'none';
+                console.log('🔴 Voice features hidden');
+            }
+
+            static toggle() {
+                if (!recognition) return;
+
+                voiceEnabled = !voiceEnabled;
+                const voiceBtn = document.getElementById('voiceBtn');
+                const voiceIndicator = document.getElementById('voiceIndicator');
+                const voiceStatus = document.getElementById('voiceStatus');
+                const micIcon = document.getElementById('micIcon');
+                
+                if (!voiceBtn || !voiceIndicator || !voiceStatus || !micIcon) return;
+                
+                if (voiceEnabled) {
+                    try {
+                        recognition.start();
+                        micIcon.textContent = '⏹️';
+                        voiceBtn.querySelector('span:last-child').textContent = Localization.get('إيقاف الصوت', 'Disable Voice');
+                        voiceBtn.classList.add('danger');
+                        voiceIndicator.classList.add('listening');
+                        voiceStatus.textContent = Localization.get('جاري الاستماع الفوري...', 'Listening instantly...');
+                        Toast.show(Localization.get('🎤 التسبيح الصوتي مفعّل', '🎤 Voice tasbih enabled'), 'success');
+                        console.log('🎤 Voice enabled');
+                    } catch (e) {
+                        console.error('❌ Error starting recognition:', e);
+                        voiceEnabled = false;
+                        Toast.show(Localization.get('❌ خطأ في تشغيل التسبيح الصوتي', '❌ Error starting voice recognition'), 'error');
                     }
-                    element.textContent = this.get(element.dataset.ar, element.dataset.en);
+                } else {
+                    recognition.stop();
+                    micIcon.textContent = '🎤';
+                    voiceBtn.querySelector('span:last-child').textContent = Localization.get('تفعيل الصوت', 'Enable Voice');
+                    voiceBtn.classList.remove('danger');
+                    voiceIndicator.classList.remove('listening');
+                    voiceStatus.textContent = Localization.get('التسبيح الصوتي: معطل', 'Voice Tasbih: Disabled');
+                    console.log('🔇 Voice disabled');
+                }
+            }
+
+            // معالجة النتائج بأقصى سرعة
+            static handleFastResult(event) {
+                const currentTime = Date.now();
+                
+                if (currentTime - this.lastProcessedTime < this.processingThreshold) {
+                    return;
+                }
+
+                for (let i = event.resultIndex; i < event.results.length; i++) {
+                    const result = event.results[i];
+                    const transcript = result[0].transcript.trim();
+                    const confidence = result[0].confidence;
+                    
+                    if (confidence >= this.minConfidence && transcript.length > 2) {
+                        this.debounce(() => {
+                            this.processTranscript(transcript, confidence);
+                        }, 50);
+                    }
+                }
+            }
+
+            static debounce(func, wait) {
+                clearTimeout(this.debounceTimer);
+                this.debounceTimer = setTimeout(func, wait);
+            }
+
+            static processTranscript(transcript, confidence) {
+                if (this.lastDetectedPhrase === transcript) return;
+                
+                this.lastDetectedPhrase = transcript;
+                this.lastProcessedTime = Date.now();
+                
+                console.log(`🎤 Recognized: "${transcript}" (${(confidence * 100).toFixed(1)}%)`);
+                this.updateLastDetected(transcript, confidence);
+                
+                if (this.isTasbihMatch(transcript)) {
+                    this.triggerInstantTasbih(transcript, confidence);
+                }
+            }
+
+            // تفعيل فوري للتسبيح
+            static triggerInstantTasbih(transcript, confidence) {
+                TasbihController.increment();
+                this.triggerVibration();
+                this.visualFeedback();
+                this.updateLastDetected(`✅ ${transcript}`, 1.0);
+                console.log(`⚡ INSTANT MATCH: ${transcript}`);
+            }
+
+            // خوارزمية مطابقة فائقة السرعة
+            static isTasbihMatch(transcript) {
+                const transcriptClean = this.cleanText(transcript);
+                const selectedKeywords = this.getCurrentKeywords();
+                
+                for (const keyword of selectedKeywords) {
+                    const keywordClean = this.cleanText(keyword);
+                    
+                    if (transcriptClean.includes(keywordClean) || 
+                        this.isPartialMatch(transcriptClean, keywordClean) ||
+                        this.fastSimilarity(transcriptClean, keywordClean) > 0.75) {
+                        return true;
+                    }
+                }
+                
+                return false;
+            }
+
+            static getCurrentKeywords() {
+                const tasbihKeywords = {
+                    'سبحان الله': [
+                        'سبحان الله', 'سبحانلله', 'سبحان الله العظيم', 'سبحان', 'سبح',
+                        'subhanallah', 'subhan allah', 'subhan', 'sabhan'
+                    ],
+                    'الحمد لله': [
+                        'الحمد لله', 'الحمدلله', 'الحمد لله رب العالمين', 'الحمد', 'حمده',
+                        'alhamdulillah', 'alhamd', 'hamd'
+                    ],
+                    'لا إله إلا الله': [
+                        'لا إله إلا الله', 'لاإله الا الله', 'لا اله الا الله', 'لا إله', 'لاإله',
+                        'lailahaillallah', 'la ilaha illa', 'la ilaha', 'shahada'
+                    ],
+                    'الله أكبر': [
+                        'الله أكبر', 'الله اكبر', 'الله أكبر كبيرا', 'الله', 'أكبر', 'الله اكبر',
+                        'allahu akbar', 'allah akbar', 'akbar', 'akbaar'
+                    ],
+                    'لا حول ولا قوة إلا بالله': [
+                        'لا حول ولا قوة', 'لا حول', 'لاحول ولاقوة', 'لاحول', 'لا قوة',
+                        'lahawla wala quwwata', 'la hawla', 'lahawla', 'quwwata'
+                    ],
+                    'استغفر الله': [
+                        'استغفر الله', 'استغفر', 'أستغفر الله', 'استغفار', 'استغفرالله',
+                        'astaghfirullah', 'astaghfir', 'astaghfirullahal', 'astaghfer'
+                    ]
+                };
+                
+                return tasbihKeywords[currentTasbih] || tasbihKeywords['سبحان الله'];
+            }
+
+            static cleanText(text) {
+                return text.toLowerCase()
+                           .replace(/[\s\-_]/g, '')
+                           .replace(/[ًٌٍُِّْ]/g, '')
+                           .replace(/[^\w\s]/gi, '');
+            }
+
+            static isPartialMatch(transcript, keyword) {
+                if (transcript.length < 3) return false;
+                
+                const minMatchLength = Math.min(4, keyword.length - 1);
+                for (let i = 0; i <= keyword.length - minMatchLength; i++) {
+                    const chunk = keyword.substring(i, i + minMatchLength);
+                    if (transcript.includes(chunk)) {
+                        return true;
+                    }
+                }
+                
+                return false;
+            }
+
+            static fastSimilarity(str1, str2) {
+                const longer = str1.length > str2.length ? str1 : str2;
+                const shorter = str1.length > str2.length ? str2 : str1;
+                
+                if (longer.length === 0) return 1.0;
+                
+                const editDistance = this.levenshteinDistance(longer, shorter);
+                return (longer.length - editDistance) / longer.length;
+            }
+
+            static levenshteinDistance(str1, str2) {
+                if (str1.length > 15 || str2.length > 15) {
+                    return Math.abs(str1.length - str2.length);
+                }
+                
+                const matrix = Array(str2.length + 1).fill(null)
+                    .map(() => Array(str1.length + 1).fill(null));
+                
+                for (let i = 0; i <= str1.length; i++) matrix[0][i] = i;
+                for (let j = 0; j <= str2.length; j++) matrix[j][0] = j;
+                
+                for (let j = 1; j <= str2.length; j++) {
+                    for (let i = 1; i <= str1.length; i++) {
+                        const cost = str1[i - 1] === str2[j - 1] ? 0 : 1;
+                        matrix[j][i] = Math.min(
+                            matrix[j][i - 1] + 1,
+                            matrix[j - 1][i] + 1,
+                            matrix[j - 1][i - 1] + cost
+                        );
+                    }
+                }
+                
+                return matrix[str2.length][str1.length];
+            }
+
+            static triggerVibration() {
+                if ('vibrate' in navigator) {
+                    navigator.vibrate(50);
+                }
+            }
+
+            static visualFeedback() {
+                const counterEl = document.getElementById('counter');
+                const lastDetected = document.getElementById('lastDetected');
+                
+                if (counterEl) {
+                    counterEl.classList.add('instant-match');
+                    setTimeout(() => counterEl.classList.remove('instant-match'), 300);
+                }
+                
+                if (lastDetected) {
+                    lastDetected.classList.add('instant');
+                    setTimeout(() => lastDetected.classList.remove('instant'), 500);
+                }
+            }
+
+            static updateStatus(arText, enText) {
+                const voiceStatus = document.getElementById('voiceStatus');
+                if (voiceStatus) {
+                    voiceStatus.textContent = Localization.get(arText, enText);
+                }
+            }
+
+            static updateLastDetected(transcript, confidence) {
+                const lastDetected = document.getElementById('lastDetected');
+                if (lastDetected) {
+                    const confidencePercent = (confidence * 100).toFixed(0);
+                    lastDetected.textContent = transcript;
+                    lastDetected.style.color = confidence > 0.8 ? '#4CAF50' : '#FF9800';
+                }
+            }
+
+            static handleError(event) {
+                console.error('🎤 Voice recognition error:', event.error);
+                if (voiceEnabled) {
+                    this.toggle();
+                }
+                
+                let errorMsg = Localization.get('حدث خطأ في التعرف على الصوت', 'Voice recognition error');
+                if (event.error === 'no-speech') {
+                    errorMsg = Localization.get('لم يتم اكتشاف صوت', 'No speech detected');
+                } else if (event.error === 'audio-capture') {
+                    errorMsg = Localization.get('لا يمكن الوصول إلى الميكروفون', 'Cannot access microphone');
+                } else if (event.error === 'not-allowed') {
+                    errorMsg = Localization.get('تم رفض الوصول إلى الميكروفون', 'Microphone access denied');
+                } else if (event.error === 'network') {
+                    errorMsg = Localization.get('خطأ في الشبكة', 'Network error');
+                }
+                
+                Toast.show(errorMsg, 'error');
+            }
+
+            static handleEnd() {
+                if (voiceEnabled) {
+                    setTimeout(() => {
+                        try {
+                            recognition.start();
+                        } catch (e) {
+                            console.error('❌ Error restarting recognition:', e);
+                        }
+                    }, 100);
+                }
+            }
+        }
+
+        // ====== Azkar Controller ======
+        class AzkarController {
+            static add() {
+                const text = document.getElementById('zekrText');
+                const info = document.getElementById('zekrInfo');
+                
+                if (!text || !text.value.trim()) {
+                    Toast.show(Localization.get('❌ يرجى كتابة الذكر أولاً!', '❌ Please write the dhikr first!'), 'error');
+                    return;
+                }
+
+                const zekr = {
+                    id: Date.now(),
+                    text: text.value.trim(),
+                    info: info ? info.value.trim() : '',
+                    date: new Date().toLocaleDateString(currentLang === 'ar' ? 'ar-SA' : 'en-US')
+                };
+
+                let myAzkar = Storage.load('myAzkar', []);
+                myAzkar.unshift(zekr);
+                Storage.save('myAzkar', myAzkar);
+
+                if (text) text.value = '';
+                if (info) info.value = '';
+
+                this.load();
+                Toast.show(Localization.get('✅ تمت إضافة الذكر بنجاح!', '✅ Dhikr added successfully!'), 'success');
+                
+                console.log('📖 Dhikr added:', zekr.id);
+            }
+
+            static load() {
+                const myAzkar = Storage.load('myAzkar', []);
+                const listContainer = document.getElementById('myAzkarList');
+                
+                if (!listContainer) return;
+                
+                if (myAzkar.length === 0) {
+                    listContainer.innerHTML = `<div class="empty-message">${Localization.get('لم تضف أي أذكار بعد. ابدأ الآن!', 'No azkar added yet. Start now!')}</div>`;
+                    return;
+                }
+
+                listContainer.innerHTML = myAzkar.map(zekr => `
+                    <div class="zekr-item" role="listitem">
+                        <div class="zekr-text">${zekr.text}</div>
+                        <div class="zekr-date">${zekr.info ? zekr.info + ' - ' : ''}${zekr.date}</div>
+                        <button class="delete-btn" onclick="AzkarController.delete(${zekr.id})" aria-label="Delete dhikr">${Localization.get('حذف', 'Delete')}</button>
+                    </div>
+                `).join('');
+                
+                console.log('📖 Loaded', myAzkar.length, 'azkar');
+            }
+
+            static delete(id) {
+                if (confirm(Localization.get('هل تريد حذف هذا الذكر؟', 'Delete this dhikr?'))) {
+                    let myAzkar = Storage.load('myAzkar', []);
+                    myAzkar = myAzkar.filter(zekr => zekr.id !== id);
+                    Storage.save('myAzkar', myAzkar);
+                    this.load();
+                    Toast.show(Localization.get('✅ تم حذف الذكر', '✅ Dhikr deleted'), 'success');
+                    console.log('📖 Dhikr deleted:', id);
+                }
+            }
+        }
+
+        // ====== Navigation Controller ======
+        class NavigationController {
+            static show(sectionName) {
+                document.querySelectorAll('.content-section').forEach(section => {
+                    section.classList.remove('active');
                 });
                 
-                document.querySelectorAll('input, textarea').forEach(element => {
-                    if (element.dataset.arPlaceholder && element.dataset.enPlaceholder) {
-                        element.placeholder = this.get(element.dataset.arPlaceholder, element.dataset.enPlaceholder);
-                    }
+                document.querySelectorAll('.nav-item').forEach(item => {
+                    item.classList.remove('active');
+                    item.setAttribute('aria-selected', 'false');
                 });
-
-                if (currentLang === 'ar') {
-                    document.body.setAttribute('dir', 'rtl');
-                    document.body.classList.remove('english');
-                } else {
-                    document.body.setAttribute('dir', 'ltr');
-                    document.body.classList.add('english');
+                
+                switch(sectionName) {
+                    case 'tasbih':
+                        document.getElementById('tasbih-section').classList.add('active');
+                        const navItem1 = document.querySelector('.nav-item[onclick="NavigationController.show(\'tasbih\')"]');
+                        if (navItem1) {
+                            navItem1.classList.add('active');
+                            navItem1.setAttribute('aria-selected', 'true');
+                        }
+                        break;
+                    case 'my-azkar':
+                        document.getElementById('my-azkar-section').classList.add('active');
+                        const navItem2 = document.querySelector('.nav-item[onclick="NavigationController.show(\'my-azkar\')"]');
+                        if (navItem2) {
+                            navItem2.classList.add('active');
+                            navItem2.setAttribute('aria-selected', 'true');
+                        }
+                        AzkarController.load();
+                        break;
+                    case 'settings':
+                        document.getElementById('settings-section').classList.add('active');
+                        const navItem3 = document.querySelector('.nav-item[onclick="NavigationController.show(\'settings\')"]');
+                        if (navItem3) {
+                            navItem3.classList.add('active');
+                            navItem3.setAttribute('aria-selected', 'true');
+                        }
+                        break;
                 }
 
-                if (recognition) {
-                    recognition.lang = currentLang === 'ar' ? 'ar-SA' : 'en-US';
-                }
-
-                console.log('🌐 Language updated:', currentLang);
-            }
-
-            static updateButtonLabels() {
-                const themeBtn = document.querySelector('#themeToggle span:last-child');
-                if (themeBtn) {
-                    themeBtn.textContent = isDarkMode ? this.get('إيقاف', 'Disable') : this.get('تفعيل', 'Enable');
-                }
-
-                const langBtn = document.querySelector('#langToggle span');
-                if (langBtn) {
-                    langBtn.textContent = currentLang === 'ar' ? 'EN' : 'عربي';
-                }
-            }
-        }
-
-        class Storage {
-            static save(key, value) {
-                try {
-                    localStorage.setItem(key, JSON.stringify(value));
-                    console.log('💾 Saved to localStorage:', key);
-                } catch (e) {
-                    console.error('❌ localStorage save error:', e);
-                }
-            }
-
-            static load(key, defaultValue = null) {
-                try {
-                    const item = localStorage.getItem(key);
-                    return item ? JSON.parse(item) : defaultValue;
-                } catch (e) {
-                    console.error('❌ localStorage load error:', e);
-                    return defaultValue;
-                }
-            }
-
-            static remove(key) {
-                try {
-                    localStorage.removeItem(key);
-                    console.log('🗑️ Removed from localStorage:', key);
-                } catch (e) {
-                    console.error('❌ localStorage remove error:', e);
+                if (voiceEnabled) {
+                    VoiceController.toggle();
                 }
             }
         }
 
+        // ====== Color Picker ======
+        class ColorPicker {
+            static show() {
+                const colorMenu = document.getElementById('colorMenu');
+                const optionsContainer = document.getElementById('colorOptions');
+                
+                if (!colorMenu || !optionsContainer) return;
+                
+                optionsContainer.innerHTML = availableColors.map((color, index) => `
+                    <div class="color-option ${color === buttonColor ? 'selected' : ''}" 
+                         style="background-color: ${color}"
+                         onclick="ColorPicker.select('${color}')"
+                         role="option"
+                         aria-selected="${color === buttonColor}"
+                         tabindex="0"
+                         onkeydown="if(event.key==='Enter'||event.key===' ') ColorPicker.select('${color}')"
+                         title="${color}">
+                    </div>
+                `).join('');
+                
+                colorMenu.classList.add('show');
+                const overlay = document.getElementById('overlay');
+                if (overlay) overlay.classList.add('show');
+                
+                if (voiceEnabled) {
+                    VoiceController.toggle();
+                }
+
+                console.log('🎨 Color menu opened');
+            }
+
+            static close() {
+                const colorMenu = document.getElementById('colorMenu');
+                const overlay = document.getElementById('overlay');
+                
+                if (colorMenu) colorMenu.classList.remove('show');
+                if (overlay) overlay.classList.remove('show');
+                
+                console.log('🎨 Color menu closed');
+            }
+
+            static select(color) {
+                buttonColor = color;
+                document.documentElement.style.setProperty('--primary-btn-color', color);
+                
+                const tasbihBtn = document.getElementById('tasbihBtn');
+                if (tasbihBtn) {
+                    tasbihBtn.style.background = color;
+                }
+                
+                Storage.save('buttonColor', color);
+                
+                document.querySelectorAll('.color-option').forEach(option => {
+                    option.classList.remove('selected');
+                    option.setAttribute('aria-selected', 'false');
+                });
+                
+                if (event && event.target) {
+                    event.target.classList.add('selected');
+                    event.target.setAttribute('aria-selected', 'true');
+                }
+                
+                this.close();
+                Toast.show(Localization.get('✅ تم تغيير اللون', '✅ Color changed'), 'success');
+                console.log('🎨 Button color changed:', color);
+            }
+        }
+
+        // ====== Settings Controller ======
+        class SettingsController {
+            static toggleTheme() {
+                isDarkMode = !isDarkMode;
+                document.body.classList.toggle('dark-mode');
+                Storage.save('darkMode', isDarkMode);
+                
+                Localization.updateButtonLabels();
+                Toast.show(isDarkMode ? Localization.get('🌙 تم تفعيل الوضع المظلم', '🌙 Dark mode enabled') : 
+                                      Localization.get('☀️ تم إيقاف الوضع المظلم', '☀️ Dark mode disabled'), 'success');
+                console.log('🌙 Dark mode toggled:', isDarkMode);
+            }
+
+            static toggleLanguage() {
+                currentLang = currentLang === 'ar' ? 'en' : 'ar';
+                Localization.update();
+                Storage.save('appLang', currentLang);
+                
+                DateController.load();
+                Localization.updateButtonLabels();
+                
+                Toast.show(Localization.get('🌐 تم تغيير اللغة', '🌐 Language changed'), 'success');
+                console.log('🌐 Language toggled:', currentLang);
+                
+                if (document.getElementById('my-azkar-section').classList.contains('active')) {
+                    AzkarController.load();
+                }
+            }
+        }
+
+        // ====== Background Controller ======
+        class BackgroundController {
+            static change(event) {
+                const file = event.target.files[0];
+                if (!file) return;
+
+                if (!file.type.startsWith('image/')) {
+                    Toast.show(Localization.get('❌ يرجى اختيار صورة', '❌ Please select an image'), 'error');
+                    return;
+                }
+
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const imageUrl = e.target.result;
+                    document.body.style.backgroundImage = `url(${imageUrl})`;
+                    document.body.style.backgroundSize = 'cover';
+                    document.body.style.backgroundAttachment = 'fixed';
+                    document.body.style.backgroundPosition = 'center';
+                    Storage.save('bgImage', imageUrl);
+                    
+                    const preview = document.getElementById('bgPreview');
+                    if (preview) {
+                        preview.style.backgroundImage = `url(${imageUrl})`;
+                        preview.classList.add('show');
+                    }
+                    
+                    Toast.show(Localization.get('🖼️ تم تغيير الخلفية', '🖼️ Background changed'), 'success');
+                    console.log('🖼️ Background changed');
+                };
+                reader.onerror = () => {
+                    Toast.show(Localization.get('❌ خطأ في تحميل الصورة', '❌ Error loading image'), 'error');
+                };
+                reader.readAsDataURL(file);
+            }
+
+            static remove() {
+                if (confirm(Localization.get('هل تريد إزالة خلفية الصورة؟', 'Remove background image?'))) {
+                    document.body.style.backgroundImage = '';
+                    document.body.style.backgroundSize = '';
+                    document.body.style.backgroundAttachment = '';
+                    document.body.style.backgroundPosition = '';
+                    Storage.remove('bgImage');
+                    
+                    const preview = document.getElementById('bgPreview');
+                    if (preview) {
+                        preview.classList.remove('show');
+                        preview.style.backgroundImage = '';
+                    }
+                    
+                    Toast.show(Localization.get('🖼️ تم إزالة الخلفية', '🖼️ Background removed'), 'success');
+                    console.log('🖼️ Background removed');
+                }
+            }
+        }
+
+        // ====== Date Controller ======
         class DateController {
             static init() {
                 this.load();
@@ -1745,440 +2396,12 @@
                 lastCalculatedDate = null;
                 Storage.remove('lastHijriDate');
                 this.load();
+                Toast.show(Localization.get('📅 تم تحديث التاريخ', '📅 Date updated'), 'success');
                 console.log('🔄 Forced date update');
             }
         }
 
-        class BackgroundController {
-            static change(event) {
-                const file = event.target.files[0];
-                if (!file) return;
-
-                if (!file.type.startsWith('image/')) {
-                    alert(Localization.get('❌ يرجى اختيار صورة', '❌ Please select an image'));
-                    return;
-                }
-
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    const imageUrl = e.target.result;
-                    document.body.style.backgroundImage = `url(${imageUrl})`;
-                    document.body.style.backgroundSize = 'cover';
-                    document.body.style.backgroundAttachment = 'fixed';
-                    document.body.style.backgroundPosition = 'center';
-                    Storage.save('bgImage', imageUrl);
-                    
-                    const preview = document.getElementById('bgPreview');
-                    if (preview) {
-                        preview.style.backgroundImage = `url(${imageUrl})`;
-                        preview.classList.add('show');
-                    }
-                    
-                    console.log('🖼️ Background changed');
-                };
-                reader.onerror = () => {
-                    alert(Localization.get('❌ خطأ في تحميل الصورة', '❌ Error loading image'));
-                };
-                reader.readAsDataURL(file);
-            }
-
-            static remove() {
-                if (confirm(Localization.get('هل تريد إزالة خلفية الصورة؟', 'Remove background image?'))) {
-                    document.body.style.backgroundImage = '';
-                    document.body.style.backgroundSize = '';
-                    document.body.style.backgroundAttachment = '';
-                    document.body.style.backgroundPosition = '';
-                    Storage.remove('bgImage');
-                    
-                    const preview = document.getElementById('bgPreview');
-                    if (preview) {
-                        preview.classList.remove('show');
-                        preview.style.backgroundImage = '';
-                    }
-                    
-                    console.log('🖼️ Background removed');
-                }
-            }
-        }
-
-        class VoiceController {
-            static init() {
-                const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-                
-                if (!SpeechRecognition) {
-                    console.warn("🔴 Speech recognition not supported");
-                    this.hideVoiceFeatures();
-                    return;
-                }
-
-                recognition = new SpeechRecognition();
-                recognition.continuous = true;
-                recognition.lang = currentLang === 'ar' ? 'ar-SA' : 'en-US';
-                recognition.interimResults = false;
-                recognition.maxAlternatives = 1;
-                
-                recognition.onresult = this.handleResult.bind(this);
-                recognition.onerror = this.handleError.bind(this);
-                recognition.onend = this.handleEnd.bind(this);
-                recognition.onstart = () => console.log('🎤 Voice recognition started');
-                recognition.onstop = () => console.log('🎤 Voice recognition stopped');
-                
-                console.log('✅ Voice recognition initialized');
-            }
-
-            static hideVoiceFeatures() {
-                const voiceBtn = document.getElementById('voiceBtn');
-                const voiceIndicator = document.getElementById('voiceIndicator');
-                if (voiceBtn) voiceBtn.style.display = 'none';
-                if (voiceIndicator) voiceIndicator.style.display = 'none';
-            }
-
-            static toggle() {
-                if (!recognition) return;
-
-                voiceEnabled = !voiceEnabled;
-                const voiceBtn = document.getElementById('voiceBtn');
-                const voiceIndicator = document.getElementById('voiceIndicator');
-                const voiceStatus = document.getElementById('voiceStatus');
-                const micIcon = document.getElementById('micIcon');
-                
-                if (!voiceBtn || !voiceIndicator || !voiceStatus || !micIcon) return;
-                
-                if (voiceEnabled) {
-                    try {
-                        recognition.start();
-                        micIcon.textContent = '⏹️';
-                        voiceBtn.querySelector('span:last-child').textContent = Localization.get('إيقاف الصوت', 'Disable Voice');
-                        voiceBtn.classList.add('danger');
-                        voiceIndicator.classList.add('listening');
-                        voiceStatus.textContent = Localization.get('جاري الاستماع...', 'Listening...');
-                        console.log('🎤 Voice enabled');
-                    } catch (e) {
-                        console.error('❌ Error starting recognition:', e);
-                        voiceEnabled = false;
-                        alert(Localization.get('حدث خطأ في تشغيل التسبيح الصوتي', 'Error starting voice recognition'));
-                    }
-                } else {
-                    recognition.stop();
-                    micIcon.textContent = '🎤';
-                    voiceBtn.querySelector('span:last-child').textContent = Localization.get('تفعيل الصوت', 'Enable Voice');
-                    voiceBtn.classList.remove('danger');
-                    voiceIndicator.classList.remove('listening');
-                    voiceStatus.textContent = Localization.get('التسبيح الصوتي: معطل', 'Voice Tasbih: Disabled');
-                    console.log('🔇 Voice disabled');
-                }
-            }
-
-            static handleResult(event) {
-                const lastResult = event.results[event.results.length - 1];
-                if (lastResult.isFinal) {
-                    const transcript = lastResult[0].transcript.trim();
-                    console.log('🎤 Recognized:', transcript);
-                    this.processCommand(transcript);
-                }
-            }
-
-            static processCommand(transcript) {
-                const lastDetected = document.getElementById('lastDetected');
-                if (lastDetected) {
-                    lastDetected.textContent = `${Localization.get('آخر ذكر:', 'Last:')} "${transcript}"`;
-                }
-                
-                const tasbihKeywords = {
-                    'سبحان الله': ['سبحان الله', 'سبحانلله', 'سبحان', 'subhanallah', 'subhan allah', 'سبحان الله العظيم'],
-                    'الحمد لله': ['الحمد لله', 'الحمدلله', 'الحمد', 'alhamdulillah', 'al hamd', 'الحمد لله رب العالمين'],
-                    'لا إله إلا الله': ['لا إله إلا الله', 'لا اله الا الله', 'لاإله الا الله', 'لا إله', 'lailahaillallah', 'la ilaha illa allah'],
-                    'الله أكبر': ['الله أكبر', 'الله اكبر', 'الله', 'allahu akbar', 'allah akbar', 'أكبر'],
-                    'لا حول ولا قوة إلا بالله': ['لا حول ولا قوة', 'لا حول', 'لا قوة', 'لا حولو لا قوة', 'lahawla wala quwwata'],
-                    'استغفر الله': ['استغفر الله', 'استغفر', 'أستغفر', 'astaghfirullah', 'astaghfir', 'اللهم استغفر']
-                };
-                
-                const selectedKeywords = tasbihKeywords[currentTasbih];
-                const transcriptLower = transcript.toLowerCase();
-                
-                const isMatch = selectedKeywords.some(keyword => {
-                    const keywordLower = keyword.toLowerCase();
-                    return transcriptLower.includes(keywordLower) || 
-                           keywordLower.includes(transcriptLower) ||
-                           this.levenshteinDistance(transcriptLower, keywordLower) < 3;
-                });
-                
-                if (isMatch) {
-                    TasbihController.increment();
-                    this.flashSuccess();
-                    console.log('✅ Voice command matched:', currentTasbih);
-                } else {
-                    console.log('❌ Voice command not matched:', transcript);
-                }
-            }
-
-            static levenshteinDistance(str1, str2) {
-                const matrix = [];
-                for (let i = 0; i <= str2.length; i++) {
-                    matrix[i] = [i];
-                }
-                for (let j = 0; j <= str1.length; j++) {
-                    matrix[0][j] = j;
-                }
-                for (let i = 1; i <= str2.length; i++) {
-                    for (let j = 1; j <= str1.length; j++) {
-                        if (str2.charAt(i - 1) === str1.charAt(j - 1)) {
-                            matrix[i][j] = matrix[i - 1][j - 1];
-                        } else {
-                            matrix[i][j] = Math.min(
-                                matrix[i - 1][j - 1] + 1,
-                                matrix[i][j - 1] + 1,
-                                matrix[i - 1][j] + 1
-                            );
-                        }
-                    }
-                }
-                return matrix[str2.length][str1.length];
-            }
-
-            static flashSuccess() {
-                const indicator = document.getElementById('voiceIndicator');
-                if (indicator) {
-                    indicator.style.background = 'rgba(76, 175, 80, 0.5)';
-                    setTimeout(() => {
-                        indicator.style.background = '';
-                    }, 300);
-                }
-            }
-
-            static handleError(event) {
-                console.error('🎤 Voice recognition error:', event.error);
-                if (voiceEnabled) {
-                    this.toggle();
-                }
-                
-                let errorMsg = Localization.get('حدث خطأ في التعرف على الصوت', 'Voice recognition error');
-                if (event.error === 'no-speech') {
-                    errorMsg = Localization.get('لم يتم اكتشاف صوت', 'No speech detected');
-                } else if (event.error === 'audio-capture') {
-                    errorMsg = Localization.get('لا يمكن الوصول إلى الميكروفون', 'Cannot access microphone');
-                } else if (event.error === 'not-allowed') {
-                    errorMsg = Localization.get('تم رفض الوصول إلى الميكروفون', 'Microphone access denied');
-                } else if (event.error === 'network') {
-                    errorMsg = Localization.get('خطأ في الشبكة', 'Network error');
-                }
-                
-                alert(errorMsg);
-            }
-
-            static handleEnd() {
-                if (voiceEnabled) {
-                    setTimeout(() => {
-                        try {
-                            recognition.start();
-                        } catch (e) {
-                            console.error('❌ Error restarting recognition:', e);
-                        }
-                    }, 100);
-                }
-            }
-        }
-
-        class AzkarController {
-            static add() {
-                const text = document.getElementById('zekrText');
-                const info = document.getElementById('zekrInfo');
-                
-                if (!text || !text.value.trim()) {
-                    alert(Localization.get('❌ يرجى كتابة الذكر أولاً!', '❌ Please write the dhikr first!'));
-                    return;
-                }
-
-                const zekr = {
-                    id: Date.now(),
-                    text: text.value.trim(),
-                    info: info ? info.value.trim() : '',
-                    date: new Date().toLocaleDateString(currentLang === 'ar' ? 'ar-SA' : 'en-US')
-                };
-
-                let myAzkar = Storage.load('myAzkar', []);
-                myAzkar.unshift(zekr);
-                Storage.save('myAzkar', myAzkar);
-
-                if (text) text.value = '';
-                if (info) info.value = '';
-
-                this.load();
-                alert(Localization.get('✅ تمت إضافة الذكر بنجاح!', '✅ Dhikr added successfully!'));
-                
-                console.log('📖 Dhikr added:', zekr.id);
-            }
-
-            static load() {
-                const myAzkar = Storage.load('myAzkar', []);
-                const listContainer = document.getElementById('myAzkarList');
-                
-                if (!listContainer) return;
-                
-                if (myAzkar.length === 0) {
-                    listContainer.innerHTML = `<div class="empty-message">${Localization.get('لم تضف أي أذكار بعد. ابدأ الآن!', 'No azkar added yet. Start now!')}</div>`;
-                    return;
-                }
-
-                listContainer.innerHTML = myAzkar.map(zekr => `
-                    <div class="zekr-item" role="listitem">
-                        <div class="zekr-text">${zekr.text}</div>
-                        <div class="zekr-date">${zekr.info ? zekr.info + ' - ' : ''}${zekr.date}</div>
-                        <button class="delete-btn" onclick="AzkarController.delete(${zekr.id})" aria-label="Delete dhikr">${Localization.get('حذف', 'Delete')}</button>
-                    </div>
-                `).join('');
-                
-                console.log('📖 Loaded', myAzkar.length, 'azkar');
-            }
-
-            static delete(id) {
-                if (confirm(Localization.get('هل تريد حذف هذا الذكر؟', 'Delete this dhikr?'))) {
-                    let myAzkar = Storage.load('myAzkar', []);
-                    myAzkar = myAzkar.filter(zekr => zekr.id !== id);
-                    Storage.save('myAzkar', myAzkar);
-                    this.load();
-                    console.log('📖 Dhikr deleted:', id);
-                }
-            }
-        }
-
-        class NavigationController {
-            static show(sectionName) {
-                document.querySelectorAll('.content-section').forEach(section => {
-                    section.classList.remove('active');
-                });
-                
-                document.querySelectorAll('.nav-item').forEach(item => {
-                    item.classList.remove('active');
-                    item.setAttribute('aria-selected', 'false');
-                });
-                
-                switch(sectionName) {
-                    case 'tasbih':
-                        document.getElementById('tasbih-section').classList.add('active');
-                        const navItem1 = document.querySelector('.nav-item[onclick="NavigationController.show(\'tasbih\')"]');
-                        if (navItem1) {
-                            navItem1.classList.add('active');
-                            navItem1.setAttribute('aria-selected', 'true');
-                        }
-                        break;
-                    case 'my-azkar':
-                        document.getElementById('my-azkar-section').classList.add('active');
-                        const navItem2 = document.querySelector('.nav-item[onclick="NavigationController.show(\'my-azkar\')"]');
-                        if (navItem2) {
-                            navItem2.classList.add('active');
-                            navItem2.setAttribute('aria-selected', 'true');
-                        }
-                        AzkarController.load();
-                        break;
-                    case 'settings':
-                        document.getElementById('settings-section').classList.add('active');
-                        const navItem3 = document.querySelector('.nav-item[onclick="NavigationController.show(\'settings\')"]');
-                        if (navItem3) {
-                            navItem3.classList.add('active');
-                            navItem3.setAttribute('aria-selected', 'true');
-                        }
-                        break;
-                }
-
-                if (voiceEnabled) {
-                    VoiceController.toggle();
-                }
-            }
-        }
-
-        class ColorPicker {
-            static show() {
-                const colorMenu = document.getElementById('colorMenu');
-                const optionsContainer = document.getElementById('colorOptions');
-                
-                if (!colorMenu || !optionsContainer) return;
-                
-                optionsContainer.innerHTML = availableColors.map((color, index) => `
-                    <div class="color-option ${color === buttonColor ? 'selected' : ''}" 
-                         style="background-color: ${color}"
-                         onclick="ColorPicker.select('${color}')"
-                         role="option"
-                         aria-selected="${color === buttonColor}"
-                         tabindex="0"
-                         onkeydown="if(event.key==='Enter'||event.key===' ') ColorPicker.select('${color}')"
-                         title="${color}">
-                    </div>
-                `).join('');
-                
-                colorMenu.classList.add('show');
-                const overlay = document.getElementById('overlay');
-                if (overlay) overlay.classList.add('show');
-                
-                if (voiceEnabled) {
-                    VoiceController.toggle();
-                }
-
-                console.log('🎨 Color menu opened');
-            }
-
-            static close() {
-                const colorMenu = document.getElementById('colorMenu');
-                const overlay = document.getElementById('overlay');
-                
-                if (colorMenu) colorMenu.classList.remove('show');
-                if (overlay) overlay.classList.remove('show');
-                
-                console.log('🎨 Color menu closed');
-            }
-
-            static select(color) {
-                buttonColor = color;
-                document.documentElement.style.setProperty('--primary-btn-color', color);
-                
-                const tasbihBtn = document.getElementById('tasbihBtn');
-                if (tasbihBtn) {
-                    tasbihBtn.style.background = color;
-                }
-                
-                Storage.save('buttonColor', color);
-                
-                document.querySelectorAll('.color-option').forEach(option => {
-                    option.classList.remove('selected');
-                    option.setAttribute('aria-selected', 'false');
-                });
-                
-                if (event && event.target) {
-                    event.target.classList.add('selected');
-                    event.target.setAttribute('aria-selected', 'true');
-                }
-                
-                this.close();
-                console.log('🎨 Button color changed:', color);
-            }
-        }
-
-        class SettingsController {
-            static toggleTheme() {
-                isDarkMode = !isDarkMode;
-                document.body.classList.toggle('dark-mode');
-                Storage.save('darkMode', isDarkMode);
-                
-                Localization.updateButtonLabels();
-                console.log('🌙 Dark mode toggled:', isDarkMode);
-            }
-
-            static toggleLanguage() {
-                currentLang = currentLang === 'ar' ? 'en' : 'ar';
-                Localization.update();
-                Storage.save('appLang', currentLang);
-                
-                DateController.load();
-                
-                Localization.updateButtonLabels();
-                console.log('🌐 Language toggled:', currentLang);
-                
-                if (document.getElementById('my-azkar-section').classList.contains('active')) {
-                    AzkarController.load();
-                }
-            }
-        }
-
+        // ====== Keyboard Shortcuts ======
         document.addEventListener('keydown', function(event) {
             if (document.getElementById('tasbih-section').classList.contains('active')) {
                 switch(event.code) {
@@ -2201,9 +2424,11 @@
             }
         });
 
+        // ====== Initialization ======
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('🚀 App initializing...');
+            console.log('🚀 App initializing with ultra-fast voice response...');
             
+            // Load saved settings
             const savedLang = Storage.load('appLang');
             if (savedLang) {
                 currentLang = savedLang;
@@ -2255,15 +2480,16 @@
                     dateStr: new Date().toDateString(),
                     result: savedDate.hijri
                 };
-                console.log('📅 Using cached Hijri date');
             }
 
+            // Initialize controllers
             PWAController.init();
             VoiceController.init();
             DateController.init();
             Localization.updateButtonLabels();
             
-            console.log('✅ App initialized successfully');
+            Toast.show(Localization.get('✅ التطبيق جاهز', '✅ App ready'), 'success');
+            console.log('✅ App initialized successfully with instant voice response');
         });
     </script>
 </body>
