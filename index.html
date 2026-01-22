@@ -2,2856 +2,890 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="theme-color" content="#1e3c72">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="description" content="المسبحة الذكية - تطبيق للتسبيح والأذكار يعمل بدون إنترنت مع دعم التحكم الصوتي">
+    <meta name="description" content="المسبحة الذكية - تطبيق عصري للتسبيح">
+    <title>المسبحة الذكية</title>
     
-    <title>المسبحة الذكية - التسبح والأذكار</title>
-    
-    <!-- PWA Manifest -->
-    <link rel="manifest" href="data:application/json;base64,ewogICJuYW1lIjogItis2LLZitixINmF2YbYp9mG2K/ZiCIsCiAgInNob3J0X25hbWUiOiAi2YXYp9mG2K/ZiCIsCiAgImRlc2NyaXB0aW9uIjogItin2YrYp9i62Kkg2KfZhNmF2YbYp9mG2K/ZiiDYp9mE2KfZhNiz2KrYr9in2Kog2KjYp9mG2KjYp9mGINij2YjYrNmI2KfZhiDYp9mE2YLYqNmE2YLYr9iMINmF2YbYp9mG2K/ZiiIsCiAgInN0YXJ0X3VybCI6ICIvIiwKICAiZGlzcGxheSI6ICJzdGFuZGFsb25lIiwKICAiYmFja2dyb3VuZF9jb2xvciI6ICIjMWUzYzcyIiwKICAidGhlbWVfY29sb3IiOiAiIzFlM2M3MiIsCiAgIm9yaWVudGF0aW9uIjogInBvcnRyYWl0IiwKICAibGFuZyI6ICJhciIsCiAgImNhdGVnb3JpZXMiOiBbInJlbGlnaW9uIiwicHJvZHVjdGl2aXR5Il0sCiAgImljb25zIjogWwogICAgewogICAgICAic3JjIjogImRhdGE6aW1hZ2Uvc3ZnK3htbDtiYXNlNjQsUEhOMlp5QmxibUZpWVhSMGRHbHZiajBpTVRBd0lpQm9aV2xuYUhRaU9pSXhNREF3SWlCM2FXUjBhRDBpTlRBd01EQWlJR1pwYkd3OUlqRXdNREFpSUdObGJHRnphRDBpTVRBd01DQStQR2x0WVdkbElIZHBaSFJvUFNJME1EQXdJaUI0Yld4dWN6MGlkR1Z6ZENJZ2VHMXdkejBpTVRBd01DQWlQR2x0WVdkbElIZHBaSFJvUFNJME1EQXdJaUI0Yld4dWN6MGlkR1Z6ZENJZ2VHMXdkejBpTVRBd01DQWlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNGlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNGlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNGlQSEJ2YkhsamFXNGlQSEJ2YkhsamFXNGlQSEJ2YkhsamFXNGlQSEJ2YkhsamFXNGlQSEJ2YkhsamFXNGlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNGlQSEJ2YkhsamFXNGlQSEJ2YkhsamFXNGlQSEJ2YkhsamFXNGlQSEJ2YkhsamFXNGlQSEJ2YkhsamFXNGlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNGlQSEJ2YkhsamFXNGlQSEJ2YkhsamFXNGlQSEJ2YkhsamFXNGlQSEJ2YkhsamFXNGlQSEJ2YkhsamFXNGlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNGlQSEJ2YkhsamFXNGlQSEJ2YkhsamFXNGlQSEJ2YkhsamFXNGlQSEJ2YkhsamFXNGlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNGlQSEJ2YkhsamFXNGlQSEJ2YkhsamFXNGlQSEJ2YkhsamFXNGlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNGlQSEJ2YkhsamFXNGlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNGlQSEJ2YkhsamFXNGlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNGlQSEJ2YkhsamFXNGlKM0J2YkhsamFXNk1EQXdNREFnIiwKICAgICAgInNpemVzIjogIjUxMng1MTIiLAogICAgICAidHlwZSI6ICJpbWFnZS9zdmcreG1sIiwKICAgICAgInB1cnBvc2UiOiAiYW55IG1hc2thYmxlIgogICAgfQogIF0KfQ==">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="manifest" href="data:application/json;base64,ewogICJuYW1lIjogItis2LLZitixINmF2YbYp9mG2K/ZiCIsCiAgInNob3J0X25hbWUiOiAi2YXYp9mG2K/ZiCIsCiAgImRlc2NyaXB0aW9uIjogItin2YrYp9i62Kkg2KfZhNmF2YbYp9mG2K/ZiiDYp9mE2KfZhNiz2KrYr9in2Kog2KjYp9mG2KjYp9mGINij2YjYrNmI2KfZhiDYp9mE2YLYqNmE2YLYr9iMINmF2YbYp9mG2K/ZiiIsCiAgInN0YXJ0X3VybCI6ICIvIiwKICAiZGlzcGxheSI6ICJzdGFuZGFsb25lIiwKICAiYmFja2dyb3VuZF9jb2xvciI6ICIjMWUzYzcyIiwKICAidGhlbWVfY29sb3IiOiAiIzFlM2M3MiIsCiAgIm9yaWVudGF0aW9uIjogInBvcnRyYWl0IiwKICAibGFuZyI6ICJhciIsCiAgImljb25zIjogW3sic3JjIjogImRhdGE6aW1hZ2Uvc3ZnK3htbDtiYXNlNjQsUEhOMlp5QmxibUZpWVhSMGRHbHZiajBpTVRBd0lpQm9aV2xuYUhRaU9pSXhNREF3SWlCM2FXUjBhRDBpTlRBd01EQWlJR1pwYkd3OUlqRXdNREFpSUdObGJHRnphRDBpTVRBd01DQStQR2x0WVdkbElIZHBaSFJvUFNJME1EQXdJaUI0Yld4dWN6MGlkR1Z6ZENJZ2VHMXdkejBpTVRBd01DQWlQR2x0WVdkbElIZHBaSFJvUFNJME1EQXdJaUI0Yld4dWN6MGlkR1Z6ZENJZ2VHMXdkejBpTVRBd01DQWlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlQSEJ2YkhsamFXNDlKM0J2YkhsamFXNGlKM0J2YkhsamFXNk1EQXdNREFnIiwic2l6ZXMiOiAiNTEyeDUxMiIsInR5cGUiOiAiaW1hZ2Uvc3ZnK3htbCJdfQ==">
     
     <style>
         :root {
-            --primary-color: #1e3c72;
-            --secondary-color: #2a5298;
-            --accent-color: #4CAF50;
-            --danger-color: #f44336;
-            --text-light: #f0f0f0;
-            --text-dark: #333;
-            --text-muted: #666;
-            --bg-light: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            --bg-dark: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
-            --card-light: rgba(255, 255, 255, 0.95);
-            --card-dark: rgba(30, 30, 46, 0.85);
-            --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.1);
-            --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.15);
-            --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.2);
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            --transition-fast: all 0.15s ease;
-            --border-radius: 15px;
-            --border-radius-lg: 20px;
-            --primary-btn-color: #1e3c72;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            -webkit-tap-highlight-color: transparent;
-            -webkit-touch-callout: none;
-            -webkit-user-select: none;
-            user-select: none;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: var(--bg-light);
-            color: var(--text-dark);
-            min-height: 100vh;
-            transition: var(--transition);
-            background-attachment: fixed;
-            padding-bottom: 90px;
-            overscroll-behavior: none;
-            background-position: center;
-            background-size: cover;
-            line-height: 1.6;
+            --primary: #1e3c72;
+            --accent: #00d2ff;
+            --glass-bg: rgba(255, 255, 255, 0.95);
+            --glass-border: 1px solid rgba(255, 255, 255, 0.8);
+            --text-main: #1e293b;
+            --text-sub: #64748b;
+            --btn-color: #1e3c72;
+            --btn-size: 250px;
+            --shadow-soft: 0 10px 40px rgba(31, 38, 135, 0.1);
+            --shadow-card: 0 4px 15px rgba(0, 0, 0, 0.05);
+            --toggle-bg: #cbd5e1;
+            --toggle-active: #1e3c72;
         }
 
         body.dark-mode {
-            background: var(--bg-dark);
-            color: var(--text-light);
+            --primary: #a5b4fc;
+            --glass-bg: rgba(20, 25, 40, 0.95);
+            --glass-border: 1px solid rgba(255, 255, 255, 0.1);
+            --text-main: #f8fafc;
+            --text-sub: #94a3b8;
+            --shadow-soft: 0 10px 40px rgba(0, 0, 0, 0.5);
+            --toggle-bg: #475569;
+            --toggle-active: #a5b4fc;
         }
 
-        body.english {
-            direction: ltr;
-            text-align: left;
+        * { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; font-family:'Tajawal', sans-serif; user-select:none; -webkit-user-select:none; }
+        
+        body {
+            background: linear-gradient(135deg, #e0e7ff 0%, #f3f4f6 100%);
+            min-height: 100vh;
+            color: var(--text-main);
+            padding-bottom: 110px;
+            overflow-x: hidden;
+            background-attachment: fixed;
+            transition: 0.3s;
+        }
+        
+        body.dark-mode { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); }
+
+        .glass-panel {
+            background: var(--glass-bg);
+            border: var(--glass-border);
+            box-shadow: var(--shadow-soft);
+            border-radius: 24px;
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            transition: all 0.3s ease;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            padding-bottom: 100px;
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+
+        .top-bar { 
+            display: flex; justify-content: space-between; align-items: center; 
+            padding: 10px 25px; margin-bottom: 25px; position: sticky; top: 10px; z-index: 50; 
+            min-height: 60px;
+        }
+        
+        .date-badge { 
+            font-size: 0.85em; font-weight: 700; padding: 5px 0; 
+            background: transparent; color: var(--text-main); cursor: pointer;
+            letter-spacing: 0.5px; opacity: 0.7;
+        }
+        
+        .install-icon-top {
+            background: var(--text-main); color: var(--glass-bg); border: none; 
+            width: 35px; height: 35px; border-radius: 50%; font-weight: 700; 
+            cursor: pointer; display: flex; align-items: center; justify-content: center;
+            box-shadow: var(--shadow-card); transition: transform 0.2s; font-size: 1em;
+        }
+        .install-icon-top:active { transform: scale(0.9); }
+        .hidden { display: none !important; }
+
+        .header-content { text-align: center; margin-bottom: 20px; }
+        .header-content h1 { 
+            font-weight: 800; font-size: 2.4em; 
+            background: linear-gradient(45deg, var(--text-main), var(--primary));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            margin-bottom: 5px;
         }
 
-        .status-bar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-            background: var(--card-light);
-            border-radius: var(--border-radius);
-            margin-bottom: 20px;
-            box-shadow: var(--shadow-sm);
-            backdrop-filter: blur(10px);
-            position: sticky;
-            top: 10px;
-            z-index: 100;
+        .tasbih-wrapper { display: flex; flex-direction: column; align-items: center; gap: 20px; }
+        
+        select {
+            width: 100%; max-width: 280px; padding: 12px; 
+            background: rgba(0,0,0,0.04);
+            border: none; border-radius: 30px; 
+            font-size: 1.1em; color: var(--text-main); font-weight: 700; 
+            text-align: center; appearance: none; outline: none; transition: 0.3s;
         }
+        body.dark-mode select { background: rgba(255,255,255,0.08); }
 
-        body.dark-mode .status-bar {
-            background: var(--card-dark);
-        }
-
-        .date-display {
-            font-size: 0.9em;
-            color: var(--primary-color);
-            font-weight: 600;
+        .tasbih-btn-large {
+            width: var(--btn-size); height: var(--btn-size);
+            border-radius: 50%; border: none;
+            background: var(--btn-color);
+            color: white;
             cursor: pointer;
-            user-select: none;
-            transition: var(--transition);
-            border: none;
-            background: none;
-            padding: 8px 12px;
-            border-radius: 8px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.25), inset 0 6px 10px rgba(255,255,255,0.3), inset 0 -6px 10px rgba(0,0,0,0.2);
             position: relative;
-            padding-right: 35px !important;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            display: flex; align-items: center; justify-content: center;
+            overflow: hidden; touch-action: manipulation;
+            transition: transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.1s;
+            z-index: 10; margin: 10px 0; outline: none;
+        }
+        .tasbih-btn-large::after {
+            content: ''; position: absolute; inset: -5px;
+            border-radius: 50%; border: 2px solid var(--btn-color);
+            opacity: 0.3; pointer-events: none; z-index: -1;
+        }
+        .tasbih-btn-large:active, .tasbih-btn-large.pressed {
+            transform: scale(0.92);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2), inset 0 6px 20px rgba(0,0,0,0.3);
         }
 
-        .date-display.loading::after {
-            content: '⏳';
-            position: absolute;
-            right: 10px;
-            top: 50%;
-            transform: translateY(-50%);
-            animation: spin 1s linear infinite;
+        .ripple-effect {
+            position: absolute; border-radius: 50%;
+            background: rgba(255, 255, 255, 0.6);
+            transform: scale(0); animation: ripple 0.5s linear; pointer-events: none;
+        }
+        @keyframes ripple { to { transform: scale(2.5); opacity: 0; } }
+
+        .counter-display {
+            font-size: 6em; font-weight: 700; color: white;
+            text-shadow: 0 4px 10px rgba(0,0,0,0.2); 
+            pointer-events: none; z-index: 2; font-variant-numeric: tabular-nums;
         }
 
-        @keyframes spin {
-            from { transform: translateY(-50%) rotate(0deg); }
-            to { transform: translateY(-50%) rotate(360deg); }
+        .color-btn-center {
+            background: transparent; border: 1px solid var(--text-sub);
+            color: var(--text-sub); padding: 8px 20px; border-radius: 30px;
+            font-size: 0.9em; font-weight: 600; cursor: pointer;
+            display: flex; align-items: center; gap: 5px; opacity: 0.8; transition: 0.2s;
         }
+        .color-btn-center:hover { opacity: 1; background: rgba(0,0,0,0.05); }
 
-        .date-display.error {
-            color: var(--danger-color) !important;
+        .controls-row { display: flex; gap: 12px; width: 100%; max-width: 300px; margin-top: 10px; }
+        
+        .btn-small {
+            flex: 1; padding: 14px; border-radius: 20px; border: none;
+            background: var(--glass-bg); color: var(--text-main);
+            font-weight: 700; cursor: pointer; box-shadow: var(--shadow-card);
+            border: var(--glass-border);
+            display: flex; justify-content: center; align-items: center; gap: 8px;
+            transition: transform 0.1s, background 0.3s;
         }
+        .btn-small:active { transform: scale(0.96); }
+        .btn-small.danger { color: #ef4444; background: rgba(239, 68, 68, 0.05); }
+        .btn-small.active { background: #10b981; color: white; border-color: #10b981; }
+        .btn-small.primary { background: var(--primary); color: white; }
 
-        .date-display:hover {
-            background: rgba(0, 0, 0, 0.08);
+        /* زر إضافة ذكر جديد المحسن */
+        .btn-large-primary {
+            width: 100%; padding: 18px; border-radius: 20px; border: none;
+            background: linear-gradient(135deg, var(--primary) 0%, #3b82f6 100%);
+            color: white; font-weight: 800; font-size: 1.1em;
+            cursor: pointer; box-shadow: 0 4px 15px rgba(30, 60, 114, 0.2);
+            display: flex; align-items: center; justify-content: center; gap: 10px;
+            margin-top: 8px; transition: transform 0.1s, box-shadow 0.3s;
         }
+        .btn-large-primary:active { transform: scale(0.98); box-shadow: 0 2px 10px rgba(30, 60, 114, 0.1); }
 
-        body.dark-mode .date-display:hover {
-            background: rgba(255, 255, 255, 0.08);
+        /* كارت آخر ذكر تم سماعه */
+        .last-heard-card {
+            width: 100%; max-width: 300px;
+            background: rgba(0,0,0,0.03);
+            border: 1px solid rgba(0,0,0,0.05);
+            border-radius: 15px; padding: 12px 15px;
+            text-align: center; margin-top: 15px;
+            display: flex; flex-direction: column; gap: 5px;
         }
+        body.dark-mode .last-heard-card { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.05); }
 
-        .update-indicator {
-            font-size: 0.7em;
-            color: var(--accent-color);
-            font-weight: bold;
+        /* === إعدادات وخيارات === */
+        .settings-group { margin-bottom: 25px; }
+        .settings-title { font-size: 1.1em; font-weight: 800; margin-bottom: 12px; color: var(--primary); padding: 0 5px; }
+        
+        .option-item {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 15px; border-bottom: 1px solid rgba(0,0,0,0.05);
+            font-weight: 600; font-size: 0.95em;
         }
+        .option-item:last-child { border-bottom: none; }
+        body.dark-mode .option-item { border-color: rgba(255,255,255,0.05); }
 
-        .status-icons {
-            display: flex;
-            gap: 12px;
+        .toggle-switch {
+            position: relative; width: 44px; height: 24px;
+            background: var(--toggle-bg); border-radius: 20px;
+            transition: 0.3s; cursor: pointer;
         }
-
-        .status-icon {
-            font-size: 1.3em;
-            cursor: pointer;
-            transition: var(--transition);
-            padding: 8px;
-            border-radius: 50%;
-            background: rgba(0, 0, 0, 0.05);
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: none;
-            color: var(--text-dark);
+        .toggle-switch::after {
+            content: ''; position: absolute; top: 2px; left: 2px;
+            width: 20px; height: 20px; background: white;
+            border-radius: 50%; transition: 0.3s; box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
+        .toggle-switch.active { background: var(--toggle-active); }
+        
+        html[dir="rtl"] .toggle-switch::after { left: auto; right: 2px; }
+        html[dir="rtl"] .toggle-switch.active::after { transform: translateX(-20px); }
+        html[dir="ltr"] .toggle-switch.active::after { transform: translateX(20px); }
 
-        body.dark-mode .status-icon {
-            background: rgba(255, 255, 255, 0.05);
-            color: var(--text-light);
+        .install-instructions {
+            background: rgba(0,0,0,0.03); border-radius: 12px;
+            padding: 15px; margin-top: 10px; border: 1px solid rgba(0,0,0,0.05);
         }
+        body.dark-mode .install-instructions { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.05); }
+        .inst-title { font-weight: 800; margin-bottom: 8px; font-size:0.95em; color: var(--text-main); }
+        .inst-step { font-size: 0.85em; margin-bottom: 5px; color: var(--text-sub); line-height: 1.5; }
 
-        .status-icon:hover {
-            transform: scale(1.1);
-            background: rgba(0, 0, 0, 0.1);
+        /* === تحسينات قائمة الأذكار الجديدة (List Style) === */
+        .zekr-card {
+            background: var(--glass-bg); 
+            padding: 20px; border-radius: 20px;
+            margin-bottom: 15px; 
+            border: var(--glass-border);
+            box-shadow: var(--shadow-card);
+            display: flex; justify-content: space-between; align-items: center;
+            position: relative; overflow: hidden;
+            transition: all 0.3s ease;
+            animation: slideIn 0.3s ease-out;
         }
-
-        body.dark-mode .status-icon:hover {
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        .header {
-            text-align: center;
-            margin-bottom: 30px;
-            padding: 25px 20px;
-            background: var(--card-light);
-            border-radius: var(--border-radius-lg);
-            box-shadow: var(--shadow-md);
-            backdrop-filter: blur(10px);
-        }
-
-        body.dark-mode .header {
-            background: var(--card-dark);
-        }
-
-        .header h1 {
-            color: var(--primary-color);
-            margin-bottom: 10px;
-            font-size: 2.2em;
-            font-weight: 700;
-        }
-
-        body.dark-mode .header h1 {
-            color: var(--text-light);
-        }
-
-        .header p {
-            color: var(--text-muted);
-            font-size: 1em;
-            opacity: 0.8;
-        }
-
-        .content-section {
-            display: none;
-            animation: fadeIn 0.4s ease;
-        }
-
-        .content-section.active {
-            display: block;
-        }
-
-        @keyframes fadeIn {
+        
+        @keyframes slideIn {
             from { opacity: 0; transform: translateY(15px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        .tasbih-container {
-            text-align: center;
-            padding: 35px 25px;
-            background: var(--card-light);
-            border-radius: var(--border-radius-lg);
-            box-shadow: var(--shadow-md);
-            backdrop-filter: blur(10px);
-            max-width: 650px;
-            margin: 0 auto;
-        }
-
-        body.dark-mode .tasbih-container {
-            background: var(--card-dark);
-        }
-
-        .tasbih-selector {
-            margin-bottom: 30px;
-        }
-
-        .tasbih-selector label {
-            display: block;
-            margin-bottom: 12px;
-            font-weight: 600;
-            font-size: 1.1em;
-            color: var(--primary-color);
-        }
-
-        body.dark-mode .tasbih-selector label {
-            color: var(--accent-color);
-        }
-
-        .tasbih-selector select {
-            padding: 14px 30px;
-            font-size: 1.2em;
-            border-radius: 30px;
-            border: 2px solid var(--primary-color);
-            background: var(--card-light);
-            color: var(--text-dark);
-            cursor: pointer;
-            transition: var(--transition);
-            width: 100%;
-            max-width: 320px;
-            font-weight: 500;
-            appearance: none;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%231e3c72' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: left 15px center;
-            background-size: 16px;
-        }
-
-        body.dark-mode .tasbih-selector select {
-            background: var(--card-dark);
-            color: var(--text-light);
-            border-color: var(--accent-color);
-        }
-
-        .tasbih-selector select:focus {
-            outline: none;
-            box-shadow: 0 0 0 4px rgba(30, 60, 114, 0.2);
-        }
-
-        .tasbih-circle-wrapper {
-            margin: 30px 0;
-            display: flex;
-            justify-content: center;
-            position: relative;
-        }
-
-        .tasbih-btn {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            background: var(--primary-btn-color);
-            color: white;
-            border: none;
-            cursor: pointer;
-            transition: var(--transition);
-            box-shadow: var(--shadow-md);
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            touch-action: manipulation;
-            user-select: none;
-            z-index: 1;
-        }
-
-        .tasbih-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at center, rgba(255,255,255,0.2) 0%, transparent 70%);
-            opacity: 0;
-            transition: var(--transition);
-        }
-
-        .tasbih-btn:hover::before {
-            opacity: 1;
-        }
-
-        .tasbih-btn:hover {
-            transform: scale(1.05);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .tasbih-btn:active {
-            transform: scale(0.95);
-        }
-
-        .tasbih-number {
-            font-size: 3.5em;
-            font-weight: 700;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: white;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
-            pointer-events: none;
-            transition: var(--transition-fast);
-            z-index: 2;
-        }
-
-        .tasbih-number.instant-match {
-            animation: pulse-fast 0.3s ease;
-            color: #4CAF50 !important;
-        }
-
-        @keyframes pulse-fast {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.2); }
-            100% { transform: scale(1); }
-        }
-
-        .color-change-wrapper {
-            margin: 20px 0;
-            display: flex;
-            justify-content: center;
-        }
-
-        .color-change-btn {
-            background: linear-gradient(45deg, #FF6B6B, #4ECDC4, #45B7D1, #96CEB4, #FECA57);
-            background-size: 300% 300%;
-            animation: gradientShift 3s ease infinite;
-            color: white;
-            border: none;
-            padding: 12px 24px;
-            border-radius: 25px;
-            cursor: pointer;
-            font-size: 14px;
-            font-weight: 600;
-            transition: var(--transition);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            box-shadow: var(--shadow-sm);
-            position: relative;
-            overflow: hidden;
-        }
-
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        .color-change-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-md);
-        }
-
-        .color-change-btn:active {
-            transform: scale(0.95);
-        }
-
-        .voice-indicator {
-            margin: 20px 0;
-            padding: 16px 25px;
-            background: rgba(0, 0, 0, 0.05);
-            border-radius: var(--border-radius);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-            font-size: 1em;
-            transition: var(--transition);
-            min-height: 60px;
-            font-weight: 500;
-        }
-
-        body.dark-mode .voice-indicator {
-            background: rgba(255, 255, 255, 0.05);
-        }
-
-        .voice-indicator.listening {
-            background: rgba(76, 175, 80, 0.15);
-            animation: pulse 2s infinite;
-            color: var(--accent-color);
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.03); opacity: 0.8; }
-        }
-
-        .tasbih-controls {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 25px;
-            flex-wrap: wrap;
-        }
-
-        .control-btn {
-            background: var(--accent-color);
-            color: white;
-            border: none;
-            padding: 14px 28px;
-            border-radius: 30px;
-            cursor: pointer;
-            font-size: 14px;
-            transition: var(--transition);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 600;
-            box-shadow: var(--shadow-sm);
-            touch-action: manipulation;
-            letter-spacing: 0.5px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .control-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: 0.5s;
-        }
-
-        .control-btn:hover::before {
-            left: 100%;
-        }
-
-        .control-btn:hover:not(:disabled) {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-md);
-        }
-
-        .control-btn:active:not(:disabled) {
-            transform: translateY(0);
-        }
-
-        .control-btn:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-        }
-
-        .control-btn.danger {
-            background: var(--danger-color);
-        }
-
-        .last-detected {
-            margin-top: 20px;
-            padding: 14px;
-            background: rgba(0, 0, 0, 0.03);
-            border-radius: 10px;
-            font-size: 0.9em;
-            color: var(--text-dark);
-            min-height: 45px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-left: 4px solid var(--accent-color);
-            transition: var(--transition);
-            word-wrap: break-word;
-            word-break: break-word;
-        }
-
-        body.dark-mode .last-detected {
-            background: rgba(255, 255, 255, 0.03);
-            color: var(--text-light);
-        }
-
-        .last-detected.instant {
-            background: rgba(76, 175, 80, 0.15);
-            border-color: #4CAF50;
-            color: #4CAF50;
-            font-weight: 600;
-            animation: flash-green 0.5s ease;
-        }
-
-        @keyframes flash-green {
-            0% { background: rgba(76, 175, 80, 0.3); }
-            100% { background: rgba(76, 175, 80, 0.15); }
-        }
-
-        .my-azkar-container {
-            background: var(--card-light);
-            border-radius: var(--border-radius-lg);
-            padding: 35px 30px;
-            box-shadow: var(--shadow-md);
-            backdrop-filter: blur(10px);
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        body.dark-mode .my-azkar-container {
-            background: var(--card-dark);
-        }
-
-        .my-azkar-header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .my-azkar-header h2 {
-            color: var(--primary-color);
-            font-size: 1.8em;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-
-        body.dark-mode .my-azkar-header h2 {
-            color: var(--text-light);
-        }
-
-        .my-azkar-header p {
-            color: var(--text-muted);
-            font-size: 0.95em;
-            opacity: 0.9;
-        }
-
-        body.dark-mode .my-azkar-header p {
-            color: var(--text-light);
-        }
-
-        .add-zekr-form {
-            background: rgba(0, 0, 0, 0.03);
-            padding: 25px;
-            border-radius: var(--border-radius);
-            margin-bottom: 30px;
-            border: 1px solid rgba(0, 0, 0, 0.05);
-        }
-
-        body.dark-mode .add-zekr-form {
-            background: rgba(255, 255, 255, 0.03);
-            border-color: rgba(255, 255, 255, 0.05);
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 10px;
-            font-weight: 600;
-            color: var(--primary-color);
-            font-size: 0.95em;
-        }
-
-        body.dark-mode .form-group label {
-            color: var(--accent-color);
-        }
-
-        .form-group input, .form-group textarea {
-            width: 100%;
-            padding: 14px 16px;
-            border: 2px solid var(--primary-color);
-            border-radius: 10px;
-            background: var(--card-light);
-            color: var(--text-dark);
-            font-size: 1em;
-            transition: var(--transition);
-            font-family: inherit;
-            resize: vertical;
-        }
-
-        body.dark-mode .form-group input,
-        body.dark-mode .form-group textarea {
-            background: var(--card-dark);
-            color: var(--text-light);
-            border-color: var(--accent-color);
-        }
-
-        .form-group input:focus, .form-group textarea:focus {
-            outline: none;
-            box-shadow: 0 0 0 4px rgba(30, 60, 114, 0.2);
-        }
-
-        .add-btn {
-            background: var(--accent-color);
-            color: white;
-            border: none;
-            padding: 14px 32px;
-            border-radius: 30px;
-            cursor: pointer;
-            font-size: 1em;
-            font-weight: 600;
-            transition: var(--transition);
-            display: block;
-            margin: 0 auto;
-            min-width: 200px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .add-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: 0.5s;
-        }
-
-        .add-btn:hover::before {
-            left: 100%;
-        }
-
-        .add-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-md);
-        }
-
-        .my-azkar-list {
-            margin-top: 30px;
-        }
-
-        .zekr-item {
-            background: var(--card-light);
-            padding: 20px;
-            border-radius: 12px;
-            margin-bottom: 16px;
-            box-shadow: var(--shadow-sm);
-            position: relative;
-            transition: var(--transition);
-            border: 1px solid rgba(0, 0, 0, 0.05);
-        }
-
-        body.dark-mode .zekr-item {
-            background: var(--card-dark);
-            border-color: rgba(255, 255, 255, 0.05);
-        }
-
-        .zekr-item:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-md);
-        }
-
-        .zekr-item:first-child {
-            border-top: 3px solid var(--accent-color);
-        }
-
-        .zekr-text {
-            font-size: 1.1em;
-            line-height: 1.7;
-            margin-bottom: 10px;
-            color: var(--text-dark);
-            padding-right: 50px;
-            word-wrap: break-word;
-            word-break: break-word;
-        }
-
-        body.english .zekr-text {
-            padding-right: 0;
-            padding-left: 50px;
-        }
-
-        body.dark-mode .zekr-text {
-            color: var(--text-light);
-        }
-
-        .zekr-date {
-            font-size: 0.8em;
-            color: var(--text-muted);
-            font-style: italic;
-            font-weight: 500;
-        }
-
-        .delete-btn {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: var(--danger-color);
-            color: white;
-            border: none;
-            padding: 6px 12px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 0.8em;
-            transition: var(--transition-fast);
-            font-weight: 600;
-            min-width: 50px;
-        }
-
-        .delete-btn:hover {
-            background: #d32f2f;
-            transform: scale(1.05);
-        }
-
-        body.english .delete-btn {
-            right: auto;
-            left: 20px;
-        }
-
-        .empty-message {
-            text-align: center;
-            padding: 50px 20px;
-            color: var(--text-muted);
-            opacity: 0.7;
-            font-style: italic;
-        }
-
-        .settings-container {
-            background: var(--card-light);
-            border-radius: var(--border-radius-lg);
-            padding: 35px 30px;
-            box-shadow: var(--shadow-md);
-            backdrop-filter: blur(10px);
-            max-width: 850px;
-            margin: 0 auto;
-        }
-
-        body.dark-mode .settings-container {
-            background: var(--card-dark);
-        }
-
-        .settings-header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .settings-header h2 {
-            color: var(--primary-color);
-            font-size: 1.8em;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-
-        body.dark-mode .settings-header h2 {
-            color: var(--text-light);
-        }
-
-        .settings-group {
-            margin-bottom: 35px;
-            padding-bottom: 25px;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-        }
-
-        body.dark-mode .settings-group {
-            border-bottom-color: rgba(255, 255, 255, 0.08);
-        }
-
-        .settings-group:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-
-        .settings-group h3 {
-            color: var(--primary-color);
-            font-size: 1.3em;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid var(--primary-color);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        body.dark-mode .settings-group h3 {
-            color: var(--accent-color);
-            border-bottom-color: var(--accent-color);
-        }
-
-        .setting-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 18px;
-            background: rgba(0, 0, 0, 0.03);
-            border-radius: 10px;
-            margin-bottom: 12px;
-            transition: var(--transition);
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .setting-item:hover {
-            background: rgba(0, 0, 0, 0.05);
-        }
-
-        body.dark-mode .setting-item {
-            background: rgba(255, 255, 255, 0.03);
-        }
-
-        body.dark-mode .setting-item:hover {
-            background: rgba(255, 255, 255, 0.05);
-        }
-
-        .setting-item label {
-            font-weight: 500;
-            color: var(--text-dark);
-            font-size: 0.95em;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            flex: 0 0 auto;
-        }
-
-        body.dark-mode .setting-item label {
-            color: var(--text-light);
-        }
-
-        .setting-item > div {
-            flex: 1;
-            min-width: 200px;
-        }
-
-        .bg-controls-wrapper {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            flex: 1;
-            max-width: 250px;
-        }
-
-        .bg-buttons-row {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
-        .bg-buttons-row .control-btn {
-            flex: 1;
-            min-width: 100px;
-            padding: 10px 16px;
-            font-size: 13px;
-        }
-
-        .background-picker.hidden {
-            display: none;
-        }
-
-        .bg-preview {
-            width: 100%;
-            height: 60px;
-            border-radius: 8px;
-            background-size: cover;
-            background-position: center;
-            border: 2px solid var(--primary-color);
-            display: none;
-        }
-
-        .bg-preview.show {
-            display: block;
-        }
-
-        body.dark-mode .bg-preview {
-            border-color: var(--accent-color);
-        }
-
-        .permission-status {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 12px;
-            border-radius: 10px;
-            margin-top: 10px;
-            font-size: 0.85em;
-            font-weight: 500;
-        }
-
-        .permission-status.granted {
-            background: rgba(76, 175, 80, 0.15);
-            color: var(--accent-color);
-            border: 1px solid rgba(76, 175, 80, 0.3);
-        }
-
-        .permission-status.denied {
-            background: rgba(244, 67, 54, 0.15);
-            color: var(--danger-color);
-            border: 1px solid rgba(244, 67, 54, 0.3);
-        }
-
-        .permission-status.prompt {
-            background: rgba(255, 152, 0, 0.15);
-            color: #FF9800;
-            border: 1px solid rgba(255, 152, 0, 0.3);
-        }
-
-        .color-menu {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: var(--card-light);
-            border-radius: var(--border-radius-lg);
-            padding: 25px;
-            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
-            z-index: 2000;
-            display: none;
-            backdrop-filter: blur(20px);
-            max-width: 90%;
-            width: 420px;
-            border: 1px solid rgba(0, 0, 0, 0.1);
-        }
-
-        body.dark-mode .color-menu {
-            background: var(--card-dark);
-            border-color: rgba(255, 255, 255, 0.1);
-        }
-
-        .color-menu.show {
-            display: block;
-            animation: fadeIn 0.3s ease;
-        }
-
-        .color-menu h3 {
-            text-align: center;
-            margin-bottom: 20px;
-            color: var(--primary-color);
-            font-weight: 600;
-        }
-
-        body.dark-mode .color-menu h3 {
-            color: var(--text-light);
-        }
-
-        .color-options {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 12px;
-            padding: 0 10px;
-        }
-
-        .color-option {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            cursor: pointer;
-            border: 3px solid transparent;
-            transition: var(--transition);
-            box-shadow: var(--shadow-sm);
-        }
-
-        .color-option:hover {
-            transform: scale(1.1);
-            border-color: white;
-            box-shadow: var(--shadow-md);
-        }
-
-        .color-option.selected {
-            border-color: white;
-            transform: scale(1.15);
-            box-shadow: 0 0 0 3px var(--primary-color);
-        }
-
-        .color-menu-close {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: var(--danger-color);
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 32px;
-            height: 32px;
-            cursor: pointer;
-            font-size: 1.2em;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: var(--transition-fast);
-        }
-
-        .color-menu-close:hover {
-            transform: scale(1.1);
-        }
-
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.6);
-            z-index: 1500;
-            display: none;
+        .zekr-card.removing {
+            opacity: 0; transform: translateX(50px);
+        }
+
+        .zekr-card::before {
+            content: ''; position: absolute; right: 0; top: 0; bottom: 0; width: 5px;
+            background: var(--primary); opacity: 0.8; border-radius: 0 5px 5px 0;
+        }
+
+        .zekr-content { flex: 1; margin-left: 15px; padding-right: 10px; }
+        .zekr-txt { 
+            font-weight: 700; font-size: 1.15em; color: var(--text-main); 
+            display: block; margin-bottom: 5px; line-height: 1.5; 
+            white-space: pre-wrap; word-break: break-word;
+        }
+        .zekr-sub { font-size: 0.85em; color: var(--text-sub); display: block; }
+        
+        .del-btn-icon {
+            background: rgba(239, 68, 68, 0.1); color: #ef4444; border: none; 
+            width: 38px; height: 38px; border-radius: 12px; cursor: pointer; 
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.1em; transition: 0.2s; flex-shrink: 0;
+        }
+        .del-btn-icon:hover { background: #ef4444; color: white; transform: scale(1.05); }
+
+        .empty-state {
+            text-align: center; padding: 40px 20px; color: var(--text-sub);
+            display: flex; flex-direction: column; align-items: center; gap: 10px;
+        }
+        .empty-icon { font-size: 3em; opacity: 0.5; margin-bottom: 10px; }
+
+        .input-area {
+            width: 100%; padding: 15px; border-radius: 16px; 
+            border: 1px solid rgba(0,0,0,0.05); background: rgba(255,255,255,0.6); 
+            color: var(--text-main); margin-bottom: 10px; font-family: inherit; font-size: 1em; outline: none; transition: 0.3s;
+        }
+        .input-area:focus { background: #fff; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(30, 60, 114, 0.1); }
+        body.dark-mode .input-area { background: rgba(0,0,0,0.2); border-color: rgba(255,255,255,0.05); }
+
+        .nav-floating {
+            position: fixed; bottom: 25px; left: 50%; transform: translateX(-50%);
+            width: 85%; max-width: 380px; background: rgba(255, 255, 255, 0.9);
+            border-radius: 35px; display: flex; justify-content: space-between;
+            padding: 8px 15px; box-shadow: 0 15px 40px rgba(0,0,0,0.1); z-index: 1000;
+            border: 1px solid rgba(255,255,255,0.5); backdrop-filter: blur(20px);
+        }
+        body.dark-mode .nav-floating { background: rgba(30, 41, 59, 0.9); border-color: rgba(255,255,255,0.1); }
+        
+        .nav-btn { background: none; border: none; padding: 12px 20px; border-radius: 25px; color: var(--text-sub); font-size: 1.3em; cursor: pointer; transition: 0.3s; display: flex; align-items: center; gap: 8px; }
+        .nav-btn span { font-size: 0.55em; font-weight: 800; display: none; }
+        .nav-btn.active { color: var(--primary); background: rgba(0,0,0,0.04); }
+        .nav-btn.active span { display: block; }
+        body.dark-mode .nav-btn.active { background: rgba(255,255,255,0.1); }
+
+        .color-modal-overlay {
+            position: fixed; inset: 0; background: rgba(0,0,0,0.6);
+            z-index: 2000; display: none; align-items: center; justify-content: center;
             backdrop-filter: blur(5px);
         }
-
-        .overlay.show {
-            display: block;
-            animation: fadeIn 0.2s ease;
+        .color-modal-overlay.show { display: flex; animation: popIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); }
+        @keyframes popIn { from { transform: scale(0.9); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+        
+        .color-modal {
+            background: var(--glass-bg); width: 90%; max-width: 340px;
+            padding: 25px; border-radius: 28px; text-align: center;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3); border: var(--glass-border);
         }
-
-        .bottom-nav {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: var(--card-light);
-            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
-            display: flex;
-            justify-content: space-around;
-            padding: 10px 0;
-            z-index: 1000;
-            transition: var(--transition);
-            border-top: 1px solid rgba(0, 0, 0, 0.08);
-            backdrop-filter: blur(10px);
-            height: 80px;
+        .color-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 20px; justify-items: center; }
+        .color-circle {
+            width: 50px; height: 50px; border-radius: 50%; cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15); border: 2px solid white;
+            transition: transform 0.2s;
         }
+        .color-circle:hover { transform: scale(1.1); }
 
-        body.dark-mode .bottom-nav {
-            background: var(--card-dark);
-            border-top-color: rgba(255, 255, 255, 0.08);
-        }
+        .content-section { display: none; }
+        .content-section.active { display: block; animation: fadeUp 0.4s ease; }
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-        .nav-item {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 8px 5px;
-            cursor: pointer;
-            transition: var(--transition);
-            border: none;
-            background: none;
-            color: var(--text-muted);
-            border-radius: 12px;
-            margin: 0 8px;
-            text-decoration: none;
-            min-height: 60px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .nav-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: var(--accent-color);
-            opacity: 0;
-            transition: var(--transition);
-            border-radius: 12px;
-        }
-
-        .nav-item.active {
-            color: var(--accent-color);
-            transform: translateY(-5px);
-        }
-
-        .nav-item.active::before {
-            opacity: 0.15;
-        }
-
-        .nav-item:active {
-            transform: scale(0.95);
-        }
-
-        .nav-item span:first-child {
-            font-size: 1.6em;
-            margin-bottom: 4px;
-            transition: var(--transition);
-            z-index: 1;
-        }
-
-        .nav-item span:last-child {
-            font-size: 0.75em;
-            font-weight: 600;
-            z-index: 1;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 15px;
-            }
-
-            .status-bar {
-                padding: 12px 15px;
-                top: 0;
-                border-radius: 0;
-                margin-bottom: 15px;
-            }
-
-            .header {
-                padding: 20px 15px;
-            }
-
-            .header h1 {
-                font-size: 1.8em;
-            }
-
-            .tasbih-container {
-                padding: 25px 20px;
-            }
-
-            .tasbih-btn {
-                width: 170px;
-                height: 170px;
-            }
-            
-            .tasbih-number {
-                font-size: 2.8em;
-            }
-
-            .color-change-wrapper {
-                margin: 15px 0;
-            }
-
-            .color-change-btn {
-                padding: 10px 20px;
-                font-size: 13px;
-            }
-
-            .color-menu {
-                width: 90%;
-                padding: 20px;
-            }
-
-            .color-options {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 10px;
-            }
-
-            .color-option {
-                width: 50px;
-                height: 50px;
-            }
-
-            .bottom-nav {
-                height: 75px;
-            }
-
-            .nav-item {
-                margin: 0 5px;
-            }
-            
-            .bg-controls-wrapper {
-                max-width: 200px;
-            }
-            
-            .bg-buttons-row {
-                flex-direction: row;
-                gap: 5px;
-            }
-            
-            .bg-buttons-row .control-btn {
-                min-width: 80px;
-                padding: 8px 12px;
-                font-size: 12px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .tasbih-btn {
-                width: 150px;
-                height: 150px;
-            }
-
-            .tasbih-number {
-                font-size: 2.3em;
-            }
-
-            .control-btn {
-                padding: 12px 20px;
-                font-size: 13px;
-            }
-
-            .color-change-btn {
-                padding: 8px 16px;
-                font-size: 12px;
-            }
-
-            .color-options {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
-        .hidden {
-            display: none !important;
-        }
-
-        .text-center {
-            text-align: center;
-        }
-
-        .toast {
-            position: fixed;
-            bottom: 100px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--card-light);
-            color: var(--text-dark);
-            padding: 12px 24px;
-            border-radius: 30px;
-            box-shadow: var(--shadow-md);
-            z-index: 2001;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            pointer-events: none;
-            font-weight: 500;
-            border: 1px solid rgba(0, 0, 0, 0.1);
-        }
-
-        body.dark-mode .toast {
-            background: var(--card-dark);
-            color: var(--text-light);
-            border-color: rgba(255, 255, 255, 0.1);
-        }
-
-        .toast.show {
-            opacity: 1;
-        }
-
-        .toast.success {
-            border-color: var(--accent-color);
-            color: var(--accent-color);
-        }
-
-        .toast.error {
-            border-color: var(--danger-color);
-            color: var(--danger-color);
-        }
-
-        .toast.warning {
-            border-color: #FF9800;
-            color: #FF9800;
-        }
-
-        /* ====== تنسيق قسم تثبيت التطبيق ====== */
-        .install-info {
-            background: rgba(30, 60, 114, 0.1);
-            border-radius: 12px;
-            padding: 16px;
-            margin-top: 15px;
-            font-size: 0.85em;
-            line-height: 1.6;
-        }
-
-        body.dark-mode .install-info {
-            background: rgba(76, 175, 80, 0.1);
-        }
-
-        .install-info p {
-            margin-bottom: 8px;
-        }
-
-        .install-info p:last-child {
-            margin-bottom: 0;
-        }
-
-        .install-info strong {
-            color: var(--primary-color);
-        }
-
-        body.dark-mode .install-info strong {
-            color: var(--accent-color);
-        }
-
-        /* ====== تنسيق البانر التلقائي للتثبيت ====== */
-        .install-banner {
-            position: fixed;
-            bottom: 90px;
-            left: 0;
-            right: 0;
-            background: var(--card-light);
-            box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.2);
-            padding: 15px 20px;
-            transform: translateY(100%);
-            transition: transform 0.3s ease;
-            z-index: 999;
-            border-top: 1px solid rgba(0, 0, 0, 0.1);
-        }
-
-        body.dark-mode .install-banner {
-            background: var(--card-dark);
-            border-top-color: rgba(255, 255, 255, 0.1);
-        }
-
-        .install-banner.show {
-            transform: translateY(0);
-        }
-
-        .install-banner-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .install-banner-text {
-            flex: 1;
-        }
-
-        .install-banner-title {
-            font-weight: 700;
-            font-size: 1.1em;
-            color: var(--primary-color);
-            margin-bottom: 5px;
-        }
-
-        body.dark-mode .install-banner-title {
-            color: var(--accent-color);
-        }
-
-        .install-banner-desc {
-            font-size: 0.9em;
-            opacity: 0.8;
-        }
-
-        .install-banner-buttons {
-            display: flex;
-            gap: 10px;
-        }
-
-        .install-banner-btn {
-            background: var(--accent-color);
-            color: white;
-            border: none;
-            padding: 10px 18px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-size: 0.85em;
-            font-weight: 600;
-            transition: var(--transition-fast);
-        }
-
-        .install-banner-btn:hover {
-            transform: translateY(-1px);
-            box-shadow: var(--shadow-sm);
-        }
-
-        .install-banner-btn.deny {
-            background: rgba(0, 0, 0, 0.1);
-            color: var(--text-muted);
-        }
-
-        body.dark-mode .install-banner-btn.deny {
-            background: rgba(255, 255, 255, 0.1);
-            color: var(--text-light);
+        .toast { position: fixed; top: 100px; left: 50%; transform: translateX(-50%); background: #1e293b; color: white; padding: 12px 30px; border-radius: 50px; font-weight: 700; opacity: 0; pointer-events: none; transition: 0.3s; z-index: 3000; box-shadow: 0 10px 30px rgba(0,0,0,0.2); font-size: 0.9em; }
+        .toast.show { opacity: 1; top: 110px; }
+        
+        .install-btn-large {
+            width: 100%; padding: 12px; background: var(--text-main); color: var(--glass-bg);
+            border-radius: 12px; font-weight: 800; border: none; cursor: pointer;
+            display: flex; align-items: center; justify-content: center; gap: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1); margin-top: 10px;
         }
     </style>
 </head>
 <body>
-    <!-- شريط الحالة العلوي -->
-    <header class="status-bar">
-        <button class="date-display" id="dateDisplay" aria-live="polite" onclick="DateController.forceUpdate()" title="اضغط للتحديث اليدوي">
-            <span data-ar="جاري التحميل..." data-en="Loading...">جاري التحميل...</span>
-            <span class="update-indicator" id="updateIndicator" style="display: none;">🔄</span>
-        </button>
-        <div class="status-icons">
-            <button class="status-icon hidden" id="installIcon" onclick="PWAController.install()" title="Install app" aria-label="Install app">⬇️</button>
-        </div>
+
+    <header class="top-bar glass-panel">
+        <div class="date-badge" id="dateDisplay" onclick="DateCtrl.update()">...</div>
+        <button id="topInstallIcon" class="install-icon-top hidden" onclick="PWA.install()" title="تثبيت التطبيق">⬇️</button>
     </header>
 
-    <!-- بانر التثبيت التلقائي -->
-    <div class="install-banner" id="installBanner">
-        <div class="install-banner-content">
-            <div class="install-banner-text">
-                <div class="install-banner-title" data-ar="📱 تثبيت التطبيق؟" data-en="📱 Install App?">📱 تثبيت التطبيق؟</div>
-                <div class="install-banner-desc" data-ar="أضفه للشاشة الرئيسية للوصول السريع" data-en="Add it to your home screen for quick access">أضفه للشاشة الرئيسية للوصول السريع</div>
-            </div>
-            <div class="install-banner-buttons">
-                <button class="install-banner-btn" onclick="PWAController.install()" data-ar="تثبيت" data-en="Install">تثبيت</button>
-                <button class="install-banner-btn deny" onclick="PWAController.dismissInstallBanner()" data-ar="لا شكراً" data-en="No thanks">لا شكراً</button>
-            </div>
-        </div>
-    </div>
-
     <div class="container">
-        <!-- رأس الصفحة -->
-        <section class="header">
-            <h1 data-ar="📿 المسبحة الذكية" data-en="📿 Smart Tasbih">📿 المسبحة الذكية</h1>
-            <p data-ar="التسبيح باللمس أو الصوت - استجابة فورية (يتطلب إذن الميكروفون)" data-en="Tap or Voice Tasbih - Instant Response (Requires microphone permission)">التسبيح باللمس أو الصوت - استجابة فورية (يتطلب إذن الميكروفون)</p>
-        </section>
+        
+        <div class="header-content">
+            <h1 id="appTitle">المسبحة الذكية</h1>
+        </div>
 
-        <!-- قسم المسبحة -->
         <main id="tasbih-section" class="content-section active">
-            <div class="tasbih-container">
-                <div class="tasbih-selector">
-                    <label for="tasbihSelect" data-ar="اختر الذكر:" data-en="Select Dhikr:">اختر الذكر:</label>
-                    <select id="tasbihSelect" onchange="TasbihController.updateCurrent()" aria-label="Select dhikr">
-                        <option value="سبحان الله" data-ar="سبحان الله" data-en="Subhan Allah">سبحان الله</option>
-                        <option value="الحمد لله" data-ar="الحمد لله" data-en="Alhamdulillah">الحمد لله</option>
-                        <option value="لا إله إلا الله" data-ar="لا إله إلا الله" data-en="La ilaha illa Allah">لا إله إلا الله</option>
-                        <option value="الله أكبر" data-ar="الله أكبر" data-en="Allahu Akbar">الله أكبر</option>
-                        <option value="لا حول ولا قوة إلا بالله" data-ar="لا حول ولا قوة إلا بالله" data-en="La hawla wa la quwwata illa billah">لا حول ولا قوة إلا بالله</option>
-                        <option value="استغفر الله" data-ar="استغفر الله" data-en="Astaghfirullah">استغفر الله</option>
+            <div class="glass-panel" style="padding: 40px 20px; display:flex; flex-direction:column; align-items:center;">
+                <div class="tasbih-wrapper">
+                    <select id="tasbihSelect" onchange="Voice.reset()">
+                        <option>سبحان الله</option><option>الحمد لله</option>
+                        <option>لا إله إلا الله</option><option>الله أكبر</option>
+                        <option>استغفر الله</option><option>لا حول ولا قوة إلا بالله</option>
                     </select>
-                </div>
 
-                <div class="tasbih-circle-wrapper">
-                    <button class="tasbih-btn" id="tasbihBtn" 
-                            onclick="TasbihController.increment()"
-                            oncontextmenu="return false;"
-                            aria-label="Tasbih button">
-                        <span class="tasbih-number" id="counter">0</span>
+                    <button class="tasbih-btn-large" id="tasbihBtn" 
+                            ontouchstart="Tasbih.touchStart(event)" 
+                            onmousedown="Tasbih.mouseDown(event)" 
+                            onmouseup="Tasbih.mouseUp()"
+                            onmouseleave="Tasbih.mouseUp()">
+                        <span class="counter-display" id="counter">0</span>
                     </button>
-                </div>
 
-                <div class="color-change-wrapper">
-                    <button class="control-btn color-change-btn" onclick="ColorPicker.show()" aria-label="Change button color">
-                        <span aria-hidden="true">🎨</span>
-                        <span data-ar="تغيير لون الزر" data-en="Change Button Color">تغيير لون الزر</span>
+                    <button class="color-btn-center" id="colorBtnMain" onclick="ColorPicker.open()">
+                        🎨 لون المسبحة
                     </button>
-                </div>
 
-                <div class="voice-indicator" id="voiceIndicator" role="status" aria-live="polite">
-                    <span aria-hidden="true">🎤</span>
-                    <span id="voiceStatus" data-ar="التسبيح الصوتي: معطل" data-en="Voice Tasbih: Disabled">التسبيح الصوتي: معطل</span>
-                </div>
+                    <div class="controls-row">
+                        <button class="btn-small" id="voiceBtn" onclick="Voice.toggle()">🎤 صوتي</button>
+                        <button class="btn-small danger" id="resetBtn" onclick="Tasbih.reset()">🔄 تصفير</button>
+                    </div>
 
-                <div class="tasbih-controls">
-                    <button class="control-btn" id="voiceBtn" onclick="VoiceController.toggle()" aria-label="Toggle voice recognition">
-                        <span id="micIcon" aria-hidden="true">🎤</span>
-                        <span data-ar="تفعيل الصوت" data-en="Enable Voice">تفعيل الصوت</span>
-                    </button>
-                    <button class="control-btn" onclick="TasbihController.reset()" aria-label="Reset counter">
-                        <span aria-hidden="true">🔄</span>
-                        <span data-ar="تصفير" data-en="Reset">تصفير</span>
-                    </button>
-                </div>
-
-                <div class="last-detected" id="lastDetected">
-                    <span data-ar="🎤 جاهز للاستماع الفوري (يتطلب إذن الميكروفون)" data-en="🎤 Ready for instant listening (Requires microphone permission)">🎤 جاهز للاستماع الفوري (يتطلب إذن الميكروفون)</span>
+                    <!-- تم نقل وتنسيق آخر ذكر تم سماعه هنا -->
+                    <div class="last-heard-card">
+                        <span id="lastHeardLabel" style="font-size:0.8em; opacity:0.7;">آخر ذكر تم سماعه:</span>
+                        <div id="lastDetected" style="font-weight:700; color: var(--primary); min-height:20px;">-</div>
+                    </div>
                 </div>
             </div>
         </main>
 
         <section id="my-azkar-section" class="content-section">
-            <div class="my-azkar-container">
-                <div class="my-azkar-header">
-                    <h2 data-ar="📖 أذكاري" data-en="📖 My Azkar">📖 أذكاري</h2>
-                    <p data-ar="سجل أذكارك الخاصة وارجع لها في أي وقت (يعمل بدون إنترنت)" data-en="Save your personal azkar and access them anytime (works offline)">سجل أذكارك الخاصة وارجع لها في أي وقت (يعمل بدون إنترنت)</p>
+            <div class="glass-panel" style="padding: 25px;">
+                <h2 id="azkarTitle" style="text-align:center; margin-bottom:20px; font-weight:800;">أذكاري</h2>
+                <div style="margin-bottom:25px;">
+                    <textarea id="zekrText" class="input-area" rows="2" placeholder="أكتب الذكر هنا..."></textarea>
+                    <input id="zekrInfo" class="input-area" type="text" placeholder="معلومات إضافية (اختياري)">
+                    <!-- زر الإضافة الجديد -->
+                    <button id="addZekrBtn" class="btn-large-primary" onclick="Azkar.add()">➕ إضافة ذكر جديد</button>
                 </div>
-
-                <form class="add-zekr-form" onsubmit="AzkarController.add(); return false;" aria-label="Add dhikr form">
-                    <div class="form-group">
-                        <label for="zekrText" data-ar="الذكر:" data-en="Dhikr:">الذكر:</label>
-                        <textarea id="zekrText" rows="3" placeholder="أكتب ذكرك هنا..." data-ar-placeholder="أكتب ذكرك هنا..." data-en-placeholder="Write your dhikr here..." required></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="zekrInfo" data-ar="مصدر/ملاحظة (اختياري):" data-en="Source/Note (optional):">مصدر/ملاحظة (اختياري):</label>
-                        <input type="text" id="zekrInfo" placeholder="مثال: رواه البخاري" data-ar-placeholder="مثال: رواه البخاري" data-en-placeholder="Eg: Narrated by Bukhari">
-                    </div>
-                    <button type="submit" class="add-btn">
-                        <span data-ar="➕ إضافة الذكر" data-en="➕ Add Dhikr">➕ إضافة الذكر</span>
-                    </button>
-                </form>
-
-                <div class="my-azkar-list" id="myAzkarList" role="list">
-                    <div class="empty-message" data-ar="لم تضف أي أذكار بعد. ابدأ الآن!" data-en="No azkar added yet. Start now!">لم تضف أي أذكار بعد. ابدأ الآن!</div>
-                </div>
+                <div id="myAzkarList"></div>
             </div>
         </section>
 
+        <!-- قسم الإعدادات -->
         <section id="settings-section" class="content-section">
-            <div class="settings-container">
-                <div class="settings-header">
-                    <h2 data-ar="⚙️ الإعدادات" data-en="⚙️ Settings">⚙️ الإعدادات</h2>
-                </div>
+            <div class="glass-panel" style="padding: 25px;">
                 
                 <div class="settings-group">
-                    <h3 data-ar="🎨 إعدادات المظهر" data-en="🎨 Appearance Settings">🎨 إعدادات المظهر</h3>
+                    <div class="settings-title" id="optTitle">الخيارات</div>
                     
-                    <div class="setting-item">
-                        <label for="themeToggle" data-ar="الوضع المظلم:" data-en="Dark Mode:">الوضع المظلم:</label>
-                        <button id="themeToggle" class="control-btn" onclick="SettingsController.toggleTheme()">
-                            <span aria-hidden="true">🌙</span>
-                            <span data-ar="تفعيل" data-en="Enable">تفعيل</span>
-                        </button>
+                    <div class="option-item">
+                        <span id="optSound">الصوت</span>
+                        <div class="toggle-switch" id="soundToggle" onclick="Settings.toggleSound()"></div>
                     </div>
 
-                    <div class="setting-item">
-                        <label for="langToggle" data-ar="لغة التطبيق:" data-en="App Language:">لغة التطبيق:</label>
-                        <button id="langToggle" class="control-btn" onclick="SettingsController.toggleLanguage()">
-                            <span data-ar="EN" data-en="عربي">EN</span>
-                        </button>
+                    <div class="option-item">
+                        <span id="optNight">الوضع الليلي</span>
+                        <div class="toggle-switch" id="themeToggle" onclick="Settings.theme()"></div>
+                    </div>
+                    
+                    <div class="option-item" onclick="Settings.lang()" style="cursor:pointer">
+                        <span id="optLang">اللغة</span>
+                        <span style="font-size:0.9em; opacity:0.7;" id="currLang">English</span>
                     </div>
 
-                    <div class="setting-item">
-                        <label for="bgPicker" data-ar="خلفية التطبيق:" data-en="App Background:">خلفية التطبيق:</label>
-                        <div class="bg-controls-wrapper">
-                            <div class="bg-buttons-row">
-                                <button class="control-btn" onclick="document.getElementById('bgPicker').click()">
-                                    <span aria-hidden="true">📷</span>
-                                    <span data-ar="اختيار صورة" data-en="Choose Image">اختيار صورة</span>
-                                </button>
-                                <input type="file" id="bgPicker" class="background-picker hidden" accept="image/*" onchange="BackgroundController.change(event)" aria-label="Background picker">
-                                <button class="control-btn danger" onclick="BackgroundController.remove()">
-                                    <span aria-hidden="true">❌</span>
-                                    <span data-ar="إزالة" data-en="Remove">إزالة</span>
-                                </button>
-                            </div>
-                            <div class="bg-preview" id="bgPreview" role="img" aria-label="Background preview"></div>
-                        </div>
+                    <div class="option-item" onclick="document.getElementById('bgPicker').click()" style="cursor:pointer">
+                        <span id="optBg">تغيير الخلفية</span>
+                        <span style="font-size:1.2em;">🖼️</span>
+                    </div>
+                    <input type="file" id="bgPicker" hidden accept="image/*" onchange="BG.change(event)">
+
+                    <button class="btn-small danger" id="delBgBtn" onclick="BG.remove()" style="margin-top:15px; width:100%">🗑️ حذف الخلفية</button>
+                </div>
+
+                <hr style="border:0; border-top:1px solid var(--glass-border); margin:20px 0;">
+
+                <div class="settings-group">
+                    <div class="settings-title" id="notesTitle">ملاحظات</div>
+                    
+                    <button id="settingsInstallBtn" class="install-btn-large hidden" onclick="PWA.install()">
+                        <span id="installBtnTxt">📲 تثبيت التطبيق</span>
+                    </button>
+
+                    <div class="install-instructions">
+                        <div class="inst-title">🍎 <span id="iosTitle">طريقة التثبيت للآيفون (iOS)</span></div>
+                        <div class="inst-step">1. <span id="iosStep1">افتح الموقع في متصفح Safari.</span></div>
+                        <div class="inst-step">2. <span id="iosStep2">اضغط على زر المشاركة في الأسفل.</span></div>
+                        <div class="inst-step">3. <span id="iosStep3">اختر "إضافة إلى الشاشة الرئيسية".</span></div>
+                    </div>
+
+                    <div class="install-instructions">
+                        <div class="inst-title">🤖 <span id="androidTitle">طريقة التثبيت للأندرويد</span></div>
+                        <div class="inst-step">1. <span id="andStep1">افتح الموقع في متصفح Chrome.</span></div>
+                        <div class="inst-step">2. <span id="andStep2">اضغط على القائمة (الثلاث نقاط) في الأعلى.</span></div>
+                        <div class="inst-step">3. <span id="andStep3">اختر "تثبيت التطبيق".</span></div>
                     </div>
                 </div>
 
-                <div class="settings-group">
-                    <h3 data-ar="🎤 إعدادات الصوت" data-en="🎤 Audio Settings">🎤 إعدادات الصوت</h3>
-                    
-                    <div class="setting-item">
-                        <label data-ar="إذن الميكروفون:" data-en="Microphone Permission:">إذن الميكروفون:</label>
-                        <div style="flex: 1;">
-                            <button class="control-btn" onclick="PermissionController.requestMicrophone()" style="min-width: 150px;">
-                                <span aria-hidden="true">🔊</span>
-                                <span data-ar="طلب الإذن" data-en="Request Permission">طلب الإذن</span>
-                            </button>
-                            <div class="permission-status prompt" id="micPermissionStatus">
-                                <span aria-hidden="true">⏳</span>
-                                <span data-ar="لم يتم طلب الإذن بعد" data-en="Permission not requested yet">لم يتم طلب الإذن بعد</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="setting-item">
-                        <label data-ar="تصفير العداد:" data-en="Reset Counter:">تصفير العداد:</label>
-                        <button class="control-btn danger" onclick="TasbihController.reset()">
-                            <span aria-hidden="true">🔄</span>
-                            <span data-ar="تصفير الآن" data-en="Reset Now">تصفير الآن</span>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- ====== قسم تثبيت التطبيق الجديد ====== -->
-                <div class="settings-group">
-                    <h3 data-ar="📱 تثبيت التطبيق" data-en="📱 Install App">📱 تثبيت التطبيق</h3>
-                    
-                    <div class="setting-item">
-                        <label data-ar="إضافة للشاشة الرئيسية:" data-en="Add to Home Screen:">إضافة للشاشة الرئيسية:</label>
-                        <button class="control-btn" onclick="PWAController.install()" style="min-width: 180px; background: #4CAF50;">
-                            <span aria-hidden="true">📲</span>
-                            <span data-ar="تثبيت التطبيق" data-en="Install App">تثبيت التطبيق</span>
-                        </button>
-                    </div>
-                    
-                    <div class="install-info">
-                        <p data-ar="📲 <strong>على أندرويد:</strong> اضغط 'تثبيت التطبيق' أو أيقونة ⬇️ أعلى الصفحة" data-en="📲 <strong>On Android:</strong> Click 'Install App' or the ⬇️ icon at the top">
-                            📲 <strong>على أندرويد:</strong> اضغط 'تثبيت التطبيق' أو أيقونة ⬇️ أعلى الصفحة
-                        </p>
-                        <p data-ar="🍎 <strong>على iOS:</strong> اضغط 'Share' ثم 'Add to Home Screen'" data-en="🍎 <strong>On iOS:</strong> Tap 'Share' then 'Add to Home Screen'">
-                            🍎 <strong>على iOS:</strong> اضغط 'Share' ثم 'Add to Home Screen'
-                        </p>
-                        <p data-ar="✅ التطبيق يعمل بشكل كامل بدون إنترنت بعد التثبيت" data-en="✅ App works fully offline after installation">
-                            ✅ التطبيق يعمل بشكل كامل بدون إنترنت بعد التثبيت
-                        </p>
-                    </div>
-                </div>
-
-                <div class="settings-group">
-                    <h3 data-ar="ℹ️ معلومات التطبيق" data-en="ℹ️ About App">ℹ️ معلومات التطبيق</h3>
-                    <div class="text-center" style="font-size: 0.9em; line-height: 1.7; opacity: 0.85; padding: 15px;">
-                        <p data-ar="🎤 لاستخدام التسبيح الصوتي: اضغط على زر 'تفعيل الصوت' واسمح بالوصول للميكروفون" data-en="🎤 For voice tasbih: Click 'Enable Voice' and allow microphone access">🎤 لاستخدام التسبيح الصوتي: اضغط على زر 'تفعيل الصوت' واسمح بالوصول للميكروفون</p>
-                        <br>
-                        <p data-ar="💾 جميع البيانات محفوظة على جهازك" data-en="💾 All data is saved on your device">💾 جميع البيانات محفوظة على جهازك</p>
-                    </div>
+                <div style="font-size:0.8em; padding:10px; text-align:center; color:var(--text-sub);">
+                    v3.0 • يعمل بلا انترنت
                 </div>
             </div>
         </section>
     </div>
 
-    <div class="overlay" id="overlay" onclick="ColorPicker.close()"></div>
-    <div class="color-menu" id="colorMenu" role="dialog" aria-labelledby="colorMenuTitle">
-        <button class="color-menu-close" onclick="ColorPicker.close()" aria-label="Close">✕</button>
-        <h3 id="colorMenuTitle" data-ar="🎨 اختر لون الزر" data-en="🎨 Choose Button Color">🎨 اختر لون الزر</h3>
-        <div class="color-options" id="colorOptions" role="listbox"></div>
+    <!-- نافذة الألوان -->
+    <div class="color-modal-overlay" id="colorModal" onclick="ColorPicker.close(event)">
+        <div class="color-modal">
+            <h3 id="colorModalTitle" style="margin-bottom:20px;">لون المسبحة</h3>
+            <div class="color-grid" id="colorGrid"></div>
+            <button class="btn-small" id="closeColorBtn" style="margin-top:25px; width:100%" onclick="ColorPicker.close(null, true)">إغلاق</button>
+        </div>
     </div>
 
-    <!-- إشعارات Toast -->
-    <div class="toast" id="toast"></div>
-
-    <nav class="bottom-nav" role="navigation" aria-label="Main navigation">
-        <button class="nav-item active" onclick="NavigationController.show('tasbih')" 
-                aria-selected="true" 
-                aria-label="Tasbih">
-            <span aria-hidden="true">📿</span>
-            <span data-ar="المسبحة" data-en="Tasbih">المسبحة</span>
-        </button>
-        <button class="nav-item" onclick="NavigationController.show('my-azkar')" 
-                aria-selected="false" 
-                aria-label="My Azkar">
-            <span aria-hidden="true">📖</span>
-            <span data-ar="أذكاري" data-en="My Azkar">أذكاري</span>
-        </button>
-        <button class="nav-item" onclick="NavigationController.show('settings')" 
-                aria-selected="false" 
-                aria-label="Settings">
-            <span aria-hidden="true">⚙️</span>
-            <span data-ar="إعدادات" data-en="Settings">إعدادات</span>
-        </button>
+    <nav class="nav-floating">
+        <button class="nav-btn active" onclick="Nav.show('tasbih')">📿 <span id="navTasbih">تسبيح</span></button>
+        <button class="nav-btn" onclick="Nav.show('my-azkar')">📖 <span id="navAzkar">أذكاري</span></button>
+        <button class="nav-btn" onclick="Nav.show('settings')">⚙️ <span id="navSettings">إعدادات</span></button>
     </nav>
 
+    <div class="toast" id="toast"></div>
+
     <script>
-        // ====== النظام الأساسي ======
-        let counter = 0;
-        let voiceEnabled = false;
-        let recognition = null;
-        let isDarkMode = false;
-        let currentLang = 'ar';
-        let currentTasbih = "سبحان الله";
-        let deferredPrompt = null;
-        let buttonColor = '#1e3c72';
-        let lastCalculatedDate = null;
-        let microphonePermission = 'prompt';
-        let installBannerDismissed = false;
+        let count = 0, isVoice = false, rec = null, isDark = false, lang = 'ar', defPrompt = null;
+        let isSound = false;
+        let audioCtx = null;
         
-        const availableColors = [
-            '#1e3c72', '#2a5298', '#4CAF50', '#f44336', '#FF9800', '#9C27B0', '#00BCD4', '#E91E63', '#795548', '#607D8B', '#3F51B5', '#009688'
+        const colors = [
+            '#1e3c72', '#2563eb', '#059669', '#dc2626', 
+            '#d97706', '#9333ea', '#0891b2', '#db2777', 
+            '#57534e', '#475569', '#4f46e5', '#0d9488'
         ];
 
-        // ====== خدمة حفظ البيانات ======
-        class Storage {
-            static save(key, value) {
-                try {
-                    localStorage.setItem(key, JSON.stringify(value));
-                    return true;
-                } catch (e) {
-                    console.error('❌ Storage save error:', e);
-                    return false;
+        // نصوص الواجهة
+        const uiText = {
+            ar: {
+                appTitle: 'المسبحة الذكية',
+                colorBtn: '🎨 لون المسبحة',
+                voiceBtn: '🎤 صوتي',
+                voiceBtnActive: '⏹ إيقاف',
+                resetBtn: '🔄 تصفير',
+                azkarTitle: 'أذكاري', 
+                addZekrPlaceholder: 'أكتب الذكر هنا...',
+                addZekrInfoPlaceholder: 'معلومات إضافية (اختياري)',
+                addBtn: '➕ إضافة ذكر جديد',
+                optTitle: 'الخيارات',
+                notesTitle: 'ملاحظات',
+                optSound: 'الصوت',
+                optNight: 'الوضع الليلي',
+                optLang: 'اللغة',
+                currLang: 'English',
+                optBg: 'تغيير الخلفية',
+                delBgBtn: '🗑️ حذف الخلفية',
+                installBtn: '📲 تثبيت التطبيق',
+                iosTitle: 'تثبيت للآيفون (iOS)',
+                ios1: 'افتح في Safari.',
+                ios2: 'اضغط زر المشاركة.',
+                ios3: 'اختر "إضافة للشاشة الرئيسية".',
+                andTitle: 'تثبيت للأندرويد',
+                and1: 'افتح في Chrome.',
+                and2: 'اضغط القائمة (3 نقاط).',
+                and3: 'اختر "تثبيت التطبيق".',
+                colorModalTitle: 'لون المسبحة',
+                closeBtn: 'إغلاق',
+                navTasbih: 'تسبيح',
+                navAzkar: 'أذكاري',
+                navSettings: 'إعدادات',
+                confirmReset: 'تصفير العداد؟',
+                confirmDel: 'حذف هذا الذكر؟',
+                confirmDelBg: 'تم حذف الخلفية',
+                voiceNotSupported: 'غير مدعوم',
+                voiceStart: 'تحدث الآن',
+                lastHeardLabel: 'آخر ذكر تم سماعه:'
+            },
+            en: {
+                appTitle: 'Smart Tasbih',
+                colorBtn: '🎨 Color',
+                voiceBtn: '🎤 Voice',
+                voiceBtnActive: '⏹ Stop',
+                resetBtn: '🔄 Reset',
+                azkarTitle: 'My Azkar',
+                addZekrPlaceholder: 'Write here...',
+                addZekrInfoPlaceholder: 'Info (optional)',
+                addBtn: '➕ Add New Zekr',
+                optTitle: 'Options',
+                notesTitle: 'Notes',
+                optSound: 'Sound',
+                optNight: 'Night Mode',
+                optLang: 'Language',
+                currLang: 'عربي',
+                optBg: 'Change Background',
+                delBgBtn: '🗑️ Remove BG',
+                installBtn: '📲 Install App',
+                iosTitle: 'Install on iOS',
+                ios1: 'Open in Safari.',
+                ios2: 'Tap Share button.',
+                ios3: 'Select "Add to Home Screen".',
+                andTitle: 'Install on Android',
+                and1: 'Open in Chrome.',
+                and2: 'Tap Menu (3 dots).',
+                and3: 'Select "Install App".',
+                colorModalTitle: 'Pick Color',
+                closeBtn: 'Close',
+                navTasbih: 'Tasbih',
+                navAzkar: 'Azkar',
+                navSettings: 'Settings',
+                confirmReset: 'Reset?',
+                confirmDel: 'Delete?',
+                confirmDelBg: 'Background removed',
+                voiceNotSupported: 'Not supported',
+                voiceStart: 'Speak now',
+                lastHeardLabel: 'Last heard:'
+            }
+        };
+
+        const Storage = {
+            s: (k, v) => localStorage.setItem(k, JSON.stringify(v)),
+            l: (k, d) => { try { return JSON.parse(localStorage.getItem(k)) || d } catch(e) { return d } },
+            r: (k) => localStorage.removeItem(k)
+        };
+
+        const Toast = (m) => {
+            const t = document.getElementById('toast'); t.textContent = m; t.classList.add('show');
+            setTimeout(() => t.classList.remove('show'), 2000);
+        };
+
+        const DateCtrl = {
+            update: () => {
+                const d = new Date();
+                let txt;
+                if (lang === 'ar') txt = new Intl.DateTimeFormat('ar-SA-u-ca-islamic-umalqura', {day:'numeric', month:'short', year:'numeric'}).format(d);
+                else txt = new Intl.DateTimeFormat('en-US', {day:'numeric', month:'short', year:'numeric'}).format(d);
+                document.getElementById('dateDisplay').textContent = txt;
+            }
+        };
+
+        const playClick = () => {
+            if (!isSound) return;
+            if (!audioCtx) {
+                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            }
+            if (audioCtx.state === 'suspended') {
+                audioCtx.resume();
+            }
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+            osc.frequency.value = 600;
+            osc.type = 'sine';
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
+            gain.gain.setValueAtTime(0.1, audioCtx.currentTime);
+            gain.gain.exponentialRampToValueAtTime(0.00001, audioCtx.currentTime + 0.1);
+            osc.start();
+            osc.stop(audioCtx.currentTime + 0.1);
+        };
+
+        const Tasbih = {
+            touchStart: (e) => { e.preventDefault(); Tasbih.press(e); },
+            mouseDown: (e) => { Tasbih.press(e); },
+            mouseUp: () => { document.getElementById('tasbihBtn').classList.remove('pressed'); },
+            press: (e) => {
+                const btn = document.getElementById('tasbihBtn');
+                if (e && (e.clientX || (e.touches && e.touches[0]))) {
+                    const rect = btn.getBoundingClientRect();
+                    const x = (e.clientX || e.touches[0].clientX) - rect.left;
+                    const y = (e.clientY || e.touches[0].clientY) - rect.top;
+                    const circle = document.createElement('span');
+                    circle.classList.add('ripple-effect');
+                    circle.style.left = `${x}px`;
+                    circle.style.top = `${y}px`;
+                    btn.appendChild(circle);
+                    setTimeout(() => circle.remove(), 500);
                 }
+                
+                count++;
+                document.getElementById('counter').textContent = count;
+                Storage.s('cnt', count);
+                
+                btn.classList.add('pressed');
+                setTimeout(() => btn.classList.remove('pressed'), 150);
+                
+                playClick();
+            },
+            reset: () => {
+                if(confirm(uiText[lang].confirmReset)) { count = 0; document.getElementById('counter').textContent = 0; Storage.s('cnt', 0); }
             }
+        };
 
-            static load(key, defaultValue = null) {
-                try {
-                    const item = localStorage.getItem(key);
-                    return item ? JSON.parse(item) : defaultValue;
-                } catch (e) {
-                    console.error('❌ Storage load error:', e);
-                    return defaultValue;
+        const Settings = {
+            toggleSound: () => {
+                isSound = !isSound;
+                document.getElementById('soundToggle').classList.toggle('active', isSound);
+                Storage.s('sound', isSound);
+                if(isSound && !audioCtx) {
+                     audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                     playClick(); 
                 }
-            }
-
-            static remove(key) {
-                try {
-                    localStorage.removeItem(key);
-                    return true;
-                } catch (e) {
-                    console.error('❌ Storage remove error:', e);
-                    return false;
-                }
-            }
-        }
-
-        // ====== نظام الترجمة ======
-        class Localization {
-            static get(arText, enText) {
-                return currentLang === 'ar' ? arText : enText;
-            }
-
-            static update() {
-                document.querySelectorAll('[data-ar][data-en]').forEach(element => {
-                    if (element.id === 'dateDisplay' || element.parentElement.id === 'dateDisplay') {
-                        return;
-                    }
-                    element.textContent = this.get(element.dataset.ar, element.dataset.en);
+            },
+            theme: () => {
+                isDark = !isDark;
+                document.body.classList.toggle('dark-mode', isDark);
+                document.getElementById('themeToggle').classList.toggle('active', isDark);
+                Storage.s('dark', isDark);
+            },
+            lang: () => {
+                lang = lang === 'ar' ? 'en' : 'ar';
+                Settings.applyLang();
+                Storage.s('lang', lang);
+            },
+            applyLang: () => {
+                document.body.dir = lang === 'ar' ? 'rtl' : 'ltr';
+                DateCtrl.update();
+                Azkar.load();
+                const t = uiText[lang];
+                
+                const ids = ['appTitle','colorBtnMain','voiceBtn','resetBtn','azkarTitle','addZekrBtn','optTitle','notesTitle',
+                            'optSound','optNight','optLang','currLang','optBg','delBgBtn','installBtnTxt',
+                             'iosTitle','iosStep1','iosStep2','iosStep3','androidTitle','andStep1','andStep2','andStep3',
+                             'colorModalTitle','closeColorBtn','navTasbih','navAzkar','navSettings','lastHeardLabel'];
+                
+                ids.forEach(id => {
+                    const el = document.getElementById(id);
+                    if(el) el.textContent = t[id.replace('Step','').replace('BtnMain','Btn').replace('BtnTxt','Btn')] || t[id];
                 });
                 
-                document.querySelectorAll('input, textarea').forEach(element => {
-                    if (element.dataset.arPlaceholder && element.dataset.enPlaceholder) {
-                        element.placeholder = this.get(element.dataset.arPlaceholder, element.dataset.enPlaceholder);
-                    }
-                });
-
-                if (currentLang === 'ar') {
-                    document.body.setAttribute('dir', 'rtl');
-                    document.body.classList.remove('english');
-                } else {
-                    document.body.setAttribute('dir', 'ltr');
-                    document.body.classList.add('english');
-                }
-
-                if (recognition) {
-                    recognition.lang = currentLang === 'ar' ? 'ar-SA' : 'en-US';
-                }
+                document.getElementById('zekrText').placeholder = t.addZekrPlaceholder;
+                document.getElementById('zekrInfo').placeholder = t.addZekrInfoPlaceholder;
+                if(!isVoice) document.getElementById('voiceBtn').textContent = t.voiceBtn;
             }
+        };
 
-            static updateButtonLabels() {
-                const themeBtn = document.querySelector('#themeToggle span:last-child');
-                if (themeBtn) {
-                    themeBtn.textContent = isDarkMode ? this.get('إيقاف', 'Disable') : this.get('تفعيل', 'Enable');
-                }
-
-                const langBtn = document.querySelector('#langToggle span');
-                if (langBtn) {
-                    langBtn.textContent = currentLang === 'ar' ? 'EN' : 'عربي';
-                }
-            }
-        }
-
-        // ====== نظام الإشعارات ======
-        class Toast {
-            static show(message, type = 'info') {
-                const toast = document.getElementById('toast');
-                if (!toast) return;
-                
-                toast.textContent = message;
-                toast.className = `toast ${type}`;
-                toast.classList.add('show');
-                
-                setTimeout(() => {
-                    toast.classList.remove('show');
-                }, 3000);
-            }
-        }
-
-        // ====== حساب التاريخ الهجري (محسّن) ======
-        function getHijriDate() {
-            try {
-                const today = new Date();
-                const todayStr = today.toDateString();
-                
-                if (lastCalculatedDate && lastCalculatedDate.dateStr === todayStr) {
-                    return lastCalculatedDate.result;
-                }
-
-                const gregorianDate = new Date();
-                const jd = gregorianDate.getTime() / 86400000 + 2440587.5;
-                const hijriStart = 1948439.5;
-                let daysSinceHijra = jd - hijriStart;
-                
-                let hijriYear = Math.floor(daysSinceHijra / 354.367) + 1;
-                let daysInYear = 0;
-                let testYear = 1;
-                let foundYear = false;
-                
-                while (!foundYear && testYear < 5000) {
-                    const isLeap = testYear % 30 === 2 || testYear % 30 === 5 || testYear % 30 === 7 || 
-                                  testYear % 30 === 10 || testYear % 30 === 13 || testYear % 30 === 16 || 
-                                  testYear % 30 === 18 || testYear % 30 === 21 || testYear % 30 === 24 || 
-                                  testYear % 30 === 26 || testYear % 30 === 29;
-                    
-                    const yearLength = isLeap ? 355 : 354;
-                    
-                    if (daysSinceHijra <= yearLength) {
-                        hijriYear = testYear;
-                        foundYear = true;
-                    } else {
-                        daysSinceHijra -= yearLength;
-                        testYear++;
-                    }
-                }
-                
-                const dayOfYear = Math.floor(daysSinceHijra) + 1;
-                const isCurrentYearLeap = hijriYear % 30 === 2 || hijriYear % 30 === 5 || hijriYear % 30 === 7 || 
-                                           hijriYear % 30 === 10 || hijriYear % 30 === 13 || hijriYear % 30 === 16 || 
-                                           hijriYear % 30 === 18 || hijriYear % 30 === 21 || hijriYear % 30 === 24 || 
-                                           hijriYear % 30 === 26 || hijriYear % 30 === 29;
-                
-                const hijriMonths = [
-                    { ar: 'محرم', en: 'Muharram', days: 30 },
-                    { ar: 'صفر', en: 'Safar', days: 29 },
-                    { ar: 'ربيع الأول', en: 'Rabi Al-Awwal', days: 30 },
-                    { ar: 'ربيع الثاني', en: 'Rabi Al-Thani', days: 29 },
-                    { ar: 'جمادى الأولى', en: 'Jumada Al-Ula', days: 30 },
-                    { ar: 'جمادى الآخرة', en: 'Jumada Al-Akhirah', days: 29 },
-                    { ar: 'رجب', en: 'Rajab', days: 30 },
-                    { ar: 'شعبان', en: 'Sha\'ban', days: 29 },
-                    { ar: 'رمضان', en: 'Ramadan', days: 30 },
-                    { ar: 'شوال', en: 'Shawwal', days: 29 },
-                    { ar: 'ذو القعدة', en: 'Dhu Al-Qi\'dah', days: 30 },
-                    { ar: 'ذو الحجة', en: 'Dhu Al-Hijjah', days: isCurrentYearLeap ? 30 : 29 }
-                ];
-                
-                let remainingDays = dayOfYear;
-                let hijriMonth = 0;
-                let hijriDay = 1;
-                
-                for (let i = 0; i < hijriMonths.length; i++) {
-                    if (remainingDays <= hijriMonths[i].days) {
-                        hijriMonth = i;
-                        hijriDay = remainingDays;
-                        break;
-                    }
-                    remainingDays -= hijriMonths[i].days;
-                }
-                
-                const result = {
-                    day: hijriDay,
-                    month: hijriMonths[hijriMonth],
-                    year: hijriYear
-                };
-                
-                lastCalculatedDate = {
-                    dateStr: todayStr,
-                    result: result
-                };
-                
-                return result;
-            } catch (error) {
-                console.error('❌ Error calculating Hijri date:', error);
-                return null;
-            }
-        }
-
-        // ====== PWA Controller (محسّن) ======
-        class PWAController {
-            static init() {
-                if ('serviceWorker' in navigator) {
-                    navigator.serviceWorker.register('data:text/javascript;base64,' + btoa(`
-                        const CACHE_NAME = 'tasbih-app-v9';
-                        
-                        self.addEventListener('install', event => {
-                            event.waitUntil(
-                                caches.open(CACHE_NAME).then(cache => {
-                                    return cache.addAll(['/']);
-                                })
-                            );
-                            console.log('Service Worker installing');
-                        });
-                        
-                        self.addEventListener('activate', event => {
-                            event.waitUntil(
-                                caches.keys().then(cacheNames => {
-                                    return Promise.all(
-                                        cacheNames.map(cacheName => {
-                                            if (cacheName !== CACHE_NAME) {
-                                                return caches.delete(cacheName);
-                                            }
-                                        })
-                                    );
-                                })
-                            );
-                        });
-                        
-                        self.addEventListener('fetch', event => {
-                            event.respondWith(
-                                caches.match(event.request).then(response => {
-                                    return response || fetch(event.request);
-                                })
-                            );
-                        });
-                    `)).then(registration => {
-                        console.log('✅ Service Worker registered');
-                        registration.update();
-                    }).catch(error => console.error('❌ SW registration failed:', error));
-                }
-
-                // استعادة حالة البانر المخفي
-                installBannerDismissed = Storage.load('installBannerDismissed', false);
-
-                window.addEventListener('beforeinstallprompt', (e) => {
-                    e.preventDefault();
-                    deferredPrompt = e;
-                    
-                    // أظهر أيقونة التثبيت في الشريط العلوي
-                    const installIcon = document.getElementById('installIcon');
-                    if (installIcon) {
-                        installIcon.classList.remove('hidden');
-                    }
-
-                    // أظهر البانر التلقائي إذا لم يتم تجاهله من قبل
-                    if (!installBannerDismissed) {
-                        const banner = document.getElementById('installBanner');
-                        if (banner) {
-                            banner.classList.add('show');
+        const Voice = {
+            lastTxt: '', lastTime: 0,
+            init: () => {
+                const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+                if (!SR) return;
+                rec = new SR(); rec.continuous = true; rec.lang = 'ar-SA'; rec.interimResults = true;
+                rec.onresult = (e) => {
+                    const now = Date.now();
+                    if (now - Voice.lastTime < 200) return;
+                    for (let i = e.results.length - 1; i >= e.resultIndex; i--) {
+                        if (e.results[i].isFinal || e.results[i][0].confidence > 0.65) {
+                             const transcript = e.results[i][0].transcript.trim();
+                             if (Voice.lastTxt !== transcript) {
+                                Voice.lastTxt = transcript; Voice.lastTime = now;
+                                Tasbih.press();
+                                document.getElementById('lastDetected').textContent = transcript;
+                                return;
+                             }
                         }
                     }
-                    
-                    console.log('📲 PWA install prompt ready');
-                });
-
-                // تحقق من إذا كان التطبيق مثبت بالفعل (للأندرويد)
-                if ('getInstalledRelatedApps' in navigator) {
-                    navigator.getInstalledRelatedApps().then(apps => {
-                        if (apps && apps.length > 0) {
-                            console.log('📱 App is already installed');
-                            this.hideInstallElements();
-                        }
-                    });
-                }
-
-                // بالنسبة لـ iOS: تحقق من وضع standalone
-                if (window.matchMedia('(display-mode: standalone)').matches) {
-                    console.log('📱 App is running in standalone mode');
-                    this.hideInstallElements();
-                }
-            }
-
-            static install() {
-                if (deferredPrompt) {
-                    deferredPrompt.prompt();
-                    deferredPrompt.userChoice.then((choiceResult) => {
-                        if (choiceResult.outcome === 'accepted') {
-                            console.log('✅ PWA installed');
-                            Toast.show(Localization.get('✅ تم تثبيت التطبيق بنجاح!', '✅ App installed successfully!'), 'success');
-                            this.hideInstallElements();
-                        } else {
-                            console.log('❌ PWA installation declined');
-                        }
-                        deferredPrompt = null;
-                    });
-                } else {
-                    // إذا كان المتصفح لا يدعم التثبيت التلقائي (مثل iOS)
-                    Toast.show(Localization.get('🍎 على iOS: استخدم خيار Share > Add to Home Screen', '🍎 On iOS: Use Share > Add to Home Screen'), 'info');
-                }
-            }
-
-            static dismissInstallBanner() {
-                const banner = document.getElementById('installBanner');
-                if (banner) {
-                    banner.classList.remove('show');
-                }
-                installBannerDismissed = true;
-                Storage.save('installBannerDismissed', true);
-                console.log('📲 Install banner dismissed');
-            }
-
-            static hideInstallElements() {
-                // أخفي أيقونة التثبيت
-                const installIcon = document.getElementById('installIcon');
-                if (installIcon) {
-                    installIcon.classList.add('hidden');
-                }
-
-                // أخفي البانر التلقائي
-                const banner = document.getElementById('installBanner');
-                if (banner) {
-                    banner.classList.remove('show');
-                }
-
-                // أخفي زر التثبيت في الإعدادات
-                const installBtn = document.getElementById('installAppBtn');
-                if (installBtn) {
-                    installBtn.style.display = 'none';
-                }
-
-                console.log('📲 Install elements hidden');
-            }
-        }
-
-        // ====== Tasbih Controller ======
-        class TasbihController {
-            static increment() {
-                counter++;
-                this.updateDisplay();
-                Storage.save('tasbihCounter', counter);
-                console.log('🔢 Counter incremented:', counter);
-            }
-
-            static updateDisplay() {
-                const counterEl = document.getElementById('counter');
-                if (!counterEl) return;
-                counterEl.textContent = counter;
-                
-                counterEl.style.transform = 'scale(1.15)';
-                setTimeout(() => {
-                    counterEl.style.transform = 'scale(1)';
-                }, 150);
-                
-                if (counter % 33 === 0) {
-                    counterEl.style.color = '#FF6B6B';
-                    setTimeout(() => {
-                        counterEl.style.color = 'white';
-                    }, 500);
-                }
-            }
-
-            static reset() {
-                if (confirm(Localization.get('هل تريد تصفير العداد؟', 'Reset the counter?'))) {
-                    counter = 0;
-                    const counterEl = document.getElementById('counter');
-                    if (counterEl) {
-                        counterEl.textContent = counter;
-                    }
-                    Storage.save('tasbihCounter', counter);
-                    Toast.show(Localization.get('✅ تم تصفير العداد', '✅ Counter reset'), 'success');
-                    console.log('🔄 Counter reset');
-                }
-            }
-
-            static updateCurrent() {
-                const select = document.getElementById('tasbihSelect');
-                if (!select) return;
-                currentTasbih = select.value;
-                VoiceController.lastDetectedPhrase = '';
-                const lastDetected = document.getElementById('lastDetected');
-                if (lastDetected) {
-                    lastDetected.textContent = Localization.get('🎤 جاهز للاستماع الفوري (يتطلب إذن الميكروفون)', '🎤 Ready for instant listening (Requires microphone permission)');
-                    lastDetected.classList.remove('instant');
-                }
-                console.log('📝 Current tasbih changed:', currentTasbih);
-            }
-        }
-
-        // ====== Permission Controller ======
-        class PermissionController {
-            static init() {
-                if ('permissions' in navigator) {
-                    navigator.permissions.query({ name: 'microphone' }).then(permissionStatus => {
-                        microphonePermission = permissionStatus.state;
-                        this.updatePermissionStatus();
-                        console.log('🎤 Microphone permission status:', microphonePermission);
-                        
-                        permissionStatus.onchange = () => {
-                            microphonePermission = permissionStatus.state;
-                            this.updatePermissionStatus();
-                            console.log('🎤 Microphone permission changed:', microphonePermission);
-                        };
-                    });
-                } else {
-                    console.warn('⚠️ Permissions API not supported');
-                }
-            }
-
-            static async requestMicrophone() {
-                try {
-                    if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
-                        Toast.show(Localization.get('❌ المتصفح لا يدعم الميكروفون', '❌ Browser does not support microphone'), 'error');
-                        return;
-                    }
-
-                    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-                    microphonePermission = 'granted';
-                    this.updatePermissionStatus();
-                    
-                    stream.getTracks().forEach(track => track.stop());
-                    
-                    Toast.show(Localization.get('✅ تم منح إذن الميكروفون', '✅ Microphone permission granted'), 'success');
-                    console.log('✅ Microphone permission granted');
-                    
-                } catch (error) {
-                    if (error.name === 'NotAllowedError' || error.name === 'PermissionDeniedError') {
-                        microphonePermission = 'denied';
-                        Toast.show(Localization.get('❌ تم رفض إذن الميكروفون - يرجى تغييره من إعدادات المتصفح', '❌ Microphone permission denied - Please change it in browser settings'), 'error');
-                    } else if (error.name === 'NotFoundError' || error.name === 'NoDeviceFound') {
-                        Toast.show(Localization.get('❌ لم يتم العثور على ميكروفون', '❌ No microphone found'), 'error');
-                    } else {
-                        Toast.show(Localization.get('❌ حدث خطأ في طلب الإذن', '❌ Error requesting permission'), 'error');
-                    }
-                    
-                    this.updatePermissionStatus();
-                    console.error('❌ Error requesting microphone permission:', error);
-                }
-            }
-
-            static updatePermissionStatus() {
-                const statusEl = document.getElementById('micPermissionStatus');
-                if (!statusEl) return;
-
-                statusEl.classList.remove('granted', 'denied', 'prompt');
-                
-                switch(microphonePermission) {
-                    case 'granted':
-                        statusEl.classList.add('granted');
-                        statusEl.innerHTML = `
-                            <span aria-hidden="true">✅</span>
-                            <span data-ar="✅ تم منح الإذن" data-en="✅ Permission granted">✅ تم منح الإذن</span>
-                        `;
-                        break;
-                    case 'denied':
-                        statusEl.classList.add('denied');
-                        statusEl.innerHTML = `
-                            <span aria-hidden="true">❌</span>
-                            <span data-ar="❌ تم رفض الإذن - اذهب لإعدادات المتصفح" data-en="❌ Permission denied - Go to browser settings">❌ تم رفض الإذن - اذهب لإعدادات المتصفح</span>
-                        `;
-                        break;
-                    default:
-                        statusEl.classList.add('prompt');
-                        statusEl.innerHTML = `
-                            <span aria-hidden="true">⏳</span>
-                            <span data-ar="⏳ لم يتم طلب الإذن بعد" data-en="⏳ Permission not requested yet">⏳ لم يتم طلب الإذن بعد</span>
-                        `;
-                }
-            }
-
-            static checkPermissionBeforeVoice() {
-                if (microphonePermission === 'denied') {
-                    Toast.show(Localization.get('❌ إذن الميكروفون مرفوض - يرجى تغييره من إعدادات المتصفح', '❌ Microphone permission denied - Please change it in browser settings'), 'error');
-                    return false;
-                }
-                return true;
-            }
-        }
-
-        // ====== Voice Controller (الإصدار الفائق السرعة) ======
-        class VoiceController {
-            static lastProcessedTime = 0;
-            static lastDetectedPhrase = '';
-            static processingThreshold = 150;
-            static minConfidence = 0.55;
-            static debounceTimer = null;
-            
-            static init() {
-                const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-                
-                if (!SpeechRecognition) {
-                    console.warn("Speech recognition not supported");
-                    this.hideVoiceFeatures();
-                    return;
-                }
-
-                recognition = new SpeechRecognition();
-                recognition.continuous = true;
-                recognition.lang = currentLang === 'ar' ? 'ar-SA' : 'en-US';
-                recognition.interimResults = true;
-                recognition.maxAlternatives = 1;
-                
-                recognition.onstart = () => {
-                    console.log('🎙️ Voice recognition started (ultra-fast mode)');
-                    this.updateStatus('الاستماع الفوري...', 'Listening instantly...');
                 };
-                
-                recognition.onresult = this.handleFastResult.bind(this);
-                recognition.onerror = this.handleError.bind(this);
-                recognition.onend = this.handleEnd.bind(this);
-                
-                console.log('✅ Voice recognition initialized (fast mode)');
-            }
-
-            static hideVoiceFeatures() {
-                const voiceBtn = document.getElementById('voiceBtn');
-                const voiceIndicator = document.getElementById('voiceIndicator');
-                if (voiceBtn) voiceBtn.style.display = 'none';
-                if (voiceIndicator) voiceIndicator.style.display = 'none';
-                console.log('🔴 Voice features hidden');
-            }
-
-            static toggle() {
-                if (!recognition) return;
-
-                if (!voiceEnabled && microphonePermission === 'denied') {
-                    if (!PermissionController.checkPermissionBeforeVoice()) {
-                        return;
-                    }
+                rec.onend = () => { if (isVoice) rec.start(); };
+            },
+            toggle: () => {
+                if (!rec) return Toast(uiText[lang].voiceNotSupported);
+                isVoice = !isVoice;
+                const btn = document.getElementById('voiceBtn');
+                if (isVoice) { 
+                    rec.start(); btn.classList.add('active'); btn.textContent = uiText[lang].voiceBtnActive; 
+                    Toast(uiText[lang].voiceStart); 
+                } else { 
+                    rec.stop(); btn.classList.remove('active'); btn.textContent = uiText[lang].voiceBtn; 
                 }
+            },
+            reset: () => { Voice.lastTxt = ''; }
+        };
 
-                voiceEnabled = !voiceEnabled;
-                const voiceBtn = document.getElementById('voiceBtn');
-                const voiceIndicator = document.getElementById('voiceIndicator');
-                const voiceStatus = document.getElementById('voiceStatus');
-                const micIcon = document.getElementById('micIcon');
-                
-                if (!voiceBtn || !voiceIndicator || !voiceStatus || !micIcon) return;
-                
-                if (voiceEnabled) {
-                    try {
-                        recognition.start();
-                        micIcon.textContent = '⏹️';
-                        voiceBtn.querySelector('span:last-child').textContent = Localization.get('إيقاف الصوت', 'Disable Voice');
-                        voiceBtn.classList.add('danger');
-                        voiceIndicator.classList.add('listening');
-                        voiceStatus.textContent = Localization.get('جاري الاستماع الفوري...', 'Listening instantly...');
-                        Toast.show(Localization.get('🎤 التسبيح الصوتي مفعّل', '🎤 Voice tasbih enabled'), 'success');
-                        console.log('🎤 Voice enabled');
-                    } catch (e) {
-                        console.error('❌ Error starting recognition:', e);
-                        voiceEnabled = false;
-                        Toast.show(Localization.get('❌ خطأ في تشغيل التسبيح الصوتي', '❌ Error starting voice recognition'), 'error');
-                    }
-                } else {
-                    recognition.stop();
-                    micIcon.textContent = '🎤';
-                    voiceBtn.querySelector('span:last-child').textContent = Localization.get('تفعيل الصوت', 'Enable Voice');
-                    voiceBtn.classList.remove('danger');
-                    voiceIndicator.classList.remove('listening');
-                    voiceStatus.textContent = Localization.get('التسبيح الصوتي: معطل', 'Voice Tasbih: Disabled');
-                    console.log('🔇 Voice disabled');
-                }
+        const ColorPicker = {
+            init: () => {
+                document.getElementById('colorGrid').innerHTML = colors.map(c => 
+                    `<div class="color-circle" style="background:${c}" onclick="ColorPicker.set('${c}')"></div>`
+                ).join('');
+            },
+            open: () => document.getElementById('colorModal').classList.add('show'),
+            close: (e, f) => { if(f || e.target.id === 'colorModal') document.getElementById('colorModal').classList.remove('show') },
+            set: (c) => {
+                document.documentElement.style.setProperty('--btn-color', c);
+                Storage.s('btnCol', c);
+                ColorPicker.close(null, true);
             }
+        };
 
-            static handleFastResult(event) {
-                const currentTime = Date.now();
-                
-                if (currentTime - this.lastProcessedTime < this.processingThreshold) {
-                    return;
-                }
-
-                for (let i = event.resultIndex; i < event.results.length; i++) {
-                    const result = event.results[i];
-                    const transcript = result[0].transcript.trim();
-                    const confidence = result[0].confidence;
-                    
-                    if (confidence >= this.minConfidence && transcript.length > 2) {
-                        this.debounce(() => {
-                            this.processTranscript(transcript, confidence);
-                        }, 50);
-                    }
-                }
-            }
-
-            static debounce(func, wait) {
-                clearTimeout(this.debounceTimer);
-                this.debounceTimer = setTimeout(func, wait);
-            }
-
-            static processTranscript(transcript, confidence) {
-                if (this.lastDetectedPhrase === transcript) return;
-                
-                this.lastDetectedPhrase = transcript;
-                this.lastProcessedTime = Date.now();
-                
-                console.log(`🎤 Recognized: "${transcript}" (${(confidence * 100).toFixed(1)}%)`);
-                this.updateLastDetected(transcript, confidence);
-                
-                if (this.isTasbihMatch(transcript)) {
-                    this.triggerInstantTasbih(transcript, confidence);
-                }
-            }
-
-            static triggerInstantTasbih(transcript, confidence) {
-                TasbihController.increment();
-                this.triggerVibration();
-                this.visualFeedback();
-                this.updateLastDetected(`✅ ${transcript}`, 1.0);
-                console.log(`⚡ INSTANT MATCH: ${transcript}`);
-            }
-
-            static isTasbihMatch(transcript) {
-                const transcriptClean = this.cleanText(transcript);
-                const selectedKeywords = this.getCurrentKeywords();
-                
-                for (const keyword of selectedKeywords) {
-                    const keywordClean = this.cleanText(keyword);
-                    
-                    if (transcriptClean.includes(keywordClean) || 
-                        this.isPartialMatch(transcriptClean, keywordClean) ||
-                        this.fastSimilarity(transcriptClean, keywordClean) > 0.75) {
-                        return true;
-                    }
-                }
-                
-                return false;
-            }
-
-            static getCurrentKeywords() {
-                const tasbihKeywords = {
-                    'سبحان الله': [
-                        'سبحان الله', 'سبحانلله', 'سبحان الله العظيم', 'سبحان', 'سبح',
-                        'subhanallah', 'subhan allah', 'subhan', 'sabhan'
-                    ],
-                    'الحمد لله': [
-                        'الحمد لله', 'الحمدلله', 'الحمد لله رب العالمين', 'الحمد', 'حمده',
-                        'alhamdulillah', 'alhamd', 'hamd'
-                    ],
-                    'لا إله إلا الله': [
-                        'لا إله إلا الله', 'لاإله الا الله', 'لا اله الا الله', 'لا إله', 'لاإله',
-                        'lailahaillallah', 'la ilaha illa', 'la ilaha', 'shahada'
-                    ],
-                    'الله أكبر': [
-                        'الله أكبر', 'الله اكبر', 'الله أكبر كبيرا', 'الله', 'أكبر', 'الله اكبر',
-                        'allahu akbar', 'allah akbar', 'akbar', 'akbaar'
-                    ],
-                    'لا حول ولا قوة إلا بالله': [
-                        'لا حول ولا قوة', 'لا حول', 'لاحول ولاقوة', 'لاحول', 'لا قوة',
-                        'lahawla wala quwwata', 'la hawla', 'lahawla', 'quwwata'
-                    ],
-                    'استغفر الله': [
-                        'استغفر الله', 'استغفر', 'أستغفر الله', 'استغفار', 'استغفرالله',
-                        'astaghfirullah', 'astaghfir', 'astaghfirullahal', 'astaghfer'
-                    ]
-                };
-                
-                return tasbihKeywords[currentTasbih] || tasbihKeywords['سبحان الله'];
-            }
-
-            static cleanText(text) {
-                return text.toLowerCase()
-                           .replace(/[\s\-_]/g, '')
-                           .replace(/[ًٌٍُِّْ]/g, '')
-                           .replace(/[^\w\s]/gi, '');
-            }
-
-            static isPartialMatch(transcript, keyword) {
-                if (transcript.length < 3) return false;
-                
-                const minMatchLength = Math.min(4, keyword.length - 1);
-                for (let i = 0; i <= keyword.length - minMatchLength; i++) {
-                    const chunk = keyword.substring(i, i + minMatchLength);
-                    if (transcript.includes(chunk)) {
-                        return true;
-                    }
-                }
-                
-                return false;
-            }
-
-            static fastSimilarity(str1, str2) {
-                const longer = str1.length > str2.length ? str1 : str2;
-                const shorter = str1.length > str2.length ? str2 : str1;
-                
-                if (longer.length === 0) return 1.0;
-                
-                const editDistance = this.levenshteinDistance(longer, shorter);
-                return (longer.length - editDistance) / longer.length;
-            }
-
-            static levenshteinDistance(str1, str2) {
-                if (str1.length > 15 || str2.length > 15) {
-                    return Math.abs(str1.length - str2.length);
-                }
-                
-                const matrix = Array(str2.length + 1).fill(null)
-                    .map(() => Array(str1.length + 1).fill(null));
-                
-                for (let i = 0; i <= str1.length; i++) matrix[0][i] = i;
-                for (let j = 0; j <= str2.length; j++) matrix[j][0] = j;
-                
-                for (let j = 1; j <= str2.length; j++) {
-                    for (let i = 1; i <= str1.length; i++) {
-                        const cost = str1[i - 1] === str2[j - 1] ? 0 : 1;
-                        matrix[j][i] = Math.min(
-                            matrix[j][i - 1] + 1,
-                            matrix[j - 1][i] + 1,
-                            matrix[j - 1][i - 1] + cost
-                        );
-                    }
-                }
-                
-                return matrix[str2.length][str1.length];
-            }
-
-            static triggerVibration() {
-                if ('vibrate' in navigator) {
-                    navigator.vibrate(50);
-                }
-            }
-
-            static visualFeedback() {
-                const counterEl = document.getElementById('counter');
-                const lastDetected = document.getElementById('lastDetected');
-                
-                if (counterEl) {
-                    counterEl.classList.add('instant-match');
-                    setTimeout(() => counterEl.classList.remove('instant-match'), 300);
-                }
-                
-                if (lastDetected) {
-                    lastDetected.classList.add('instant');
-                    setTimeout(() => lastDetected.classList.remove('instant'), 500);
-                }
-            }
-
-            static updateStatus(arText, enText) {
-                const voiceStatus = document.getElementById('voiceStatus');
-                if (voiceStatus) {
-                    voiceStatus.textContent = Localization.get(arText, enText);
-                }
-            }
-
-            static updateLastDetected(transcript, confidence) {
-                const lastDetected = document.getElementById('lastDetected');
-                if (lastDetected) {
-                    const confidencePercent = (confidence * 100).toFixed(0);
-                    lastDetected.textContent = transcript;
-                    lastDetected.style.color = confidence > 0.8 ? '#4CAF50' : '#FF9800';
-                }
-            }
-
-            static handleError(event) {
-                console.error('🎤 Voice recognition error:', event.error);
-                if (voiceEnabled) {
-                    this.toggle();
-                }
-                
-                let errorMsg = Localization.get('حدث خطأ في التعرف على الصوت', 'Voice recognition error');
-                if (event.error === 'no-speech') {
-                    errorMsg = Localization.get('لم يتم اكتشاف صوت', 'No speech detected');
-                } else if (event.error === 'audio-capture') {
-                    errorMsg = Localization.get('لا يمكن الوصول إلى الميكروفون', 'Cannot access microphone');
-                } else if (event.error === 'not-allowed') {
-                    microphonePermission = 'denied';
-                    PermissionController.updatePermissionStatus();
-                    errorMsg = Localization.get('❌ تم رفض إذن الميكروفون - يرجى تغييره من إعدادات المتصفح', '❌ Microphone permission denied - Please change it in browser settings');
-                } else if (event.error === 'network') {
-                    errorMsg = Localization.get('خطأ في الشبكة', 'Network error');
-                }
-                
-                Toast.show(errorMsg, 'error');
-            }
-
-            static handleEnd() {
-                if (voiceEnabled) {
-                    setTimeout(() => {
-                        try {
-                            recognition.start();
-                        } catch (e) {
-                            console.error('❌ Error restarting recognition:', e);
-                        }
-                    }, 100);
-                }
-            }
-        }
-
-        // ====== Azkar Controller ======
-        class AzkarController {
-            static add() {
-                const text = document.getElementById('zekrText');
+        const Azkar = {
+            add: () => {
+                const tx = document.getElementById('zekrText');
                 const info = document.getElementById('zekrInfo');
+                const textVal = tx.value.trim();
+                if (!textVal) { tx.focus(); return; }
                 
-                if (!text || !text.value.trim()) {
-                    Toast.show(Localization.get('❌ يرجى كتابة الذكر أولاً!', '❌ Please write the dhikr first!'), 'error');
+                const arr = Storage.l('azk', []);
+                const newId = Date.now().toString(36) + Math.random().toString(36).substr(2);
+                arr.unshift({id: newId, t: textVal, i: info.value.trim()});
+                Storage.s('azk', arr); 
+                tx.value = ''; info.value = ''; Azkar.load();
+                Toast(lang === 'ar' ? 'تمت الإضافة' : 'Added');
+            },
+            load: () => {
+                const arr = Storage.l('azk', []);
+                const list = document.getElementById('myAzkarList');
+                list.innerHTML = '';
+
+                if (arr.length === 0) {
+                    list.innerHTML = `
+                        <div class="empty-state">
+                            <div class="empty-icon">📭</div>
+                            <p>${lang==='ar'?'القائمة فارغة، أضف أذكارك الخاصة':'List is empty'}</p>
+                        </div>`;
                     return;
                 }
 
-                const zekr = {
-                    id: Date.now(),
-                    text: text.value.trim(),
-                    info: info ? info.value.trim() : '',
-                    date: new Date().toLocaleDateString(currentLang === 'ar' ? 'ar-SA' : 'en-US')
-                };
+                arr.forEach(z => {
+                    const card = document.createElement('div');
+                    card.className = 'zekr-card';
+                    card.id = `zekr-${z.id}`;
 
-                let myAzkar = Storage.load('myAzkar', []);
-                myAzkar.unshift(zekr);
-                Storage.save('myAzkar', myAzkar);
+                    const contentDiv = document.createElement('div');
+                    contentDiv.className = 'zekr-content';
 
-                if (text) text.value = '';
-                if (info) info.value = '';
+                    const txtSpan = document.createElement('span');
+                    txtSpan.className = 'zekr-txt';
+                    txtSpan.textContent = z.t;
 
-                this.load();
-                Toast.show(Localization.get('✅ تمت إضافة الذكر بنجاح!', '✅ Dhikr added successfully!'), 'success');
-                
-                console.log('📖 Dhikr added:', zekr.id);
-            }
+                    const subDiv = document.createElement('div');
+                    subDiv.className = 'zekr-sub';
+                    subDiv.textContent = z.i || '';
 
-            static load() {
-                const myAzkar = Storage.load('myAzkar', []);
-                const listContainer = document.getElementById('myAzkarList');
-                
-                if (!listContainer) return;
-                
-                if (myAzkar.length === 0) {
-                    listContainer.innerHTML = `<div class="empty-message">${Localization.get('لم تضف أي أذكار بعد. ابدأ الآن!', 'No azkar added yet. Start now!')}</div>`;
-                    return;
-                }
+                    contentDiv.appendChild(txtSpan);
+                    contentDiv.appendChild(subDiv);
 
-                listContainer.innerHTML = myAzkar.map(zekr => `
-                    <div class="zekr-item" role="listitem">
-                        <div class="zekr-text">${zekr.text}</div>
-                        <div class="zekr-date">${zekr.info ? zekr.info + ' - ' : ''}${zekr.date}</div>
-                        <button class="delete-btn" onclick="AzkarController.delete(${zekr.id})" aria-label="Delete dhikr">${Localization.get('حذف', 'Delete')}</button>
-                    </div>
-                `).join('');
-                
-                console.log('📖 Loaded', myAzkar.length, 'azkar');
-            }
+                    const delBtn = document.createElement('button');
+                    delBtn.className = 'del-btn-icon';
+                    delBtn.innerHTML = '✕';
+                    delBtn.onclick = () => Azkar.del(z.id);
 
-            static delete(id) {
-                if (confirm(Localization.get('هل تريد حذف هذا الذكر؟', 'Delete this dhikr?'))) {
-                    let myAzkar = Storage.load('myAzkar', []);
-                    myAzkar = myAzkar.filter(zekr => zekr.id !== id);
-                    Storage.save('myAzkar', myAzkar);
-                    this.load();
-                    Toast.show(Localization.get('✅ تم حذف الذكر', '✅ Dhikr deleted'), 'success');
-                    console.log('📖 Dhikr deleted:', id);
-                }
-            }
-        }
-
-        // ====== Navigation Controller ======
-        class NavigationController {
-            static show(sectionName) {
-                document.querySelectorAll('.content-section').forEach(section => {
-                    section.classList.remove('active');
+                    card.appendChild(contentDiv);
+                    card.appendChild(delBtn);
+                    list.appendChild(card);
                 });
-                
-                document.querySelectorAll('.nav-item').forEach(item => {
-                    item.classList.remove('active');
-                    item.setAttribute('aria-selected', 'false');
-                });
-                
-                switch(sectionName) {
-                    case 'tasbih':
-                        document.getElementById('tasbih-section').classList.add('active');
-                        const navItem1 = document.querySelector('.nav-item[onclick="NavigationController.show(\'tasbih\')"]');
-                        if (navItem1) {
-                            navItem1.classList.add('active');
-                            navItem1.setAttribute('aria-selected', 'true');
-                        }
-                        break;
-                    case 'my-azkar':
-                        document.getElementById('my-azkar-section').classList.add('active');
-                        const navItem2 = document.querySelector('.nav-item[onclick="NavigationController.show(\'my-azkar\')"]');
-                        if (navItem2) {
-                            navItem2.classList.add('active');
-                            navItem2.setAttribute('aria-selected', 'true');
-                        }
-                        AzkarController.load();
-                        break;
-                    case 'settings':
-                        document.getElementById('settings-section').classList.add('active');
-                        const navItem3 = document.querySelector('.nav-item[onclick="NavigationController.show(\'settings\')"]');
-                        if (navItem3) {
-                            navItem3.classList.add('active');
-                            navItem3.setAttribute('aria-selected', 'true');
-                        }
-                        break;
-                }
-
-                if (voiceEnabled) {
-                    VoiceController.toggle();
-                }
-            }
-        }
-
-        // ====== Color Picker ======
-        class ColorPicker {
-            static show() {
-                const colorMenu = document.getElementById('colorMenu');
-                const optionsContainer = document.getElementById('colorOptions');
-                
-                if (!colorMenu || !optionsContainer) return;
-                
-                optionsContainer.innerHTML = availableColors.map((color, index) => `
-                    <div class="color-option ${color === buttonColor ? 'selected' : ''}" 
-                         style="background-color: ${color}"
-                         onclick="ColorPicker.select('${color}')"
-                         role="option"
-                         aria-selected="${color === buttonColor}"
-                         tabindex="0"
-                         onkeydown="if(event.key==='Enter'||event.key===' ') ColorPicker.select('${color}')"
-                         title="${color}">
-                    </div>
-                `).join('');
-                
-                colorMenu.classList.add('show');
-                const overlay = document.getElementById('overlay');
-                if (overlay) overlay.classList.add('show');
-                
-                if (voiceEnabled) {
-                    VoiceController.toggle();
-                }
-
-                console.log('🎨 Color menu opened');
-            }
-
-            static close() {
-                const colorMenu = document.getElementById('colorMenu');
-                const overlay = document.getElementById('overlay');
-                
-                if (colorMenu) colorMenu.classList.remove('show');
-                if (overlay) overlay.classList.remove('show');
-                
-                console.log('🎨 Color menu closed');
-            }
-
-            static select(color) {
-                buttonColor = color;
-                document.documentElement.style.setProperty('--primary-btn-color', color);
-                
-                const tasbihBtn = document.getElementById('tasbihBtn');
-                if (tasbihBtn) {
-                    tasbihBtn.style.background = color;
-                }
-                
-                Storage.save('buttonColor', color);
-                
-                document.querySelectorAll('.color-option').forEach(option => {
-                    option.classList.remove('selected');
-                    option.setAttribute('aria-selected', 'false');
-                });
-                
-                if (event && event.target) {
-                    event.target.classList.add('selected');
-                    event.target.setAttribute('aria-selected', 'true');
-                }
-                
-                this.close();
-                Toast.show(Localization.get('✅ تم تغيير اللون', '✅ Color changed'), 'success');
-                console.log('🎨 Button color changed:', color);
-            }
-        }
-
-        // ====== Settings Controller ======
-        class SettingsController {
-            static toggleTheme() {
-                isDarkMode = !isDarkMode;
-                document.body.classList.toggle('dark-mode');
-                Storage.save('darkMode', isDarkMode);
-                
-                Localization.updateButtonLabels();
-                Toast.show(isDarkMode ? Localization.get('🌙 تم تفعيل الوضع المظلم', '🌙 Dark mode enabled') : 
-                                      Localization.get('☀️ تم إيقاف الوضع المظلم', '☀️ Dark mode disabled'), 'success');
-                console.log('🌙 Dark mode toggled:', isDarkMode);
-            }
-
-            static toggleLanguage() {
-                currentLang = currentLang === 'ar' ? 'en' : 'ar';
-                Localization.update();
-                Storage.save('appLang', currentLang);
-                
-                DateController.load();
-                Localization.updateButtonLabels();
-                
-                Toast.show(Localization.get('🌐 تم تغيير اللغة', '🌐 Language changed'), 'success');
-                console.log('🌐 Language toggled:', currentLang);
-                
-                if (document.getElementById('my-azkar-section').classList.contains('active')) {
-                    AzkarController.load();
-                }
-            }
-        }
-
-        // ====== Background Controller ======
-        class BackgroundController {
-            static change(event) {
-                const file = event.target.files[0];
-                if (!file) return;
-
-                if (!file.type.startsWith('image/')) {
-                    Toast.show(Localization.get('❌ يرجى اختيار صورة', '❌ Please select an image'), 'error');
-                    return;
-                }
-
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    const imageUrl = e.target.result;
-                    document.body.style.backgroundImage = `url(${imageUrl})`;
-                    document.body.style.backgroundSize = 'cover';
-                    document.body.style.backgroundAttachment = 'fixed';
-                    document.body.style.backgroundPosition = 'center';
-                    Storage.save('bgImage', imageUrl);
-                    
-                    const preview = document.getElementById('bgPreview');
-                    if (preview) {
-                        preview.style.backgroundImage = `url(${imageUrl})`;
-                        preview.classList.add('show');
-                    }
-                    
-                    Toast.show(Localization.get('🖼️ تم تغيير الخلفية', '🖼️ Background changed'), 'success');
-                    console.log('🖼️ Background changed');
-                };
-                reader.onerror = () => {
-                    Toast.show(Localization.get('❌ خطأ في تحميل الصورة', '❌ Error loading image'), 'error');
-                };
-                reader.readAsDataURL(file);
-            }
-
-            static remove() {
-                if (confirm(Localization.get('هل تريد إزالة خلفية الصورة؟', 'Remove background image?'))) {
-                    document.body.style.backgroundImage = '';
-                    document.body.style.backgroundSize = '';
-                    document.body.style.backgroundAttachment = '';
-                    document.body.style.backgroundPosition = '';
-                    Storage.remove('bgImage');
-                    
-                    const preview = document.getElementById('bgPreview');
-                    if (preview) {
-                        preview.classList.remove('show');
-                        preview.style.backgroundImage = '';
-                    }
-                    
-                    Toast.show(Localization.get('🖼️ تم إزالة الخلفية', '🖼️ Background removed'), 'success');
-                    console.log('🖼️ Background removed');
-                }
-            }
-        }
-
-        // ====== Date Controller ======
-        class DateController {
-            static init() {
-                this.load();
-                
-                setInterval(() => {
-                    this.checkDateUpdate();
-                }, 60000);
-                
-                console.log('📅 Date controller initialized with auto-update');
-            }
-            
-            static checkDateUpdate() {
-                const savedDate = Storage.load('lastHijriDate');
-                const today = new Date().toDateString();
-                
-                if (!savedDate || savedDate.gregorianDate !== today) {
-                    console.log('📅 Date changed, updating...');
-                    this.load();
-                }
-            }
-            
-            static load() {
-                const dateElement = document.getElementById('dateDisplay');
-                const updateIndicator = document.getElementById('updateIndicator');
-                
-                if (!dateElement) return;
-                
-                dateElement.classList.add('loading');
-                if (updateIndicator) updateIndicator.style.display = 'inline';
-                
-                setTimeout(() => {
-                    const hijri = getHijriDate();
-                    
-                    dateElement.classList.remove('loading');
-                    if (updateIndicator) updateIndicator.style.display = 'none';
-                    
-                    if (hijri) {
-                        const dateStrAr = `${hijri.day} ${hijri.month.ar} ${hijri.year} هـ`;
-                        const dateStrEn = `${hijri.day} ${hijri.month.en} ${hijri.year} AH`;
-                        
-                        dateElement.innerHTML = `
-                            <span data-ar="${dateStrAr}" data-en="${dateStrEn}">${currentLang === 'ar' ? dateStrAr : dateStrEn}</span>
-                        `;
-                        
-                        Storage.save('lastHijriDate', {
-                            gregorianDate: new Date().toDateString(),
-                            hijri: hijri
-                        });
-                        
-                        dateElement.classList.remove('error');
-                        console.log('✅ Hijri date loaded:', hijri);
+            },
+            del: (id) => {
+                if(confirm(uiText[lang].confirmDel)) {
+                    const card = document.getElementById(`zekr-${id}`);
+                    if(card) {
+                        card.classList.add('removing');
+                        setTimeout(() => {
+                            let arr = Storage.l('azk', []);
+                            arr = arr.filter(z => z.id !== id);
+                            Storage.s('azk', arr); Azkar.load();
+                        }, 300);
                     } else {
-                        const errorMsgAr = 'خطأ في الحساب';
-                        const errorMsgEn = 'Calculation error';
-                        dateElement.innerHTML = `<span data-ar="${errorMsgAr}" data-en="${errorMsgEn}" class="error">${currentLang === 'ar' ? errorMsgAr : errorMsgEn}</span>`;
-                        dateElement.classList.add('error');
-                        console.error('❌ Failed to load Hijri date');
+                        let arr = Storage.l('azk', []);
+                        arr = arr.filter(z => z.id !== id);
+                        Storage.s('azk', arr); Azkar.load();
                     }
-                }, 300);
-            }
-            
-            static forceUpdate() {
-                lastCalculatedDate = null;
-                Storage.remove('lastHijriDate');
-                this.load();
-                Toast.show(Localization.get('📅 تم تحديث التاريخ', '📅 Date updated'), 'success');
-                console.log('🔄 Forced date update');
-            }
-        }
-
-        // ====== Keyboard Shortcuts ======
-        document.addEventListener('keydown', function(event) {
-            if (document.getElementById('tasbih-section').classList.contains('active')) {
-                switch(event.code) {
-                    case 'Space':
-                        event.preventDefault();
-                        TasbihController.increment();
-                        break;
-                    case 'KeyR':
-                        TasbihController.reset();
-                        break;
-                    case 'KeyV':
-                        VoiceController.toggle();
-                        break;
                 }
             }
-            
-            if (event.ctrlKey && event.code === 'KeyD') {
-                event.preventDefault();
-                DateController.forceUpdate();
-            }
-        });
+        };
 
-        // ====== Initialization ======
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('🚀 App initializing with ultra-fast voice response and PWA install...');
-            
-            // Load saved settings
-            const savedLang = Storage.load('appLang');
-            if (savedLang) {
-                currentLang = savedLang;
-                Localization.update();
-            }
-
-            const savedDarkMode = Storage.load('darkMode');
-            if (savedDarkMode !== null) {
-                isDarkMode = savedDarkMode;
-                if (isDarkMode) document.body.classList.add('dark-mode');
-            }
-
-            const savedColor = Storage.load('buttonColor');
-            if (savedColor) {
-                buttonColor = savedColor;
-                document.documentElement.style.setProperty('--primary-btn-color', savedColor);
-                const tasbihBtn = document.getElementById('tasbihBtn');
-                if (tasbihBtn) {
-                    tasbihBtn.style.background = savedColor;
+        const BG = {
+            change: (e) => {
+                const f = e.target.files[0];
+                if(f) {
+                    const r = new FileReader();
+                    r.onload = v => {
+                        document.body.style.backgroundImage = `url(${v.target.result})`;
+                        document.body.style.backgroundSize = 'cover';
+                        Storage.s('bg', v.target.result);
+                    };
+                    r.readAsDataURL(f);
                 }
-            }
+            },
+            remove: () => { document.body.style.backgroundImage = ''; Storage.r('bg'); Toast(uiText[lang].confirmDelBg); }
+        };
 
-            const savedCounter = Storage.load('tasbihCounter');
-            if (savedCounter !== null) {
-                counter = savedCounter;
-                const counterEl = document.getElementById('counter');
-                if (counterEl) {
-                    counterEl.textContent = counter;
-                }
+        const Nav = {
+            show: (id) => {
+                document.querySelectorAll('.content-section').forEach(e => e.classList.remove('active'));
+                document.getElementById(id+'-section').classList.add('active');
+                document.querySelectorAll('.nav-btn').forEach(e => e.classList.remove('active'));
+                const idx = id === 'tasbih' ? 0 : (id === 'my-azkar' ? 1 : 2);
+                document.querySelectorAll('.nav-btn')[idx].classList.add('active');
+                if(id === 'my-azkar') Azkar.load();
             }
+        };
 
-            const savedBg = Storage.load('bgImage');
-            if (savedBg) {
-                document.body.style.backgroundImage = `url(${savedBg})`;
-                document.body.style.backgroundSize = 'cover';
-                document.body.style.backgroundAttachment = 'fixed';
-                document.body.style.backgroundPosition = 'center';
-                
-                const preview = document.getElementById('bgPreview');
-                if (preview) {
-                    preview.style.backgroundImage = `url(${savedBg})`;
-                    preview.classList.add('show');
-                }
+        const PWA = {
+            install: () => { 
+                if(defPrompt) { 
+                    defPrompt.prompt(); 
+                    defPrompt.userChoice.then(c => { 
+                        if(c.outcome==='accepted') {
+                            document.getElementById('topInstallIcon').classList.add('hidden');
+                            document.getElementById('settingsInstallBtn').classList.add('hidden');
+                        }
+                    }); 
+                } 
             }
+        };
 
-            const savedDate = Storage.load('lastHijriDate');
-            if (savedDate && savedDate.gregorianDate === new Date().toDateString()) {
-                lastCalculatedDate = {
-                    dateStr: new Date().toDateString(),
-                    result: savedDate.hijri
-                };
-            }
+        const swCode = `
+            const CACHE_NAME = 'tasbih-v3';
+            self.addEventListener('install', e => {
+                e.waitUntil(
+                    caches.open(CACHE_NAME).then(cache => {
+                        return cache.addAll(['./', 'https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap']);
+                    })
+                );
+            });
+            self.addEventListener('fetch', e => {
+                e.respondWith(caches.match(e.request).then(res => res || fetch(e.request).catch(() => caches.match('./'))));
+            });
+        `;
 
-            // Initialize controllers
-            PWAController.init();
-            VoiceController.init();
-            DateController.init();
-            PermissionController.init();
-            Localization.updateButtonLabels();
+        window.addEventListener('load', () => {
+            count = Storage.l('cnt', 0); document.getElementById('counter').textContent = count;
+            isSound = Storage.l('sound', false); document.getElementById('soundToggle').classList.toggle('active', isSound);
             
-            Toast.show(Localization.get('✅ التطبيق جاهز', '✅ App ready'), 'success');
-            console.log('✅ App initialized successfully with instant voice response and PWA install');
+            if(Storage.l('dark')) { isDark=true; document.body.classList.add('dark-mode'); document.getElementById('themeToggle').classList.add('active'); }
+            const c = Storage.l('btnCol'); if(c) document.documentElement.style.setProperty('--btn-color', c);
+            const b = Storage.l('bg'); if(b) { document.body.style.backgroundImage = `url(${b})`; document.body.style.backgroundSize='cover'; }
+            
+            lang = Storage.l('lang', 'ar');
+            Settings.applyLang();
+            ColorPicker.init(); Voice.init();
+            
+            window.addEventListener('beforeinstallprompt', (e) => {
+                e.preventDefault(); defPrompt = e;
+                document.getElementById('topInstallIcon').classList.remove('hidden');
+                document.getElementById('settingsInstallBtn').classList.remove('hidden');
+            });
+            
+            if('serviceWorker' in navigator) {
+                const blob = new Blob([swCode], {type: 'application/javascript'});
+                navigator.serviceWorker.register(URL.createObjectURL(blob));
+            }
         });
     </script>
 </body>
 </html>
+
